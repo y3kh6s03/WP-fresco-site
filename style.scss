@@ -229,7 +229,7 @@
 
 
 ////////////////////////////////////
-///////////////future///////////////
+///////////////about///////////////
 ////////////////////////////////////
 
 
@@ -242,30 +242,95 @@
         margin-right: calc(50% - 50vw);
         @extend .mb-md;
 
+        @include mq(lg){
+            height: 400px;
+        }
+        @include mq(xl){
+            height: 450px;
+        }
+
         &__container {
         }
 
         &__image {
             height: 100%;
+            width: 50vw;
+
+            @include mq(lg){
+                width: 30vw;
+            }
+            @include mq(xl){
+                width: 20vw;
+            }
         }
     }
 
     &__description {
         width: 70vw;
-        &__p {}
+        @extend .mb-md;
+
+        @include mq(md){
+            max-width: 500px
+        }
+        @include mq(xl){
+            width: 50vw;
+            max-width: 600px
+        }
+
+        &__p {
+            @extend .mb-sm;
+        }
     }
 
 
     &__image {
-        &__container {
-            &__img1 {
-            }
+        position: relative;
+        height: 160px;
 
-            &__img2 {}
+        @include mq(sm){
+            height: 200px;
+        }
+        @include mq(md){
+            height: 310px;
+        }
+        @include mq(xl){
+            height: 380px;
         }
 
 
+        &__container {
+            text-align: end;
+
+            &__img1 {
+                width: 20vw;
+                height: 150px;
+                position: absolute;
+                top: 0;
+                left: -6%;
+
+                @include mq(md){
+                    max-width: 150px;
+                    height: 230px;
+                }
+                @include mq(lg){
+                    max-width: 180px;
+                    height: 280px;
+                    left: -13%;
+                }
+            }
+
+            &__img2 {
+                width: 40vw;
+                bottom: 100px;
+                transform: translateY(50%);
+
+                @include mq(md){
+                    max-width: 300px;
+                }
+                @include mq(xl){
+                    max-width: 350px;
+                }
+            }
+        }
     }
-
-
 }
