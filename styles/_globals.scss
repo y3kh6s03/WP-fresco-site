@@ -99,7 +99,8 @@ $fNum: 'Noto Nastaliq Urdu', serif;
 .content__title {
 
     &__en {
-        @extend .font-lg;
+        @extend .font-xl;
+        line-height: 1.2;
     }
     &__bar {
         display: block;
@@ -134,6 +135,9 @@ $fNum: 'Noto Nastaliq Urdu', serif;
 /////////////////////////////////////
 // Base setting
 /////////////////////////////////////
+
+$ease: cubic-bezier(1,0,.01,1);
+
 html {
     scroll-behavior: smooth;
 }
@@ -141,16 +145,8 @@ html {
 
 
 * {
-    font-size: 14px;
+    @extend .font-md;
     line-height: 1.7;
-
-    @include mq(md) {
-        font-size: 15px;
-    }
-
-    @include mq(lg) {
-        font-size: 16px;
-    }
 
     margin: 0;
     padding: 0;
@@ -227,6 +223,7 @@ img {
         background-color: $cBlack;
         transform: scaleX(10%);
         transform-origin: left;
+        animation: pagelink_bar_out 1s $ease forwards;
     }
 
     &__arrow {
@@ -234,9 +231,22 @@ img {
         width: 5px;
         height: 1px;
         position: absolute;
-        top: 50%;
+        top: 56%;
         right: 0;
         transform: translateY(-50%);
+
+        @include mq(sm){
+            top: 56.5%;
+        }
+        @include mq(md){
+            top: 57%;
+        }
+        @include mq(lg){
+            top: 60%;
+        }
+        @include mq(xl){
+            top: 61.5%;
+        }
 
         &::before,&::after{
             content: "";
@@ -246,6 +256,7 @@ img {
             position: absolute;
             top: 0;
             right: 0;
+            transition: all .5s .5s $ease;
         }
         &::before{
             transform: rotate(320deg) translateX(2px) translateY(3.5px);
@@ -259,5 +270,57 @@ img {
         display: block;
         text-align: end;
         transform: translateY(100%);
+        transition: all 1s .3s $ease;
+    }
+
+    &:hover{
+        & .pagelink__bar{
+            animation: pagelink_bar_hover 1s $ease forwards;
+        }
+        & .pagelink__arrow{
+            &::before{
+            transform: rotate(0deg) translateX(3px) translateY(.01px);
+            }
+        }
+        & .pagelink__text{
+            transform: translateY(0);
+        }
+    }
+}
+
+@keyframes pagelink_bar_hover {
+    0%{
+        transform: scaleX(10%);
+        transform-origin: left;
+    }
+    50%{
+        transform: scaleX(100%);
+        transform-origin: left;
+    }
+    51%{
+        transform: scaleX(100%);
+        transform-origin: right;
+    }
+    100%{
+        transform: scaleX(10%);
+        transform-origin: right;
+    }
+}
+@keyframes pagelink_bar_out {
+    0%{
+        transform: scaleX(10%);
+        transform-origin: right;
+    }
+    50%{
+        transform: scaleX(100%);
+        transform-origin: right;
+    }
+    51%{
+        transform: scaleX(100%);
+        transform-origin: left;
+    }
+    100%{
+        transform: scaleX(10%);
+        transform-origin: left;
     }
 }
