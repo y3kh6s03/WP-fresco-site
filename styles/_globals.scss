@@ -97,6 +97,7 @@ $fNum: 'Noto Nastaliq Urdu', serif;
 }
 
 .content__title {
+    @extend .mb-md;
 
     &__en {
         @extend .font-xl;

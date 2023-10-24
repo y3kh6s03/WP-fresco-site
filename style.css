@@ -1,8 +1,8 @@
-.font-sm, .hero__link__a__jaTitle, .hero__nav__ul__li span, .content__title__ja {
+.font-sm, .hero__link__a__jaTitle, .hero__nav__ul__li span, .service__list__item__link span:nth-child(2), .content__title__ja {
   font-size: 10px;
 }
 @media (min-width: 960px) {
-  .font-sm, .hero__link__a__jaTitle, .hero__nav__ul__li span, .content__title__ja {
+  .font-sm, .hero__link__a__jaTitle, .hero__nav__ul__li span, .service__list__item__link span:nth-child(2), .content__title__ja {
     font-size: 12px;
   }
 }
@@ -22,21 +22,21 @@
   }
 }
 
-.font-lg, .future__description__title, .pagelink__name {
+.font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .pagelink__name {
   font-size: 18px;
 }
 @media (min-width: 600px) {
-  .font-lg, .future__description__title, .pagelink__name {
+  .font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .pagelink__name {
     font-size: 20px;
   }
 }
 @media (min-width: 960px) {
-  .font-lg, .future__description__title, .pagelink__name {
+  .font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .pagelink__name {
     font-size: 24px;
   }
 }
 @media (min-width: 1280px) {
-  .font-lg, .future__description__title, .pagelink__name {
+  .font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .pagelink__name {
     font-size: 26px;
   }
 }
@@ -103,11 +103,11 @@
   margin-bottom: 20px;
 }
 
-.mb-md, .hero, .about__title, .about__description, .future__title, .future__description__text {
+.mb-md, .hero, .about__title, .about__description, .future__title, .future__description__text, .content__title {
   margin-bottom: 50px;
 }
 
-.mb-lg, .about {
+.mb-lg, .about, .future, .service {
   margin-bottom: 200px;
 }
 
@@ -645,4 +645,198 @@ img {
 }
 .future .pagelink__arrow::before, .future .pagelink__arrow::after {
   background-color: white;
+}
+
+.service__list {
+  position: relative;
+}
+.service__list__item {
+  width: 100%;
+  height: 300px;
+}
+@media (min-width: 600px) {
+  .service__list__item {
+    height: 400px;
+  }
+}
+@media (min-width: 960px) {
+  .service__list__item {
+    height: 100px;
+  }
+  .service__list__item:nth-of-type(1):hover .service__list__item__image img {
+    transform: translateY(0%);
+  }
+  .service__list__item:nth-of-type(1):hover .service__list__item__image p {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  .service__list__item:nth-of-type(2):hover .service__list__item__image img {
+    transform: translateY(0%);
+  }
+  .service__list__item:nth-of-type(2):hover .service__list__item__image p {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  .service__list__item:nth-of-type(3):hover .service__list__item__image img {
+    transform: translateY(0%);
+  }
+  .service__list__item:nth-of-type(3):hover .service__list__item__image p {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  .service__list__item:nth-of-type(4):hover .service__list__item__image img {
+    transform: translateY(0%);
+  }
+  .service__list__item:nth-of-type(4):hover .service__list__item__image p {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+.service__list__item__image {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+@media (min-width: 960px) {
+  .service__list__item__image {
+    position: absolute;
+    width: 40vw;
+    height: 400px;
+    top: 0;
+    right: 0;
+  }
+}
+.service__list__item__image img {
+  width: 100%;
+  height: 200px;
+}
+@media (min-width: 600px) {
+  .service__list__item__image img {
+    height: 300px;
+  }
+}
+@media (min-width: 960px) {
+  .service__list__item__image img {
+    height: 100%;
+    transform: translateY(100%);
+    transition: all 0.5s cubic-bezier(1, 0, 0.01, 1);
+  }
+}
+.service__list__item__image p {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
+  mix-blend-mode: color-burn;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+@media (min-width: 960px) {
+  .service__list__item__image p {
+    left: 10%;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.5s cubic-bezier(1, 0, 0.01, 1);
+  }
+}
+.service__list__item__image p span {
+  font-family: "Noto Nastaliq Urdu", serif;
+}
+.service__list__item__link span:nth-child(1) {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
+}
+.service__list__item__link span:nth-child(2) {
+  font-family: "Noto Sans JP", sans-serif;
+  margin-left: 20px;
+}
+.service__list__item__link span:nth-child(3) {
+  display: block;
+  width: 280px;
+  height: 1px;
+  background-color: #333333;
+  transform: scaleX(5%);
+  transform-origin: left;
+  animation: service-link-out 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+}
+@media (min-width: 960px) {
+  .service__list__item__link span:nth-child(3) {
+    width: 350px;
+  }
+}
+@media (min-width: 1280px) {
+  .service__list__item__link span:nth-child(3) {
+    width: 500px;
+  }
+}
+.service__list__item:hover .service__list__item__link span:nth-child(3) {
+  animation: service-link-hover 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+}
+.service .circle {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  pointer-events: none;
+  z-index: -99;
+}
+.service .circle__wrapper {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+.service .circle__wrapper__inner {
+  overflow: visible;
+  animation: rotation 60s linear infinite;
+}
+.service .circle__wrapper__inner__path {
+  fill: none;
+}
+.service .circle__wrapper__inner__text {
+  fill: #333333;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  opacity: 0.3;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes service-link-hover {
+  0% {
+    transform: scaleX(5%);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(100%);
+    transform-origin: left;
+  }
+  51% {
+    transform: scaleX(100%);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(5%);
+    transform-origin: right;
+  }
+}
+@keyframes service-link-out {
+  0% {
+    transform: scaleX(5%);
+    transform-origin: right;
+  }
+  50% {
+    transform: scaleX(100%);
+    transform-origin: right;
+  }
+  51% {
+    transform: scaleX(100%);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(5%);
+    transform-origin: left;
+  }
 }/*# sourceMappingURL=style.css.map */
