@@ -744,10 +744,11 @@
     @extend .mb-lg;
     height: 700px;
 
-    @include mq(lg){
+    @include mq(lg) {
         height: 750px;
     }
-    @include mq(xl){
+
+    @include mq(xl) {
         height: 800px;
     }
 
@@ -765,10 +766,11 @@
         left: 0;
         z-index: -98;
 
-        @include mq(lg){
+        @include mq(lg) {
             height: 750px;
         }
-        @include mq(xl){
+
+        @include mq(xl) {
             height: 800px;
         }
     }
@@ -788,76 +790,134 @@
         }
     }
 
+    & .swiper {
+        @extend .mb-md;
 
+        &-wrapper {
+            transition-timing-function: linear;
+        }
+
+        &-slide {
+            position: relative;
+
+
+            &::before {
+                content: "";
+                width: 80vw;
+                max-width: 400px;
+                height: 100%;
+                background-color: black;
+                opacity: .1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                pointer-events: none;
+            }
+
+            & img {
+                display: block;
+                width: 80vw;
+                max-width: 400px;
+                height: 300px;
+                position: relative;
+            }
+
+            & .text__container {
+                position: absolute;
+                bottom: 10%;
+                left: 5%;
+                z-index: 11;
+            }
+
+            & .works__service {
+                display: block;
+                color: white;
+
+            }
+
+            & .works__service__author {
+                color: white;
+            }
+        }
+
+        @keyframes swipe-animation {
+            0% {
+                transform: scaleX(0);
+                transform-origin: right;
+            }
+
+            50% {
+                transform: scaleX(100%);
+                transform-origin: right;
+            }
+
+            51% {
+                transform: scaleX(100%);
+                transform-origin: left;
+            }
+
+            100% {
+                transform: scaleX(0%);
+                transform-origin: left;
+            }
+        }
+    }
 }
 
-.swiper {
-    @extend .mb-md;
+////////////////////////////////////
+///////////////works//////////////
+////////////////////////////////////
 
-    &-wrapper {
-        transition-timing-function: $ease;
+
+.recruit {
+    @extend .mb-lg;
+
+    &::before {
+        content: "";
+        width: 95vw;
+        height: 80%;
+        background-color: $cOrange;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -98;
     }
 
-    &-slide {
-        position: relative;
+    &__image {
+        width: 70vw;
+        margin-left: calc(50% - 20vw);
+        @extend .mb-md;
 
-
-        &::before {
-            content: "";
-            width: 80vw;
-            max-width: 400px;
-            height: 100%;
-            background-color: black;
-            opacity: .1;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 10;
-            pointer-events: none;
-        }
-
-        & img {
-            display: block;
-            width: 80vw;
-            max-width: 400px;
-            height: 300px;
-            position: relative;
-        }
-
-        & .text__container {
-            position: absolute;
-            bottom: 10%;
-            left: 5%;
-            z-index: 11;
-        }
-
-        & .works__service {
-            display: block;
-            color: white;
-
-        }
-
-        & .works__service__author {
-            color: white;
+        @include mq(lg){
+            width: 50vw;
+            margin-left: calc(100% - 40vw);
         }
     }
 
-    @keyframes swipe-animation {
-        0%{
-            transform: scaleX(0);
-            transform-origin: left;
+    &__title__container {}
+
+    &__description {
+        padding-bottom: 50px;
+
+        @include mq(lg){
+            margin-left: 10%;
+            padding-bottom: 100px
         }
-        50%{
-            transform: scaleX(100%);
-            transform-origin: left;
+
+        &__title {
+            @extend .mb-sm;
+            & h3 {
+                @extend .font-lg;
+            }
         }
-        51%{
-            transform: scaleX(100%);
-            transform-origin: right;
-        }
-        100%{
-            transform: scaleX(0%);
-            transform-origin: right;
+
+        &__text {
+            @extend .mb-md;
+            width: 85vw;
+            max-width: 600px;
+
+            & p {}
         }
     }
 }
