@@ -22,21 +22,21 @@
   }
 }
 
-.font-lg, .pagelink__name {
+.font-lg, .future__description__title, .pagelink__name {
   font-size: 18px;
 }
 @media (min-width: 600px) {
-  .font-lg, .pagelink__name {
+  .font-lg, .future__description__title, .pagelink__name {
     font-size: 20px;
   }
 }
 @media (min-width: 960px) {
-  .font-lg, .pagelink__name {
+  .font-lg, .future__description__title, .pagelink__name {
     font-size: 24px;
   }
 }
 @media (min-width: 1280px) {
-  .font-lg, .pagelink__name {
+  .font-lg, .future__description__title, .pagelink__name {
     font-size: 26px;
   }
 }
@@ -99,15 +99,15 @@
   transform: scaleX(7%);
   transform-origin: left;
 }
-.mb-sm, .hero__link__a:nth-child(1), .hero__nav__ul__li, .about__description__p {
+.mb-sm, .hero__link__a:nth-child(1), .hero__nav__ul__li, .about__description__p, .future__description__title {
   margin-bottom: 20px;
 }
 
-.mb-md, .hero, .about__title, .about__description {
+.mb-md, .hero, .about__title, .about__description, .future__title, .future__description__text {
   margin-bottom: 50px;
 }
 
-.mb-lg {
+.mb-lg, .about {
   margin-bottom: 200px;
 }
 
@@ -217,7 +217,7 @@ img {
 }
 @media (min-width: 1280px) {
   .pagelink__arrow {
-    top: 61.5%;
+    top: 62%;
   }
 }
 .pagelink__arrow::before, .pagelink__arrow::after {
@@ -555,4 +555,94 @@ img {
   .about__image__container__img2 {
     max-width: 350px;
   }
+}
+
+.future {
+  position: relative;
+}
+.future::before {
+  content: "";
+  width: 100vw;
+  height: 110vh;
+  background-color: #839C96;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -99;
+}
+.future__title {
+  padding-top: 100px;
+}
+.future__title h2,
+.future__title span {
+  color: white;
+}
+.future__title .content__title__bar {
+  background-color: white;
+}
+.future__description {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 calc(50% - 50vw);
+  background-image: url("/images/main-images/healthy-body.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.future__description::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.future__description__title {
+  color: white;
+  padding-top: 100px;
+  position: relative;
+  z-index: 100;
+  margin-left: 5%;
+}
+@media (min-width: 960px) {
+  .future__description__title {
+    margin-left: 10%;
+  }
+}
+.future__description__text {
+  width: 80vw;
+  max-width: 700px;
+  color: white;
+  position: relative;
+  z-index: 100;
+  margin-left: 5%;
+}
+@media (min-width: 960px) {
+  .future__description__text {
+    margin-left: 10%;
+  }
+}
+.future .pagelink {
+  z-index: 100;
+  margin-left: 5%;
+}
+@media (min-width: 960px) {
+  .future .pagelink {
+    margin-left: 10%;
+  }
+}
+.future .pagelink__name {
+  color: white;
+}
+.future .pagelink__text {
+  color: white;
+}
+.future .pagelink__bar {
+  background-color: white;
+}
+.future .pagelink__arrow::before, .future .pagelink__arrow::after {
+  background-color: white;
 }/*# sourceMappingURL=style.css.map */
