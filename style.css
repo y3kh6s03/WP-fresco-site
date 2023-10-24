@@ -22,21 +22,21 @@
   }
 }
 
-.font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .recruit__description__title h3, .pagelink__name {
+.font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .recruit__description__title h3, .info__item__text__p, .pagelink__name {
   font-size: 18px;
 }
 @media (min-width: 600px) {
-  .font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .recruit__description__title h3, .pagelink__name {
+  .font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .recruit__description__title h3, .info__item__text__p, .pagelink__name {
     font-size: 20px;
   }
 }
 @media (min-width: 960px) {
-  .font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .recruit__description__title h3, .pagelink__name {
+  .font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .recruit__description__title h3, .info__item__text__p, .pagelink__name {
     font-size: 24px;
   }
 }
 @media (min-width: 1280px) {
-  .font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .recruit__description__title h3, .pagelink__name {
+  .font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .recruit__description__title h3, .info__item__text__p, .pagelink__name {
     font-size: 26px;
   }
 }
@@ -104,15 +104,15 @@
   font-family: "Noto Sans JP", sans-serif;
 }
 
-.mb-sm, .hero__link__a:nth-child(1), .hero__nav__ul__li, .about__description__p, .future__description__title, .recruit__description__title {
+.mb-sm, .hero__link__a:nth-child(1), .hero__nav__ul__li, .about__description__p, .future__description__title, .recruit__description__title, .info__item__image {
   margin-bottom: 20px;
 }
 
-.mb-md, .hero, .about__title, .about__description, .future__title, .future__description__text, .works .swiper, .recruit__image, .recruit__description__text, .content__title {
+.mb-md, .hero, .about__title, .about__description, .future__title, .future__description__text, .works .swiper, .recruit__image, .recruit__description__text, .info__inner, .content__title {
   margin-bottom: 50px;
 }
 
-.mb-lg, .about, .future, .service, .works, .recruit {
+.mb-lg, .about, .future, .service, .works, .recruit, .info {
   margin-bottom: 200px;
 }
 
@@ -863,6 +863,13 @@ img {
 .works .content__title {
   padding-top: 100px;
 }
+.works .content__title h2,
+.works .content__title span {
+  color: white;
+}
+.works .content__title__bar {
+  background-color: white;
+}
 .works::before {
   content: "";
   width: 80vw;
@@ -983,4 +990,202 @@ img {
 .recruit__description__text {
   width: 85vw;
   max-width: 600px;
+}
+@media (min-width: 600px) {
+  .info__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 960px) {
+  .info__container {
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+}
+.info__inner {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+@media (min-width: 600px) {
+  .info__inner {
+    width: 40vw;
+  }
+  .info__inner:nth-of-type(3) {
+    width: 100%;
+  }
+}
+@media (min-width: 960px) {
+  .info__inner {
+    width: 30vw;
+  }
+  .info__inner:nth-of-type(3) {
+    width: 30vw;
+  }
+}
+.info__inner:nth-of-type(1):hover .info__item__text__ja {
+  transform: translateY(100%);
+}
+.info__inner:nth-of-type(1):hover .info__item__text__bar {
+  animation: info-hover 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+}
+.info__inner:nth-of-type(1):hover .info__item__text__arrow::after {
+  transform: rotate(0) translateY(3px);
+}
+@media (min-width: 600px) {
+  .info__inner:nth-of-type(1):hover .info__item__text__arrow::after {
+    transform: rotate(0) translateY(3.5px);
+  }
+}
+@media (min-width: 960px) {
+  .info__inner:nth-of-type(1):hover .info__item__text__arrow::after {
+    transform: rotate(0) translateY(6px);
+  }
+}
+@media (min-width: 1280px) {
+  .info__inner:nth-of-type(1):hover .info__item__text__arrow::after {
+    transform: rotate(0) translateY(8px);
+  }
+}
+.info__inner:nth-of-type(1):hover .info__item__text__click {
+  transform: translateY(0);
+}
+.info__inner:nth-of-type(2):hover .info__item__text__ja {
+  transform: translateY(100%);
+}
+.info__inner:nth-of-type(2):hover .info__item__text__bar {
+  animation: info-hover 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+}
+.info__inner:nth-of-type(2):hover .info__item__text__arrow::after {
+  transform: rotate(0) translateY(3px);
+}
+.info__inner:nth-of-type(2):hover .info__item__text__click {
+  transform: translateY(0);
+}
+.info__inner:nth-of-type(3):hover .info__item__text__ja {
+  transform: translateY(100%);
+}
+.info__inner:nth-of-type(3):hover .info__item__text__bar {
+  animation: info-hover 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+}
+.info__inner:nth-of-type(3):hover .info__item__text__arrow::after {
+  transform: rotate(0) translateY(3px);
+}
+.info__inner:nth-of-type(3):hover .info__item__text__click {
+  transform: translateY(0);
+}
+.info__item {
+  position: relative;
+}
+.info__item__image {
+  width: 100%;
+  height: 200px;
+}
+.info__item__text {
+  position: relative;
+  width: 75vw;
+  max-width: 220px;
+}
+.info__item__text__p {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
+}
+.info__item__text__bar {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #333333;
+  transform: scaleX(5%);
+  transform-origin: left;
+  animation: info-out 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+}
+.info__item__text__arrow {
+  display: block;
+  width: 5px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+.info__item__text__arrow::before, .info__item__text__arrow::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  position: absolute;
+  transition: all 1s 0.1s cubic-bezier(1, 0, 0.01, 1);
+}
+.info__item__text__arrow::before {
+  transform: rotate(40deg) translate(1.3px, 0.9px);
+}
+@media (min-width: 960px) {
+  .info__item__text__arrow::before {
+    transform: rotate(40deg) translate(3.5px, 2.6px);
+  }
+}
+@media (min-width: 1280px) {
+  .info__item__text__arrow::before {
+    transform: rotate(40deg) translate(4.5px, 4.6px);
+  }
+}
+.info__item__text__arrow::after {
+  transform: rotate(320deg) translate(-2.46px, 3.7px);
+}
+@media (min-width: 960px) {
+  .info__item__text__arrow::after {
+    transform: rotate(320deg) translate(-3.66px, 5.8px);
+  }
+}
+@media (min-width: 1280px) {
+  .info__item__text__arrow::after {
+    transform: rotate(320deg) translate(-5.66px, 7.8px);
+  }
+}
+.info__item__text__ja {
+  display: block;
+  transition: all 0.5s cubic-bezier(1, 0, 0.01, 1);
+}
+.info__item__text__click {
+  position: absolute;
+  bottom: 0;
+  right: 3%;
+  transform: translateY(100%);
+  transition: all 0.5s cubic-bezier(1, 0, 0.01, 1);
+}
+@keyframes info-hover {
+  0% {
+    transform: scaleX(5%);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(100%);
+    transform-origin: left;
+  }
+  51% {
+    transform: scaleX(100%);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(5%);
+    transform-origin: right;
+  }
+}
+@keyframes info-out {
+  0% {
+    transform: scaleX(5%);
+    transform-origin: right;
+  }
+  50% {
+    transform: scaleX(100%);
+    transform-origin: right;
+  }
+  51% {
+    transform: scaleX(100%);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(5%);
+    transform-origin: left;
+  }
 }/*# sourceMappingURL=style.css.map */

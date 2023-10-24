@@ -754,6 +754,15 @@
 
     & .content__title {
         padding-top: 100px;
+
+        & h2,
+        span {
+            color: white;
+        }
+
+        &__bar {
+            background-color: white;
+        }
     }
 
     &::before {
@@ -866,7 +875,7 @@
 }
 
 ////////////////////////////////////
-///////////////works//////////////
+///////////////recruit//////////////
 ////////////////////////////////////
 
 
@@ -889,7 +898,7 @@
         margin-left: calc(50% - 20vw);
         @extend .mb-md;
 
-        @include mq(lg){
+        @include mq(lg) {
             width: 50vw;
             margin-left: calc(100% - 40vw);
         }
@@ -900,13 +909,14 @@
     &__description {
         padding-bottom: 50px;
 
-        @include mq(lg){
+        @include mq(lg) {
             margin-left: 10%;
             padding-bottom: 100px
         }
 
         &__title {
             @extend .mb-sm;
+
             & h3 {
                 @extend .font-lg;
             }
@@ -918,6 +928,235 @@
             max-width: 600px;
 
             & p {}
+        }
+    }
+}
+
+////////////////////////////////////
+//////////////infomation////////////
+////////////////////////////////////
+
+.info {
+    @extend .mb-lg;
+
+    &__container{
+        @include mq(md){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @include mq(lg){
+            flex-wrap: nowrap;
+            gap: 20px
+        }
+    }
+
+    &__inner {
+        @extend .mb-md;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+        @include mq(md){
+            width: 40vw;
+
+            &:nth-of-type(3){
+                width: 100%;
+            }
+        }
+        @include mq(lg){
+            width: 30vw;
+
+            &:nth-of-type(3){
+                width: 30vw;
+            }
+
+        }
+
+        &:nth-of-type(1):hover {
+            & .info__item__text__ja {
+               transform: translateY(100%);
+            }
+            & .info__item__text__bar {
+                animation: info-hover 1s $ease forwards;
+            }
+            & .info__item__text__arrow::after {
+                transform: rotate(0) translateY(3px);
+
+                @include mq(md){
+                    transform: rotate(0) translateY(3.5px);
+                }
+                @include mq(lg){
+                    transform: rotate(0) translateY(6px);
+                }
+                @include mq(xl){
+                    transform: rotate(0) translateY(8px);
+                }
+            }
+            & .info__item__text__click {
+                transform: translateY(0);
+            }
+        }
+        &:nth-of-type(2):hover {
+            & .info__item__text__ja {
+               transform: translateY(100%);
+            }
+            & .info__item__text__bar {
+                animation: info-hover 1s $ease forwards;
+            }
+            & .info__item__text__arrow::after {
+                transform: rotate(0) translateY(3px);
+            }
+            & .info__item__text__click {
+                transform: translateY(0);
+            }
+        }
+        &:nth-of-type(3):hover {
+            & .info__item__text__ja {
+               transform: translateY(100%);
+            }
+            & .info__item__text__bar {
+                animation: info-hover 1s $ease forwards;
+            }
+            & .info__item__text__arrow::after {
+                transform: rotate(0) translateY(3px);
+            }
+            & .info__item__text__click {
+                transform: translateY(0);
+            }
+        }
+
+
+    }
+
+    &__item {
+        position: relative;
+
+        &__image {
+            width: 100%;
+            height: 200px;
+            @extend .mb-sm;
+
+            &__img {}
+        }
+
+        &__text {
+            position: relative;
+            width: 75vw;
+            max-width: 220px;
+
+            &__p {
+                font-family: $fNoto;
+                font-weight: bold;
+                @extend .font-lg;
+            }
+
+            &__bar {
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: $cBlack;
+                transform: scaleX(5%);
+                transform-origin: left;
+                animation: info-out 1s $ease forwards;
+            }
+
+            &__arrow {
+                display: block;
+                width: 5px;
+                height: 1px;
+                position: absolute;
+                top: 50%;
+                right: 0;
+
+                &::before,
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background-color: $cBlack;
+                    position: absolute;
+                    transition: all 1s .1s $ease;
+                }
+
+                &::before {
+                    transform: rotate(40deg) translate(1.3px, .9px);
+
+                    @include mq(lg){
+                        transform: rotate(40deg) translate(3.5px, 2.6px);
+                    }
+                    @include mq(xl){
+                        transform: rotate(40deg) translate(4.5px, 4.6px);
+                    }
+                }
+
+                &::after {
+                    transform: rotate(320deg) translate(-2.46px, 3.7px);
+
+                    @include mq(lg){
+                        transform: rotate(320deg) translate(-3.66px, 5.8px);
+                    }
+                    @include mq(xl){
+                        transform: rotate(320deg) translate(-5.66px, 7.8px);
+                    }
+                }
+            }
+
+            &__ja {
+                display: block;
+                transition: all .5s $ease;
+            }
+
+            &__click {
+                position: absolute;
+                bottom: 0;
+                right: 3%;
+                transform: translateY(100%);
+                transition: all .5s $ease;
+            }
+        }
+
+    }
+
+    @keyframes info-hover {
+        0% {
+            transform: scaleX(5%);
+            transform-origin: left;
+        }
+
+        50% {
+            transform: scaleX(100%);
+            transform-origin: left;
+        }
+
+        51% {
+            transform: scaleX(100%);
+            transform-origin: right;
+        }
+
+        100% {
+            transform: scaleX(5%);
+            transform-origin: right;
+        }
+    }
+
+    @keyframes info-out {
+        0% {
+            transform: scaleX(5%);
+            transform-origin: right;
+        }
+
+        50% {
+            transform: scaleX(100%);
+            transform-origin: right;
+        }
+
+        51% {
+            transform: scaleX(100%);
+            transform-origin: left;
+        }
+
+        100% {
+            transform: scaleX(5%);
+            transform-origin: left;
         }
     }
 }
