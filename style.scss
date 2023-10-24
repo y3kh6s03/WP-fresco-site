@@ -234,6 +234,8 @@
 
 
 .about {
+    @extend .mb-lg;
+
     &__title {
         height: 300px;
         display: flex;
@@ -242,24 +244,25 @@
         margin-right: calc(50% - 50vw);
         @extend .mb-md;
 
-        @include mq(lg){
+        @include mq(lg) {
             height: 400px;
         }
-        @include mq(xl){
+
+        @include mq(xl) {
             height: 450px;
         }
 
-        &__container {
-        }
+        &__container {}
 
         &__image {
             height: 100%;
             width: 50vw;
 
-            @include mq(lg){
+            @include mq(lg) {
                 width: 30vw;
             }
-            @include mq(xl){
+
+            @include mq(xl) {
                 width: 20vw;
             }
         }
@@ -269,10 +272,11 @@
         width: 70vw;
         @extend .mb-md;
 
-        @include mq(md){
+        @include mq(md) {
             max-width: 500px
         }
-        @include mq(xl){
+
+        @include mq(xl) {
             width: 50vw;
             max-width: 600px
         }
@@ -287,13 +291,15 @@
         position: relative;
         height: 160px;
 
-        @include mq(sm){
+        @include mq(sm) {
             height: 200px;
         }
-        @include mq(md){
+
+        @include mq(md) {
             height: 310px;
         }
-        @include mq(xl){
+
+        @include mq(xl) {
             height: 380px;
         }
 
@@ -308,11 +314,12 @@
                 top: 0;
                 left: -6%;
 
-                @include mq(md){
+                @include mq(md) {
                     max-width: 150px;
                     height: 230px;
                 }
-                @include mq(lg){
+
+                @include mq(lg) {
                     max-width: 180px;
                     height: 280px;
                     left: -13%;
@@ -324,13 +331,144 @@
                 bottom: 100px;
                 transform: translateY(50%);
 
-                @include mq(md){
+                @include mq(md) {
                     max-width: 300px;
                 }
-                @include mq(xl){
+
+                @include mq(xl) {
                     max-width: 350px;
                 }
             }
         }
     }
+}
+
+
+////////////////////////////////////
+///////////////about///////////////
+////////////////////////////////////
+
+
+.future {
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 100vw;
+        height: 110vh;
+        background-color: $cGreen;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -99;
+    }
+
+    &__title {
+        @extend .mb-md;
+        padding-top: 100px;
+
+        & h2,
+        span {
+            color: white;
+        }
+
+        & .content__title__bar {
+            background-color: white;
+        }
+
+        &__container {}
+    }
+
+    &__description__wrapper {
+        // pointer-events: none;s
+
+    }
+
+    &__description {
+        width: 100vw;
+        height: 100vh;
+        margin: 0 calc(50% - 50vw);
+        // padding: 0 5%;
+        background-image: url("/images/main-images/healthy-body.jpg");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+        @include mq(lg){
+            // padding: 0 10%;
+        }
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: .1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        &__title {
+            @extend .font-lg;
+            @extend .mb-sm;
+            color: white;
+            padding-top: 100px;
+            position: relative;
+            z-index: 100;
+            margin-left: 5%;
+
+            @include mq(lg){
+                margin-left: 10%;
+            }
+        }
+
+        &__text {
+            @extend .mb-md;
+            width: 80vw;
+            max-width: 700px;
+            color: white;
+            position: relative;
+            z-index: 100;
+            margin-left: 5%;
+
+            @include mq(lg){
+                margin-left: 10%;
+            }
+        }
+    }
+
+    & .pagelink {
+        z-index: 100;
+        margin-left: 5%;
+
+        @include mq(lg){
+            margin-left: 10%;
+        }
+
+        &__name {
+            color: white;
+        }
+
+        &__text {
+            color: white;
+
+        }
+
+        &__bar {
+            background-color: white;
+        }
+
+        &__arrow {
+
+            &::before,
+            &::after {
+                background-color: white;
+            }
+        }
+
+    }
+
+
 }
