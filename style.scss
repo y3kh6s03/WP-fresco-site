@@ -481,6 +481,7 @@
 
 .service {
     @extend .mb-lg;
+
     &__title {
         &__container {}
     }
@@ -504,39 +505,46 @@
                         & img {
                             transform: translateY(0%);
                         }
+
                         & p {
                             opacity: 1;
                             transform: translateX(0%);
                         }
                     }
                 }
+
                 &:nth-of-type(2):hover {
                     & .service__list__item__image {
                         & img {
                             transform: translateY(0%);
                         }
+
                         & p {
                             opacity: 1;
                             transform: translateX(0%);
                         }
                     }
                 }
+
                 &:nth-of-type(3):hover {
                     & .service__list__item__image {
                         & img {
                             transform: translateY(0%);
                         }
+
                         & p {
                             opacity: 1;
                             transform: translateX(0%);
                         }
                     }
                 }
+
                 &:nth-of-type(4):hover {
                     & .service__list__item__image {
                         & img {
                             transform: translateY(0%);
                         }
+
                         & p {
                             opacity: 1;
                             transform: translateX(0%);
@@ -581,7 +589,7 @@
                     top: 5%;
                     left: 5%;
 
-                    @include mq(lg){
+                    @include mq(lg) {
                         left: 10%;
                         opacity: 0;
                         transform: translateX(100px);
@@ -619,10 +627,11 @@
                     transform-origin: left;
                     animation: service-link-out 1s $ease forwards;
 
-                    @include mq(lg){
+                    @include mq(lg) {
                         width: 350px;
                     }
-                    @include mq(xl){
+
+                    @include mq(xl) {
                         width: 500px;
                     }
                 }
@@ -679,49 +688,176 @@
             }
         }
     }
+
+    @keyframes service-link-hover {
+        0% {
+            transform: scaleX(5%);
+            transform-origin: left;
+        }
+
+        50% {
+            transform: scaleX(100%);
+            transform-origin: left;
+        }
+
+        51% {
+            transform: scaleX(100%);
+            transform-origin: right;
+        }
+
+        100% {
+            transform: scaleX(5%);
+            transform-origin: right;
+        }
+    }
+
+    @keyframes service-link-out {
+        0% {
+            transform: scaleX(5%);
+            transform-origin: right;
+        }
+
+        50% {
+            transform: scaleX(100%);
+            transform-origin: right;
+        }
+
+        51% {
+            transform: scaleX(100%);
+            transform-origin: left;
+        }
+
+        100% {
+            transform: scaleX(5%);
+            transform-origin: left;
+        }
+    }
 }
 
 
-@keyframes service-link-hover {
-    0% {
-        transform: scaleX(5%);
-        transform-origin: left;
+////////////////////////////////////
+///////////////works//////////////
+////////////////////////////////////
+
+
+.works {
+    @extend .mb-lg;
+    height: 700px;
+
+    @include mq(lg){
+        height: 750px;
+    }
+    @include mq(xl){
+        height: 800px;
     }
 
-    50% {
-        transform: scaleX(100%);
-        transform-origin: left;
+    & .content__title {
+        padding-top: 100px;
     }
 
-    51% {
-        transform: scaleX(100%);
-        transform-origin: right;
+    &::before {
+        content: "";
+        width: 80vw;
+        height: 700px;
+        background-color: $cGreen;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -98;
+
+        @include mq(lg){
+            height: 750px;
+        }
+        @include mq(xl){
+            height: 800px;
+        }
     }
 
-    100% {
-        transform: scaleX(5%);
-        transform-origin: right;
+    &__swipe {
+        &__text {
+            @extend .font-lg;
+            color: white;
+        }
+
+        &__bar {
+            display: block;
+            width: 120px;
+            height: 1px;
+            background-color: white;
+            animation: swipe-animation 2s $ease infinite;
+        }
     }
+
+
 }
 
-@keyframes service-link-out {
-    0% {
-        transform: scaleX(5%);
-        transform-origin: right;
+.swiper {
+    @extend .mb-md;
+
+    &-wrapper {
+        transition-timing-function: $ease;
     }
 
-    50% {
-        transform: scaleX(100%);
-        transform-origin: right;
+    &-slide {
+        position: relative;
+
+
+        &::before {
+            content: "";
+            width: 80vw;
+            max-width: 400px;
+            height: 100%;
+            background-color: black;
+            opacity: .1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        & img {
+            display: block;
+            width: 80vw;
+            max-width: 400px;
+            height: 300px;
+            position: relative;
+        }
+
+        & .text__container {
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            z-index: 11;
+        }
+
+        & .works__service {
+            display: block;
+            color: white;
+
+        }
+
+        & .works__service__author {
+            color: white;
+        }
     }
 
-    51% {
-        transform: scaleX(100%);
-        transform-origin: left;
-    }
-
-    100% {
-        transform: scaleX(5%);
-        transform-origin: left;
+    @keyframes swipe-animation {
+        0%{
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+        50%{
+            transform: scaleX(100%);
+            transform-origin: left;
+        }
+        51%{
+            transform: scaleX(100%);
+            transform-origin: right;
+        }
+        100%{
+            transform: scaleX(0%);
+            transform-origin: right;
+        }
     }
 }

@@ -22,21 +22,21 @@
   }
 }
 
-.font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .pagelink__name {
+.font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .pagelink__name {
   font-size: 18px;
 }
 @media (min-width: 600px) {
-  .font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .pagelink__name {
+  .font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .pagelink__name {
     font-size: 20px;
   }
 }
 @media (min-width: 960px) {
-  .font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .pagelink__name {
+  .font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .pagelink__name {
     font-size: 24px;
   }
 }
 @media (min-width: 1280px) {
-  .font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .pagelink__name {
+  .font-lg, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .pagelink__name {
     font-size: 26px;
   }
 }
@@ -103,11 +103,11 @@
   margin-bottom: 20px;
 }
 
-.mb-md, .hero, .about__title, .about__description, .future__title, .future__description__text, .content__title {
+.mb-md, .hero, .about__title, .about__description, .future__title, .future__description__text, .swiper, .content__title {
   margin-bottom: 50px;
 }
 
-.mb-lg, .about, .future, .service {
+.mb-lg, .about, .future, .service, .works {
   margin-bottom: 200px;
 }
 
@@ -803,7 +803,6 @@ img {
     transform: rotate(360deg);
   }
 }
-
 @keyframes service-link-hover {
   0% {
     transform: scaleX(5%);
@@ -838,5 +837,110 @@ img {
   100% {
     transform: scaleX(5%);
     transform-origin: left;
+  }
+}
+
+.works {
+  height: 700px;
+}
+@media (min-width: 960px) {
+  .works {
+    height: 750px;
+  }
+}
+@media (min-width: 1280px) {
+  .works {
+    height: 800px;
+  }
+}
+.works .content__title {
+  padding-top: 100px;
+}
+.works::before {
+  content: "";
+  width: 80vw;
+  height: 700px;
+  background-color: #839C96;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -98;
+}
+@media (min-width: 960px) {
+  .works::before {
+    height: 750px;
+  }
+}
+@media (min-width: 1280px) {
+  .works::before {
+    height: 800px;
+  }
+}
+.works__swipe__text {
+  color: white;
+}
+.works__swipe__bar {
+  display: block;
+  width: 120px;
+  height: 1px;
+  background-color: white;
+  animation: swipe-animation 2s cubic-bezier(1, 0, 0.01, 1) infinite;
+}
+
+.swiper-wrapper {
+  transition-timing-function: cubic-bezier(1, 0, 0.01, 1);
+}
+.swiper-slide {
+  position: relative;
+}
+.swiper-slide::before {
+  content: "";
+  width: 80vw;
+  max-width: 400px;
+  height: 100%;
+  background-color: black;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+.swiper-slide img {
+  display: block;
+  width: 80vw;
+  max-width: 400px;
+  height: 300px;
+  position: relative;
+}
+.swiper-slide .text__container {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  z-index: 11;
+}
+.swiper-slide .works__service {
+  display: block;
+  color: white;
+}
+.swiper-slide .works__service__author {
+  color: white;
+}
+@keyframes swipe-animation {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(100%);
+    transform-origin: left;
+  }
+  51% {
+    transform: scaleX(100%);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0%);
+    transform-origin: right;
   }
 }/*# sourceMappingURL=style.css.map */
