@@ -1,0 +1,57 @@
+@use "./_globals.scss" as *;
+
+
+/////////////////////////////////////
+// subpage-hero
+/////////////////////////////////////
+
+.subHero {
+    width: 100vw;
+    max-width: 1440px;
+    margin: 0 auto 120px;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+
+    @include mq(lg){
+        padding-left: 10%;;
+    }
+
+    &__title {
+        flex: 4;
+        font-family: $fNoto;
+        @extend .font-xxl;
+        line-height: 1.2;
+        margin-right: -10vw;
+        z-index: 1;
+
+        margin-right: -20vw;
+
+        &__bar {
+            display: block;
+            width: 50vw;
+            max-width: 600px;
+            height: 1px;
+            background-color: $cBlack;
+            box-shadow: -1px 0px 2px 1px white;
+            z-index: 10;
+            position: relative;
+        }
+
+        &__ja {
+            display: block;
+
+        }
+    }
+    &__image {
+        flex: 5;
+        max-width: 550px;
+        height: 100vh;
+        max-height: 450px;
+
+        @include mq(lg){
+            max-width: 700px;
+            max-height: 600px;
+        }
+    }
+}
