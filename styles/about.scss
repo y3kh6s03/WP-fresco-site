@@ -1,0 +1,132 @@
+@use "./_subglobals.scss" as *;
+@use "./_globals.scss" as *;
+
+
+.philosophy {
+    @extend .mb-lg;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__headline {
+        font-family: $fNoto;
+        @extend .font-xxl;
+        @extend .mb-md;
+    }
+
+    &__description {
+        font-family: $fNotoJP;
+    }
+}
+
+.aboutContents {
+    @extend .mb-lg;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__inner {
+
+        @include mq(md) {
+            width: 80%;
+        }
+
+        @include mq(lg) {
+            width: 100%;
+            display: flex;
+            gap: 50px;
+        }
+
+        @include mq(xl) {
+            gap: 100px;
+        }
+    }
+
+    &__headline {
+        font-family: $fNotoJP;
+        @extend .font-lg;
+        @extend .mb-md;
+
+        @include mq(md) {
+            width: 310px
+        }
+
+        @include mq(lg) {
+            flex: 1;
+        }
+    }
+
+    &__description {
+        font-family: $fNotoJP;
+
+        @include mq(lg) {
+            flex: 1;
+        }
+    }
+}
+
+.message {
+    @extend .mb-lg;
+
+    &__inner {
+        @include mq(lg) {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 50px;
+        }
+
+        &__image {
+            width: 70vw;
+            max-width: 500px;
+            height: 300px;
+            max-height: 500px;
+            margin-left: calc(50% - 50vw);
+            @extend .mb-md;
+
+            @include mq(lg) {
+                flex: 2;
+                height: 100%;
+                margin-left: auto;
+                margin-right: calc(50% - 50vw);
+
+                &__img{
+                    max-height: 500px;
+                }
+            }
+        }
+
+        &__description {
+            @include mq(lg) {
+                flex: 3;
+                max-width: 500px
+            }
+
+            & h3 {
+                @extend .mb-sm;
+                @extend .font-lg;
+                font-family: $fNotoJP;
+                font-weight: bold
+            }
+
+            & p {
+                @extend .mb-md;
+                font-family: $fNotoJP
+            }
+
+            &__author {
+                @include mq(lg) {
+                    text-align: end
+                }
+                & span {
+                    @extend .font-sm;
+                    font-family: $fNotoJP;
+                    margin-right: 60px
+                }
+
+                & p {
+                    @extend .font-lg;
+                    font-family: $fNotoJP
+                }
+            }
+        }
+    }
+
+}
