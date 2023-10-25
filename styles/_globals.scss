@@ -292,41 +292,123 @@ img {
             transform: translateY(0);
         }
     }
+    @keyframes pagelink_bar_hover {
+        0%{
+            transform: scaleX(10%);
+            transform-origin: left;
+        }
+        50%{
+            transform: scaleX(100%);
+            transform-origin: left;
+        }
+        51%{
+            transform: scaleX(100%);
+            transform-origin: right;
+        }
+        100%{
+            transform: scaleX(10%);
+            transform-origin: right;
+        }
+    }
+    @keyframes pagelink_bar_out {
+        0%{
+            transform: scaleX(10%);
+            transform-origin: right;
+        }
+        50%{
+            transform: scaleX(100%);
+            transform-origin: right;
+        }
+        51%{
+            transform: scaleX(100%);
+            transform-origin: left;
+        }
+        100%{
+            transform: scaleX(10%);
+            transform-origin: left;
+        }
+    }
 }
 
-@keyframes pagelink_bar_hover {
-    0%{
-        transform: scaleX(10%);
-        transform-origin: left;
+
+
+
+.contact__button {
+    width: 90vw;
+    height: 130px;
+    max-width: 550px;
+    min-width: 330px;
+    border-radius: 10px;
+    background-color: $cBlue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    margin: 0 auto;
+
+    &__a {}
+
+    &__textinner {
+        clip-path: polygon(-170px 0, 370px 0, 370px 100%, -170px 100%);
+
+        &__ja {
+            display: block;
+            @extend .font-lg;
+            font-family: $fNotoJP;
+            font-weight: bold;
+            color: white;
+            line-height: 40px;
+            position: relative;
+            transition: all .5s $ease;
+
+            &::before {
+                content: "Contact";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -100%);
+                transition: all .5s $ease;
+            }
+
+        }
+
+        &__bar {
+            display: block;
+            width: 100%;
+            max-width: 340px;
+            height: 1px;
+            background-color: white;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        &__click {
+            display: block;
+            width: 100%;
+            color: white;
+            font-family: $fNoto;
+            text-align: center;
+            line-height: 50px;
+            transition: all 1s $ease;
+        }
     }
-    50%{
-        transform: scaleX(100%);
-        transform-origin: left;
-    }
-    51%{
-        transform: scaleX(100%);
-        transform-origin: right;
-    }
-    100%{
-        transform: scaleX(10%);
-        transform-origin: right;
-    }
-}
-@keyframes pagelink_bar_out {
-    0%{
-        transform: scaleX(10%);
-        transform-origin: right;
-    }
-    50%{
-        transform: scaleX(100%);
-        transform-origin: right;
-    }
-    51%{
-        transform: scaleX(100%);
-        transform-origin: left;
-    }
-    100%{
-        transform: scaleX(10%);
-        transform-origin: left;
+
+    &:hover {
+        & .contact__button__textinner {
+            &__ja {
+                transform: translateY(-100%);
+
+                &::before{
+                    transform: translate(-50%, 100%);
+                }
+            }
+        }
+        & .contact__button__textinner__click {
+            transform: translateX(50%);
+        }
     }
 }

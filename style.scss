@@ -939,13 +939,14 @@
 .info {
     @extend .mb-lg;
 
-    &__container{
-        @include mq(md){
+    &__container {
+        @include mq(md) {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        @include mq(lg){
+
+        @include mq(lg) {
             flex-wrap: nowrap;
             gap: 20px
         }
@@ -955,17 +956,18 @@
         @extend .mb-md;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
-        @include mq(md){
+        @include mq(md) {
             width: 40vw;
 
-            &:nth-of-type(3){
+            &:nth-of-type(3) {
                 width: 100%;
             }
         }
-        @include mq(lg){
+
+        @include mq(lg) {
             width: 30vw;
 
-            &:nth-of-type(3){
+            &:nth-of-type(3) {
                 width: 30vw;
             }
 
@@ -973,52 +975,89 @@
 
         &:nth-of-type(1):hover {
             & .info__item__text__ja {
-               transform: translateY(100%);
+                transform: translateY(100%);
             }
+
             & .info__item__text__bar {
                 animation: info-hover 1s $ease forwards;
             }
+
             & .info__item__text__arrow::after {
                 transform: rotate(0) translateY(3px);
 
-                @include mq(md){
+                @include mq(md) {
                     transform: rotate(0) translateY(3.5px);
                 }
-                @include mq(lg){
+
+                @include mq(lg) {
                     transform: rotate(0) translateY(6px);
                 }
-                @include mq(xl){
+
+                @include mq(xl) {
                     transform: rotate(0) translateY(8px);
                 }
             }
+
             & .info__item__text__click {
                 transform: translateY(0);
             }
         }
+
         &:nth-of-type(2):hover {
             & .info__item__text__ja {
-               transform: translateY(100%);
+                transform: translateY(100%);
             }
+
             & .info__item__text__bar {
                 animation: info-hover 1s $ease forwards;
             }
+
             & .info__item__text__arrow::after {
                 transform: rotate(0) translateY(3px);
+
+                @include mq(md) {
+                    transform: rotate(0) translateY(3.5px);
+                }
+
+                @include mq(lg) {
+                    transform: rotate(0) translateY(6px);
+                }
+
+                @include mq(xl) {
+                    transform: rotate(0) translateY(8px);
+                }
             }
+
             & .info__item__text__click {
                 transform: translateY(0);
             }
         }
+
         &:nth-of-type(3):hover {
             & .info__item__text__ja {
-               transform: translateY(100%);
+                transform: translateY(100%);
             }
+
             & .info__item__text__bar {
                 animation: info-hover 1s $ease forwards;
             }
+
             & .info__item__text__arrow::after {
                 transform: rotate(0) translateY(3px);
+
+                @include mq(md) {
+                    transform: rotate(0) translateY(3.5px);
+                }
+
+                @include mq(lg) {
+                    transform: rotate(0) translateY(6px);
+                }
+
+                @include mq(xl) {
+                    transform: rotate(0) translateY(8px);
+                }
             }
+
             & .info__item__text__click {
                 transform: translateY(0);
             }
@@ -1080,10 +1119,11 @@
                 &::before {
                     transform: rotate(40deg) translate(1.3px, .9px);
 
-                    @include mq(lg){
+                    @include mq(lg) {
                         transform: rotate(40deg) translate(3.5px, 2.6px);
                     }
-                    @include mq(xl){
+
+                    @include mq(xl) {
                         transform: rotate(40deg) translate(4.5px, 4.6px);
                     }
                 }
@@ -1091,10 +1131,11 @@
                 &::after {
                     transform: rotate(320deg) translate(-2.46px, 3.7px);
 
-                    @include mq(lg){
+                    @include mq(lg) {
                         transform: rotate(320deg) translate(-3.66px, 5.8px);
                     }
-                    @include mq(xl){
+
+                    @include mq(xl) {
                         transform: rotate(320deg) translate(-5.66px, 7.8px);
                     }
                 }
@@ -1160,3 +1201,25 @@
         }
     }
 }
+
+////////////////////////////////////
+///////////////contact//////////////
+////////////////////////////////////
+
+
+.contact {
+    @extend .mb-lg;
+
+    &__contents {
+        &__p {
+            @extend .font-md;
+            font-family: $fNotoJP;
+            @extend .mb-md;
+        }
+    }
+}
+
+////////////////////////////////////
+///////////////contact//////////////
+////////////////////////////////////
+
