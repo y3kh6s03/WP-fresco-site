@@ -1,0 +1,77 @@
+@use "./_globals.scss" as *;
+@use "./_subglobals.scss" as *;
+
+
+.contents {
+    @extend .mb-md;
+    padding: 0 5%;
+    max-width: 1440px;
+    margin: 0 auto 150px;
+
+    @include mq(md) {
+        padding: 0 0 0 5%;
+    }
+
+
+    &__wrapper {
+
+        @include mq(md) {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        @include mq(lg) {
+            gap: 50px;
+        }
+    }
+
+
+    &__inner {
+        @include mq(md) {
+            flex: 3;
+        }
+
+        @include mq(lg) {
+            max-width: 600px
+        }
+    }
+
+    &__headline {
+        @extend .mb-md;
+
+        &__ja {
+            @extend .font-lg;
+            font-family: $fNotoJP;
+        }
+
+        &__bar {
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $cBlack;
+        }
+
+        &__en {
+            font-family: $fNoto;
+        }
+    }
+
+
+
+    &__description {
+        @extend .mb-md;
+        font-family: $fNotoJP;
+    }
+
+    &__image {
+        @include mq(md) {
+            flex: 2;
+            max-width: 550px
+        }
+
+        &__img {}
+    }
+
+
+}
