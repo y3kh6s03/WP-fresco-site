@@ -676,8 +676,9 @@ small {
 }
 @media (min-width: 960px) {
   .contents__header__image {
-    max-width: 450px;
-    height: 400px;
+    width: 50vw;
+    max-width: 700px;
+    height: 450px;
   }
 }
 .contents__description {
@@ -714,7 +715,8 @@ small {
   text-align: end;
 }
 .contents:nth-of-type(odd) .contents__header__jaName {
-  right: 0;
+  right: auto;
+  left: 0;
 }
 .contents:nth-of-type(odd) .contents__image {
   margin-left: calc(100% - 50vw);
