@@ -2,22 +2,7 @@
 @use "./_subglobals.scss" as *;
 
 
-.section__headline {
-    @extend .font-lg;
-    font-family: $fNotoJP;
-    padding-left: 5%;
-    @extend .mb-lg;
 
-    @include mq(lg) {
-        padding-left: 10%;
-    }
-
-    @include mq(xl) {
-        max-width: 1440px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
 
 .contents {
     @extend .mb-lg;

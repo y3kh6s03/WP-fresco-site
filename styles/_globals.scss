@@ -207,6 +207,25 @@ img {
     object-position: center;
 }
 
+.section__headline {
+    @extend .font-lg;
+    font-family: $fNotoJP;
+    font-weight: bold;
+    padding-left: 5%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    @extend .mb-lg;
+
+    @include mq(lg) {
+        padding-left: 10%;
+    }
+
+    & h3{
+        max-width: 650px;
+    }
+}
+
 /////////////////////////////////////
 // Button
 /////////////////////////////////////
