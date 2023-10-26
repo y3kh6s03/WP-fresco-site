@@ -39,11 +39,18 @@
         &__image {
             flex: 1;
             height: 300px;
+
+            @include mq(lg){
+                max-width: 450px;
+                height: 400px;
+            }
         }
     }
 
     &__description {
         @extend .mb-md;
+        max-width: 450px;
+
         &__author {
             @extend .mb-sm;
             & span{
@@ -65,7 +72,11 @@
 
     &__image {
         width: 40vw;
-        &__img {}
+
+        @include mq(md){
+            width: 35vw;
+            max-width: 300px;
+        }
 
     }
 
@@ -88,6 +99,11 @@
 
         & .contents__image {
             margin-left: calc(100% - 50vw);
+
+            @include mq(xl){
+                margin-left: auto;
+                margin-right: calc(50% - 20vw);
+            }
             &__img {}
 
         }
