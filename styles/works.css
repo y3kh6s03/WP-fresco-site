@@ -22,21 +22,21 @@
   }
 }
 
-.font-lg, .contents__header__enName, .footer__nav__ul li a, .contact__button__textinner__ja, .pagelink__name {
+.font-lg, .contents__header__enName, .footer__nav__ul li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
   font-size: 18px;
 }
 @media (min-width: 600px) {
-  .font-lg, .contents__header__enName, .footer__nav__ul li a, .contact__button__textinner__ja, .pagelink__name {
+  .font-lg, .contents__header__enName, .footer__nav__ul li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
     font-size: 20px;
   }
 }
 @media (min-width: 960px) {
-  .font-lg, .contents__header__enName, .footer__nav__ul li a, .contact__button__textinner__ja, .pagelink__name {
+  .font-lg, .contents__header__enName, .footer__nav__ul li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
     font-size: 24px;
   }
 }
 @media (min-width: 1280px) {
-  .font-lg, .contents__header__enName, .footer__nav__ul li a, .contact__button__textinner__ja, .pagelink__name {
+  .font-lg, .contents__header__enName, .footer__nav__ul li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
     font-size: 26px;
   }
 }
@@ -112,7 +112,7 @@
   margin-bottom: 50px;
 }
 
-.mb-lg, .contents {
+.mb-lg, .contents, .section__headline {
   margin-bottom: 200px;
 }
 
@@ -177,6 +177,23 @@ img {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+.section__headline {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  padding-left: 5%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 960px) {
+  .section__headline {
+    padding-left: 10%;
+  }
+}
+.section__headline h3 {
+  max-width: 650px;
 }
 
 .pagelink {

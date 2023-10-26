@@ -1,0 +1,76 @@
+@use "./_globals.scss" as *;
+@use "./_subglobals.scss" as *;
+
+
+.contents {
+    width: 85%;
+    font-family: $fNotoJP;
+    @extend .mb-md;
+
+    @include mq(lg) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__headline {
+        @extend .font-lg;
+        @extend .mb-md;
+    }
+
+    &__inner {
+
+        &__p {
+            @extend .mb-md;
+
+            @include mq(md) {
+                max-width: 600px;
+            }
+
+            @include mq(lg) {
+                width: 50vw;
+            }
+        }
+
+        &__image {
+            width: 90%;
+            max-width: 450px;
+            margin-left: calc(60% - 0vw);
+
+            @include mq(lg) {
+                margin-left: 0;
+                width: 39vw;
+                height: 500px;
+                position: relative;
+                bottom: 0;
+                right: -15%;
+            }
+
+            & img {
+                @include mq(lg){
+                    height: 80%;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    &:nth-of-type(3) {
+        @extend .mb-lg;
+
+        @include mq(lg){
+            flex-direction: row-reverse;
+        }
+
+        & .contents__inner__image {
+            margin-left: 40%;
+            max-width: 350px;
+
+            @include mq(lg){
+                margin-left: -30%;
+            }
+        }
+    }
+
+}
