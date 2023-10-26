@@ -1,0 +1,96 @@
+@use "./_globals.scss" as *;
+@use "./_subglobals.scss" as *;
+
+
+.contents {
+    @extend .mb-lg;
+    &__header {
+        display: flex;
+        @extend .mb-md;
+
+        &__inner {
+            flex: 1;
+            position: relative;
+        }
+
+        &__bar{
+            display: block;
+            width: 93%;
+            height: 1px;
+            background-color: $cBlack;
+        }
+
+        &__enName {
+            @extend .font-lg;
+            font-family: $fNoto;
+        }
+
+        &__jaName {
+            @extend .font-sm;
+            font-family: $fNotoJP;
+            font-weight: bold;
+            padding: 1% 5%;
+            position: absolute;
+            top: 50%;
+            right: 7%;
+            border: 1px solid $cBlack;
+        }
+
+        &__image {
+            flex: 1;
+            height: 300px;
+        }
+    }
+
+    &__description {
+        @extend .mb-md;
+        &__author {
+            @extend .mb-sm;
+            & span{
+                display: block;
+                font-family: $fNoto;
+                font-weight: normal;
+            }
+
+            & p{
+                font-family: $fNotoJP;
+                font-weight: bold;
+            }
+        }
+
+        &__p {
+            font-family: $fNotoJP;
+        }
+    }
+
+    &__image {
+        width: 40vw;
+        &__img {}
+
+    }
+
+    &:nth-of-type(odd){
+
+        & .contents__header{
+            flex-direction: row-reverse;
+            width: 100%;
+            gap: 3%;
+
+            &__bar{
+                width: 100%;
+                text-align: end;
+            }
+
+            &__jaName{
+                right: 0;
+            }
+        }
+
+        & .contents__image {
+            margin-left: calc(100% - 50vw);
+            &__img {}
+
+        }
+    }
+
+}
