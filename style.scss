@@ -43,9 +43,15 @@
 
         }
 
-        &__h1 {
-            @extend .font-xxl;
-            color: white;
+        &__inner {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+            & h1 {
+                @extend .font-xxl;
+                color: white;
+                transform: translateY(100%);
+                transition: all 1s .1s $ease;
+            }
 
         }
 
@@ -54,6 +60,8 @@
             width: 80vw;
             height: 1px;
             background-color: white;
+            transform: scaleX(0);
+            transform-origin: right;
 
             @include mq(lg) {
                 margin: 5px 0;
@@ -65,13 +73,57 @@
         }
 
         &__subtitle {
+            display: block;
             color: white;
             @extend .font-md;
+            opacity: 0;
+            transform: translateX(100px);
+            transition: all 1s 1s $ease;
 
             @include mq(lg) {
                 margin-left: 5px;
             }
 
+        }
+
+        &.loaded {
+            & .hero__title {
+
+                &__p {}
+
+                &__inner {
+                    & h1{
+                        transform: translateY(0);
+                    }
+                }
+
+                &__bar {
+                    animation: loadedTitleBar 2s $ease forwards;
+                }
+
+                &__subtitle {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        }
+        @keyframes loadedTitleBar {
+            0%{
+                transform: scaleX(0);
+                transform-origin: right;
+            }
+            50%{
+                transform: scaleX(100%);
+                transform-origin: right;
+            }
+            51%{
+                transform: scaleX(100%);
+                transform-origin: left;
+            }
+            100%{
+                transform: scaleX(10%);
+                transform-origin: left;
+            }
         }
     }
 
@@ -151,6 +203,8 @@
 
             &__li {
                 @extend .mb-sm;
+                opacity: 0;
+                transform: translateX(40px);
 
                 & a {
                     color: white;

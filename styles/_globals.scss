@@ -480,6 +480,7 @@ img {
         align-items: end;
         justify-content: center;
         z-index: 100;
+        cursor: pointer;
 
 
         &__bar {
@@ -487,30 +488,107 @@ img {
             width: 50px;
             height: 1px;
             background-color: white;
+            transition: all 1s $ease;
+
+            &:nth-child(1) {
+                transform: translateY(50%) rotate(180deg);
+            }
+
+            &:nth-child(2) {
+                transform: translateY(3px) rotate(0deg);
+            }
         }
 
-        &__bar:nth-child(1) {
-            transform: translateY(50%);
-        }
-
-        &__bar:nth-child(2) {
-            transform: translateY(3px);
+        &.onClick{
+            & .header__icon__bar{
+                &:nth-child(1){
+                    transform: rotate(10deg);
+                }
+                &:nth-child(2){
+                    transform: rotate(350deg);
+                }
+            }
         }
     }
 
     &__nav {
-        opacity: 0;
-        position: absolute;
+        width: 80vw;
+        height: 100vh;
+        padding-left: 10%;
+        background-color: $cOrange;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        z-index: 99;
+        transition: all 1s $ease;
 
+        @include mq(md){
+            width: 60vw;
+        }
+        @include mq(lg){
+            width: 50vw;
+        }
 
-        &__title {}
+        &__title {
+            color: white;
+            @extend .font-md;
+            font-weight: bold;
+            @extend .mb-md;
+            position: relative;
+
+            &:before{
+                content: "";
+                width: 90%;
+                height: 1px;
+                background-color: white;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
 
         &__ul {}
 
         &__ul__li {
-            & a {}
+            @extend .mb-sm;
+            & a {
+                color: white;
+                @extend .font-lg;
+            }
 
-            & span {}
+            & span {
+                display: block;
+                color: white;
+                @extend .font-sm;
+            }
+        }
+
+
+        &.onClick{
+            transform: translateX(0);
+        }
+    }
+
+    &__bcc{
+        width: 100vw;
+        height: 100vh;
+        background-color: $cBlack;
+        opacity: .6;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 98;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 1s $ease;
+
+        &.onClick{
+            opacity: .5;
+            pointer-events: all;
         }
     }
 }

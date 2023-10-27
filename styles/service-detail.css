@@ -1,42 +1,42 @@
-.font-sm, .footer__nav__ul li span, .content__title__ja {
+.font-sm, .footer__nav__ul li span, .header__nav__ul__li span, .content__title__ja {
   font-size: 10px;
 }
 @media (min-width: 960px) {
-  .font-sm, .footer__nav__ul li span, .content__title__ja {
+  .font-sm, .footer__nav__ul li span, .header__nav__ul__li span, .content__title__ja {
     font-size: 12px;
   }
 }
 
-.font-md, .footer td, .footer th, * {
+.font-md, .footer td, .footer th, .header__nav__title, * {
   font-size: 14px;
   line-height: 1.7;
 }
 @media (min-width: 600px) {
-  .font-md, .footer td, .footer th, * {
+  .font-md, .footer td, .footer th, .header__nav__title, * {
     font-size: 15px;
   }
 }
 @media (min-width: 960px) {
-  .font-md, .footer td, .footer th, * {
+  .font-md, .footer td, .footer th, .header__nav__title, * {
     font-size: 16px;
   }
 }
 
-.font-lg, .contents__headline, .footer__nav__ul li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
+.font-lg, .contents__headline, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
   font-size: 18px;
 }
 @media (min-width: 600px) {
-  .font-lg, .contents__headline, .footer__nav__ul li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
+  .font-lg, .contents__headline, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
     font-size: 20px;
   }
 }
 @media (min-width: 960px) {
-  .font-lg, .contents__headline, .footer__nav__ul li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
+  .font-lg, .contents__headline, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
     font-size: 24px;
   }
 }
 @media (min-width: 1280px) {
-  .font-lg, .contents__headline, .footer__nav__ul li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
+  .font-lg, .contents__headline, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
     font-size: 26px;
   }
 }
@@ -104,11 +104,11 @@
   font-family: "Noto Sans JP", sans-serif;
 }
 
-.mb-sm, .footer__nav__ul li:last-child, .footer__nav, .footer__logo {
+.mb-sm, .footer__nav__ul li:last-child, .footer__nav, .footer__logo, .header__nav__ul__li {
   margin-bottom: 20px;
 }
 
-.mb-md, .contents, .contents__headline, .contents__inner__p, .footer, .content__title {
+.mb-md, .contents, .contents__headline, .contents__inner__p, .footer, .header__nav__title, .content__title {
   margin-bottom: 50px;
 }
 
@@ -399,23 +399,94 @@ img {
   align-items: end;
   justify-content: center;
   z-index: 100;
+  cursor: pointer;
 }
 .header__icon__bar {
   display: block;
   width: 50px;
   height: 1px;
   background-color: white;
+  transition: all 1s cubic-bezier(1, 0, 0.01, 1);
 }
 .header__icon__bar:nth-child(1) {
-  transform: translateY(50%);
+  transform: translateY(50%) rotate(180deg);
 }
 .header__icon__bar:nth-child(2) {
-  transform: translateY(3px);
+  transform: translateY(3px) rotate(0deg);
+}
+.header__icon.onClick .header__icon__bar:nth-child(1) {
+  transform: rotate(10deg);
+}
+.header__icon.onClick .header__icon__bar:nth-child(2) {
+  transform: rotate(350deg);
 }
 .header__nav {
-  opacity: 0;
-  position: absolute;
+  width: 80vw;
+  height: 100vh;
+  padding-left: 10%;
+  background-color: #E1B58B;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  z-index: 99;
+  transition: all 1s cubic-bezier(1, 0, 0.01, 1);
 }
+@media (min-width: 600px) {
+  .header__nav {
+    width: 60vw;
+  }
+}
+@media (min-width: 960px) {
+  .header__nav {
+    width: 50vw;
+  }
+}
+.header__nav__title {
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+.header__nav__title:before {
+  content: "";
+  width: 90%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.header__nav__ul__li a {
+  color: white;
+}
+.header__nav__ul__li span {
+  display: block;
+  color: white;
+}
+.header__nav.onClick {
+  transform: translateX(0);
+}
+.header__bcc {
+  width: 100vw;
+  height: 100vh;
+  background-color: #333333;
+  opacity: 0.6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 98;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s cubic-bezier(1, 0, 0.01, 1);
+}
+.header__bcc.onClick {
+  opacity: 0.5;
+  pointer-events: all;
+}
+
 .footer__wrapper {
   background-color: #839C96;
   position: relative;
