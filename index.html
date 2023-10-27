@@ -14,6 +14,9 @@
     <link href="/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
     <script src="/js/main.js" defer></script>
 </head>
@@ -63,6 +66,7 @@
                 </li>
             </ul>
         </nav>
+        <span class="header__bcc"></span>
     </header>
 
 
@@ -73,9 +77,11 @@
                     <p class="hero__title__p">
                         FRESCO COMPANY
                     </p>
-                    <h1 class="hero__title__h1">
-                        MEAL FOR SMILE.
-                    </h1>
+                    <div class="hero__title__inner">
+                        <h1>
+                            MEAL FOR SMILE.
+                        </h1>
+                    </div>
                     <span class="hero__title__bar"></span>
                     <span class="hero__title__subtitle">
                         Bringing Joy Through Food.
@@ -167,7 +173,8 @@
                 <div class="about__image">
                     <div class="about__image__container">
                         <img src="/images/main-images/slide_004.png" alt="images" class="about__image__container__img1">
-                        <img src="/images/main-images/dietician4.jpg" alt="images" class="about__image__container__img2">
+                        <img src="/images/main-images/dietician4.jpg" alt="images"
+                            class="about__image__container__img2">
                     </div>
                 </div>
             </section>
@@ -439,7 +446,8 @@
                     <div class="info__inner">
                         <a href="#" class="info__item">
                             <div class="info__item__image">
-                                <img src="/images/main-images/dietician3.jpg" alt="images" class="info__item__image__img">
+                                <img src="/images/main-images/dietician3.jpg" alt="images"
+                                    class="info__item__image__img">
                             </div>
                             <div class="info__item__text">
                                 <p class="info__item__text__p">
@@ -457,7 +465,8 @@
                     <div class="info__inner">
                         <a href="#" class="info__item">
                             <div class="info__item__image">
-                                <img src="/images/main-images/catering4.JPG" alt="images" class="info__item__image__img">
+                                <img src="/images/main-images/catering4.JPG" alt="images"
+                                    class="info__item__image__img">
                             </div>
                             <div class="info__item__text">
                                 <p class="info__item__text__p">
@@ -543,7 +552,8 @@
                                 d="M 0 50 A 50 50 0 1 1 0 51 z" />
                             <text class="return__wrapper__inner__text">
                                 <textPath href="#return__wrapper__inner__path">
-                                    Fresco company. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meal
+                                    Fresco company.
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meal
                                     for smile.
                                 </textPath>
                             </text>
@@ -573,44 +583,44 @@
                     <ul class="footer__nav__ul">
                         <li>
                             <a href="/">
-                            Home
-                            <span>ホーム</span>
+                                Home
+                                <span>ホーム</span>
                             </a>
                         </li>
                         <li>
                             <a href="/about">
-                            About
-                            <span>わたしたちについて</span>
+                                About
+                                <span>わたしたちについて</span>
                             </a>
                         </li>
                         <li>
                             <a href="/future">
-                            Future
-                            <span>わたしたちの未来</span>
+                                Future
+                                <span>わたしたちの未来</span>
                             </a>
                         </li>
                         <li>
                             <a href="/service">
-                            Service
-                            <span>わたしたちの事業</span>
+                                Service
+                                <span>わたしたちの事業</span>
                             </a>
                         </li>
                         <li>
                             <a href="/">
-                            Works
-                            <span>わたしたちの歩み</span>
+                                Works
+                                <span>わたしたちの歩み</span>
                             </a>
                         </li>
                         <li>
                             <a href="/">
-                            Recruit
-                            <span>採用情報</span>
+                                Recruit
+                                <span>採用情報</span>
                             </a>
                         </li>
                         <li>
                             <a href="/">
-                            Contact
-                            <span>お問い合わせ</span>
+                                Contact
+                                <span>お問い合わせ</span>
                             </a>
                         </li>
                     </ul>
