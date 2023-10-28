@@ -103,7 +103,7 @@
   width: 200px;
   height: 1px;
   background-color: #333333;
-  transform: scaleX(5%) translateY(-300px);
+  transform: scaleX(0%) translateY(-300px);
   transform-origin: right;
   transition: all 1s cubic-bezier(1, 0, 0.01, 1);
 }
@@ -152,7 +152,7 @@
   margin-bottom: 50px;
 }
 
-.mb-lg, .about, .future, .service, .works, .recruit, .info, .contact, .section__headline {
+.mb-lg, .future, .service, .works, .recruit, .info, .contact, .section__headline {
   margin-bottom: 200px;
 }
 
@@ -733,6 +733,7 @@ small {
   background-position: center;
   background-size: cover;
   position: relative;
+  z-index: 90;
 }
 .hero::before {
   content: "";
@@ -743,6 +744,9 @@ small {
   position: absolute;
   top: 0;
   left: 0;
+}
+.hero__container {
+  height: 100vh;
 }
 .hero__title {
   font-family: "Noto Sans", sans-serif;
@@ -903,7 +907,7 @@ small {
 }
 
 .about {
-  transform: translateY(-50%);
+  margin-top: -50%;
 }
 .about__title {
   height: 300px;
@@ -1089,16 +1093,22 @@ small {
 .future__title .content__title__bar {
   background-color: white;
 }
-.future__description {
+.future__description__wrapper {
   width: 100vw;
-  height: 100vh;
   margin: 0 calc(50% - 50vw);
-  background-image: url("/images/main-images/healthy-body.jpg");
-  background-size: cover;
-  background-position: center;
+  -webkit-clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
+          clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
   position: relative;
 }
-.future__description::before {
+.future__description__wrapper img {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(90%);
+}
+.future__description__wrapper img::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -1107,7 +1117,12 @@ small {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0;
+}
+.future__description {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 calc(50% - 50vw);
+  position: relative;
 }
 .future__description__title {
   color: white;
@@ -1473,6 +1488,8 @@ small {
 .recruit__image {
   width: 70vw;
   margin-left: calc(50% - 20vw);
+  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+          clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 }
 @media (min-width: 960px) {
   .recruit__image {

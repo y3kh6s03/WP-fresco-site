@@ -103,7 +103,7 @@
   width: 200px;
   height: 1px;
   background-color: #333333;
-  transform: scaleX(5%) translateY(-300px);
+  transform: scaleX(0%) translateY(-300px);
   transform-origin: right;
   transition: all 1s cubic-bezier(1, 0, 0.01, 1);
 }

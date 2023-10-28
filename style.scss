@@ -13,6 +13,7 @@
     background-size: cover;
     position: relative;
     @extend .mb-md;
+    z-index: 90;
 
     &::before {
         content: "";
@@ -23,6 +24,10 @@
         position: absolute;
         top: 0;
         left: 0;
+    }
+
+    &__container{
+        height: 100vh;
     }
 
     &__title {
@@ -94,7 +99,7 @@
                 &__p {}
 
                 &__inner {
-                    & h1{
+                    & h1 {
                         transform: translateY(0);
                     }
                 }
@@ -109,20 +114,24 @@
                 }
             }
         }
+
         @keyframes loadedTitleBar {
-            0%{
+            0% {
                 transform: scaleX(0);
                 transform-origin: right;
             }
-            50%{
+
+            50% {
                 transform: scaleX(100%);
                 transform-origin: right;
             }
-            51%{
+
+            51% {
                 transform: scaleX(100%);
                 transform-origin: left;
             }
-            100%{
+
+            100% {
                 transform: scaleX(10%);
                 transform-origin: left;
             }
@@ -230,8 +239,7 @@
 
 
 .about {
-    @extend .mb-lg;
-    transform: translateY(-50%);
+    margin-top: -50%;
 
     &__title {
         height: 300px;
@@ -265,7 +273,7 @@
                 width: 20vw;
             }
 
-            &__img{
+            &__img {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -450,8 +458,31 @@
     }
 
     &__description__wrapper {
-        // pointer-events: none;s
+        width: 100vw;
+        margin: 0 calc(50% - 50vw);
+        // clip-path: polygon(0 0, 120% 0, 120% 100%, 0 100%);
+        clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
+        position: relative;
 
+        & img {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scaleX(90%);
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                opacity: .1;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
     }
 
     &__description {
@@ -459,25 +490,13 @@
         height: 100vh;
         margin: 0 calc(50% - 50vw);
         // padding: 0 5%;
-        background-image: url("/images/main-images/healthy-body.jpg");
-        background-size: cover;
-        background-position: center;
+        // background-image: url("/images/main-images/healthy-body.jpg");
+        // background-size: cover;
+        // background-position: center;
         position: relative;
 
         @include mq(lg) {
             // padding: 0 10%;
-        }
-
-        &::before {
-            content: "";
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            opacity: .1;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 0;
         }
 
         &__title {
@@ -966,6 +985,7 @@
         width: 70vw;
         margin-left: calc(50% - 20vw);
         @extend .mb-md;
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 
         @include mq(lg) {
             width: 50vw;
