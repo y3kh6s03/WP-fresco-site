@@ -1,6 +1,8 @@
 @forward "./mq";
 @use "./mq" as *;
 
+$ease: cubic-bezier(1, 0, .01, 1);
+
 /////////////////////////////////////
 //　color
 /////////////////////////////////////
@@ -99,10 +101,16 @@ $fNum: 'Noto Nastaliq Urdu', serif;
 .content__title {
     @extend .mb-md;
 
+    &__inner {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
     &__en {
         font-family: $fNoto;
         @extend .font-xl;
-        line-height: 1.2;
+        line-height: 1;
+        transform: translateY(100%);
+        transition: all 1s .2s $ease;
     }
 
     &__bar {
@@ -110,13 +118,53 @@ $fNum: 'Noto Nastaliq Urdu', serif;
         width: 200px;
         height: 1px;
         background-color: $cBlack;
-        transform: scaleX(7%);
-        transform-origin: left;
+        transform: scaleX(5%) translateY(-300px);
+        transform-origin: right;
+        transition: all 1s $ease;
     }
 
     &__ja {
+        display: block;
         @extend .font-sm;
         font-family: $fNotoJP;
+        transform: translateX(50px);
+        opacity: 0;
+        transition: all 1s .6s $ease;
+    }
+
+    & .active {
+        & .content__title__en {
+            transform: translateY(0);
+        }
+
+        & .content__title__bar {
+            transform: scaleX(7%);
+            animation: titleActive 1s $ease forwards;
+        }
+
+        & .content__title__ja {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes titleActive {
+        0%{
+            transform: scaleX(5%);
+            transform-origin: right;
+        }
+        50%{
+            transform: scaleX(100%);
+            transform-origin: right;
+        }
+        51%{
+            transform: scaleX(100%);
+            transform-origin: left;
+        }
+        100%{
+            transform: scaleX(7%);
+            transform-origin: left;
+        }
     }
 }
 
@@ -139,9 +187,6 @@ $fNum: 'Noto Nastaliq Urdu', serif;
 /////////////////////////////////////
 // Base setting
 /////////////////////////////////////
-
-$ease: cubic-bezier(1, 0, .01, 1);
-
 html {
     scroll-behavior: smooth;
 }
@@ -221,7 +266,7 @@ img {
         padding-left: 10%;
     }
 
-    & h3{
+    & h3 {
         max-width: 650px;
     }
 }
@@ -499,12 +544,13 @@ img {
             }
         }
 
-        &.onClick{
-            & .header__icon__bar{
-                &:nth-child(1){
+        &.onClick {
+            & .header__icon__bar {
+                &:nth-child(1) {
                     transform: rotate(10deg);
                 }
-                &:nth-child(2){
+
+                &:nth-child(2) {
                     transform: rotate(350deg);
                 }
             }
@@ -526,10 +572,11 @@ img {
         z-index: 99;
         transition: all 1s $ease;
 
-        @include mq(md){
+        @include mq(md) {
             width: 60vw;
         }
-        @include mq(lg){
+
+        @include mq(lg) {
             width: 50vw;
         }
 
@@ -540,7 +587,7 @@ img {
             @extend .mb-md;
             position: relative;
 
-            &:before{
+            &:before {
                 content: "";
                 width: 90%;
                 height: 1px;
@@ -555,6 +602,7 @@ img {
 
         &__ul__li {
             @extend .mb-sm;
+
             & a {
                 color: white;
                 @extend .font-lg;
@@ -568,12 +616,12 @@ img {
         }
 
 
-        &.onClick{
+        &.onClick {
             transform: translateX(0);
         }
     }
 
-    &__bcc{
+    &__bcc {
         width: 100vw;
         height: 100vh;
         background-color: $cBlack;
@@ -586,7 +634,7 @@ img {
         pointer-events: none;
         transition: all 1s $ease;
 
-        &.onClick{
+        &.onClick {
             opacity: .5;
             pointer-events: all;
         }
