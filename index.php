@@ -1,74 +1,5 @@
-<!DOCTYPE html>
-<html lang="ja">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@700&family=Noto+Sans+JP:wght@300;500&family=Noto+Sans:wght@300;800&display=swap"
-        rel="stylesheet">
-    <link href="/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
-    <script src="/js/main.js" defer></script>
-</head>
-
-<body>
-
-    <header class="header">
-        <div class="header__logo">
-            <img src="/images/main-images/logo-1.png" alt="images" class="header__logo__image">
-        </div>
-        <div class="header__icon">
-            <span class="header__icon__bar"></span>
-            <span class="header__icon__bar"></span>
-        </div>
-        <nav class="header__nav">
-            <p class="header__nav__title">
-                Nabigation
-            </p>
-            <ul class="header__nav__ul">
-                <li class="header__nav__ul__li">
-                    <a href="/index.html">Home</a>
-                    <span>ホーム</span>
-                </li>
-                <li class="header__nav__ul__li">
-                    <a href="/page-about.html">About</a>
-                    <span>わたしたちについて</span>
-                </li>
-                <li class="header__nav__ul__li">
-                    <a href="/page-future">Future</a>
-                    <span>わたしたちの未来</span>
-                </li>
-                <li class="header__nav__ul__li">
-                    <a href="/page-services">Services</a>
-                    <span>わたしたちの事業</span>
-                </li>
-                <li class="header__nav__ul__li">
-                    <a href="/page-works">Works</a>
-                    <span>わたしたちの歩み</span>
-                </li>
-                <li class="header__nav__ul__li">
-                    <a href="/page-recruitd">Recruit</a>
-                    <span>わたしたちの採用情報</span>
-                </li>
-                <li class="header__nav__ul__li">
-                    <a href="/page-contact">Contact</a>
-                    <span>お問い合わせ</span>
-                </li>
-            </ul>
-        </nav>
-        <span class="header__bcc"></span>
-    </header>
-
+<?php get_header(); ?>
 
     <main>
         <div class="body__wrapper">
@@ -107,37 +38,37 @@
                     <nav class="hero__nav">
                         <ul class="hero__nav__ul">
                             <li class="hero__nav__ul__li">
-                                <a href="index.html">Home
+                                <a href="<?php echo home_url();?>">Home
                                     <span>ホーム</span>
                                 </a>
                             </li>
                             <li class="hero__nav__ul__li">
-                                <a href="/page-about.html">About
+                                <a href="<?php echo home_url();?>/about">About
                                     <span>わたしたちについて</span>
                                 </a>
                             </li>
                             <li class="hero__nav__ul__li">
-                                <a href="/page-future">Future
+                                <a href="<?php echo home_url();?>/future">Future
                                     <span>わたしたちの未来</span>
                                 </a>
                             </li>
                             <li class="hero__nav__ul__li">
-                                <a href="/page-services">Services
+                                <a href="<?php echo home_url();?>/services">Services
                                     <span>わたしたちの事業</span>
                                 </a>
                             </li>
                             <li class="hero__nav__ul__li">
-                                <a href="/page-works">Works
+                                <a href="<?php echo home_url();?>/works">Works
                                     <span>わたしたちの歩み</span>
                                 </a>
                             </li>
                             <li class="hero__nav__ul__li">
-                                <a href="/page-recruitd">Recruit
+                                <a href="#">Recruit
                                     <span>わたしたちの採用情報</span>
                                 </a>
                             </li>
                             <li class="hero__nav__ul__li">
-                                <a href="/page-contact">Contact
+                                <a href="<?php echo home_url();?>/contact">Contact
                                     <span>お問い合わせ</span>
                                 </a>
                             </li>
@@ -160,16 +91,16 @@
                         </span>
                     </div>
                     <div class="about__title__image">
-                        <img src="/images/main-images/catering2.jpg" alt="images" class="about__title__image__img">
-                        <img src="/images/main-images/catering6.jpg" alt="images" class="about__title__image__img">
-                        <img src="/images/main-images/catering7.jpg" alt="images" class="about__title__image__img">
+                        <img src="<?php echo get_template_directory_uri()?>/images/main-images/catering2.jpg" alt="images" class="about__title__image__img">
+                        <img src="<?php echo get_template_directory_uri()?>/images/main-images/catering6.jpg" alt="images" class="about__title__image__img">
+                        <img src="<?php echo get_template_directory_uri()?>/images/main-images/catering7.jpg" alt="images" class="about__title__image__img">
                     </div>
                 </div>
                 <div class="about__description">
                     <p class="about__description__p">
                         フレスコカンパニーは、北信地域を中心に施設給食事業を展開し、全国各地に向けてケータリング事業などを行う”食の専門企業”です。みなさまの笑顔をつくるあらゆる食体験を提供していま す。
                     </p>
-                    <a href="/page-about.html" class="pagelink">
+                    <a href="<?php echo home_url();?>/about" class="pagelink">
                         <span class="pagelink__name">About</span>
                         <span class="pagelink__bar"></span>
                         <span class="pagelink__arrow"></span>
@@ -178,9 +109,8 @@
                 </div>
                 <div class="about__image">
                     <div class="about__image__container">
-                        <img src="/images/main-images/slide_004.png" alt="images" class="about__image__container__img1">
-                        <img src="/images/main-images/dietician4.jpg" alt="images"
-                            class="about__image__container__img2">
+                        <img src="<?php echo get_template_directory_uri()?>/images/main-images/slide_004.png" alt="images" class="about__image__container__img1">
+                        <img src="<?php echo get_template_directory_uri()?>/images/main-images/dietician4.jpg" alt="images" class="about__image__container__img2">
                     </div>
                 </div>
             </section>
@@ -201,7 +131,7 @@
                 </div>
 
                 <div class="future__description__wrapper">
-                    <img id="future__img" src="/images/main-images/healthy-body.jpg" alt="">
+                    <img id="future__img" src="<?php echo get_template_directory_uri()?>/images/main-images/healthy-body.jpg" alt="">
                     <div class="future__description">
                         <h3 class="future__description__title">
                             食を通じて、<br>すこやかな未来をつくりたい
@@ -211,7 +141,7 @@
                             しかし、生きるために必要なことは 食事だけではありません。健康づくりや地球環境保全など人生のためのあらゆる物事を、食事を 通じてよりよくしていきたい。
                             フレスコカンパニーは、”食べる”を通じて今を生きる私たちや未来の 子供たちに笑顔あふれる人生を提供します。
                         </p>
-                        <a href="/page-about.html" class="pagelink">
+                        <a href="<?php echo home_url();?>/future" class="pagelink">
                             <span class="pagelink__name">Future</span>
                             <span class="pagelink__bar"></span>
                             <span class="pagelink__arrow"></span>
@@ -241,11 +171,11 @@
                 <ul class="service__list">
                     <li class="service__list__item">
                         <div class="service__list__item__image">
-                            <img src="/images/main-images/kyushoku.jpg" alt="images" />
+                            <img src="<?php echo get_template_directory_uri()?>/images/main-images/kyushoku.jpg" alt="images" />
                             <p>Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>01</span>
                             </p>
                         </div>
-                        <a href="#" class="service__list__item__link">
+                        <a href="<?php echo home_url();?>/servicedetail" class="service__list__item__link">
                             <span>
                                 Kyushoku
                             </span>
@@ -257,7 +187,7 @@
                     </li>
                     <li class="service__list__item">
                         <div class="service__list__item__image">
-                            <img src="/images/main-images/dietician4.jpg" alt="images" />
+                            <img src="<?php echo get_template_directory_uri()?>/images/main-images/dietician4.jpg" alt="images" />
                             <p>Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>02</span>
                             </p>
                         </div>
@@ -273,7 +203,7 @@
                     </li>
                     <li class="service__list__item">
                         <div class="service__list__item__image">
-                            <img src="/images/main-images/catering4.JPG" alt="images" />
+                            <img src="<?php echo get_template_directory_uri()?>/images/main-images/catering4.JPG" alt="images" />
                             <p>Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>03</span>
                             </p>
                         </div>
@@ -289,7 +219,7 @@
                     </li>
                     <li class="service__list__item">
                         <div class="service__list__item__image">
-                            <img src="/images/main-images/frozen.jpg" alt="images" />
+                            <img src="<?php echo get_template_directory_uri()?>/images/main-images/frozen.jpg" alt="images" />
                             <p>Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>04</span>
                             </p>
                         </div>
@@ -310,8 +240,7 @@
                 <div class="circle">
                     <div class="circle__wrapper">
                         <svg class="circle__wrapper__inner" viewBox="0 0 100 100">
-                            <path id="circle__wrapper__inner__path" class="circle__wrapper__inner__path"
-                                d="M 0 50 A 50 50 0 1 1 0 51 z" />
+                            <path id="circle__wrapper__inner__path" class="circle__wrapper__inner__path" d="M 0 50 A 50 50 0 1 1 0 51 z" />
                             <text class="circle__wrapper__inner__text">
                                 <textPath href="#circle__wrapper__inner__path">
                                     Fresco company. Meal for smile.
@@ -342,7 +271,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="">
-                                <img src="/images/main-images/catering6.jpg" alt="images">
+                                <img src="<?php echo get_template_directory_uri()?>/images/main-images/catering6.jpg" alt="images">
                                 <div class="text__container">
                                     <span class="works__service">直営給食サポートサービス</span>
                                     <span class="works__service__author">千曲市ワーケーションウエルカムデイズ</span>
@@ -351,7 +280,7 @@
                         </div>
                         <div class="swiper-slide">
                             <a href="">
-                                <img src="/images/main-images/catering6.jpg" alt="images">
+                                <img src="<?php echo get_template_directory_uri()?>/images/main-images/catering6.jpg" alt="images">
                                 <div class="text__container">
                                     <span class="works__service">直営給食サポートサービス</span>
                                     <span class="works__service__author">千曲市ワーケーションウエルカムデイズ</span>
@@ -360,7 +289,7 @@
                         </div>
                         <div class="swiper-slide">
                             <a href="">
-                                <img src="/images/main-images/catering6.jpg" alt="images">
+                                <img src="<?php echo get_template_directory_uri()?>/images/main-images/catering6.jpg" alt="images">
                                 <div class="text__container">
                                     <span class="works__service">直営給食サポートサービス</span>
                                     <span class="works__service__author">千曲市ワーケーションウエルカムデイズ</span>
@@ -369,7 +298,7 @@
                         </div>
                         <div class="swiper-slide">
                             <a href="">
-                                <img src="/images/main-images/catering6.jpg" alt="images">
+                                <img src="<?php echo get_template_directory_uri()?>/images/main-images/catering6.jpg" alt="images">
                                 <div class="text__container">
                                     <span class="works__service">直営給食サポートサービス</span>
                                     <span class="works__service__author">千曲市ワーケーションウエルカムデイズ</span>
@@ -378,7 +307,7 @@
                         </div>
                         <div class="swiper-slide">
                             <a href="">
-                                <img src="/images/main-images/catering6.jpg" alt="images">
+                                <img src="<?php echo get_template_directory_uri()?>/images/main-images/catering6.jpg" alt="images">
                                 <div class="text__container">
                                     <span class="works__service">直営給食サポートサービス</span>
                                     <span class="works__service__author">千曲市ワーケーションウエルカムデイズ</span>
@@ -387,7 +316,7 @@
                         </div>
                         <div class="swiper-slide">
                             <a href="">
-                                <img src="/images/main-images/catering6.jpg" alt="images">
+                                <img src="<?php echo get_template_directory_uri()?>/images/main-images/catering6.jpg" alt="images">
                                 <div class="text__container">
                                     <span class="works__service">直営給食サポートサービス</span>
                                     <span class="works__service__author">千曲市ワーケーションウエルカムデイズ</span>
@@ -406,7 +335,7 @@
 
             <section class="recruit container">
                 <div class="recruit__image">
-                    <img src="/images/main-images/student_hero.jpg" alt="images" class="recruit__image__img">
+                    <img src="<?php echo get_template_directory_uri()?>/images/main-images/student_hero.jpg" alt="images" class="recruit__image__img">
                 </div>
                 <div class="content__title recruit__title">
                     <div class="content__title__container">
@@ -462,8 +391,7 @@
                     <div class="info__inner">
                         <a href="#" class="info__item">
                             <div class="info__item__image">
-                                <img src="/images/main-images/dietician3.jpg" alt="images"
-                                    class="info__item__image__img">
+                                <img src="<?php echo get_template_directory_uri()?>/images/main-images/dietician3.jpg" alt="images" class="info__item__image__img">
                             </div>
                             <div class="info__item__text">
                                 <p class="info__item__text__p">
@@ -481,8 +409,7 @@
                     <div class="info__inner">
                         <a href="#" class="info__item">
                             <div class="info__item__image">
-                                <img src="/images/main-images/catering4.JPG" alt="images"
-                                    class="info__item__image__img">
+                                <img src="<?php echo get_template_directory_uri()?>/images/main-images/catering4.JPG" alt="images" class="info__item__image__img">
                             </div>
                             <div class="info__item__text">
                                 <p class="info__item__text__p">
@@ -498,9 +425,9 @@
 
 
                     <div class="info__inner">
-                        <a href="#" class="info__item">
+                        <a href="https://www.taiseisangyo.com/" class="info__item">
                             <div class="info__item__image">
-                                <img src="/images/main-images/taisei.jpg" alt="images" class="info__item__image__img">
+                                <img src="<?php echo get_template_directory_uri()?>/images/main-images/taisei.jpg" alt="images" class="info__item__image__img">
                             </div>
                             <div class="info__item__text">
                                 <p class="info__item__text__p">
@@ -558,98 +485,4 @@
         </div>
     </main>
 
-
-    <footer>
-        <div class="footer__wrapper">
-            <a class="footer__logo" href="/"></a>
-            <a href="#hero">
-                <div class="return">
-                    <div class="return__wrapper">
-                        <svg class="return__wrapper__inner" viewBox="0 0 100 100">
-                            <path id="return__wrapper__inner__path" class="return__wrapper__inner__path"
-                                d="M 0 50 A 50 50 0 1 1 0 51 z" />
-                            <text class="return__wrapper__inner__text">
-                                <textPath href="#return__wrapper__inner__path">
-                                    Fresco company.
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meal
-                                    for smile.
-                                </textPath>
-                            </text>
-                        </svg>
-                    </div>
-                </div>
-            </a>
-
-            <nav class="footer">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th>Tell</th>
-                            <td>026-247-8770</td>
-                        </tr>
-                        <tr>
-                            <th>Fax</th>
-                            <td>026-247-8771</td>
-                        </tr>
-                        <tr>
-                            <th>E-mail</th>
-                            <td>honbu-f@fresco-c.com</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="footer__nav">
-                    <ul class="footer__nav__ul">
-                        <li>
-                            <a href="/">
-                                Home
-                                <span>ホーム</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/about">
-                                About
-                                <span>わたしたちについて</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/future">
-                                Future
-                                <span>わたしたちの未来</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/service">
-                                Service
-                                <span>わたしたちの事業</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/">
-                                Works
-                                <span>わたしたちの歩み</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/">
-                                Recruit
-                                <span>採用情報</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/">
-                                Contact
-                                <span>お問い合わせ</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <small>&copy; 2023 Fresco company .All rights reserved.</small>
-        </div>
-
-    </footer>
-
-
-</body>
-
-</html>
+<?php get_footer(); ?>

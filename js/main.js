@@ -110,6 +110,7 @@ tl.to(futureEl, {
 //////////////////////////////
 
 window.addEventListener("DOMContentLoaded", () => {
+
     gsap.utils.toArray(".content__title__container").forEach((el) => {
         const selectEl = gsap.utils.selector(el);
 
@@ -120,7 +121,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 toggleClass: "active",
                 toggleActions: "play none none reset",
             },
-        }).to(selectEl(".content__title"), {})
+        }).to(selectEl, {})
     })
 })
 

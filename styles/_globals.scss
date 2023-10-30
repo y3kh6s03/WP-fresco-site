@@ -743,7 +743,7 @@ img {
         margin-top: 30px;
         margin-left: 5%;
         @extend .mb-sm;
-        background-image: url(/images/main-images/logo-2.png);
+        background-image: url(../images/main-images/logo-2.png);
         background-size: contain;
         background-repeat: no-repeat;
 
@@ -825,7 +825,7 @@ img {
 
     &::before {
         content: "";
-        background-image: url(/images/main-images/noise.png);
+        background-image: url(../images/main-images/noise.png);
         background-repeat: repeat;
         width: 300%;
         position: fixed;
@@ -833,7 +833,7 @@ img {
         right: 0;
         bottom: 0;
         left: 0;
-        z-index: -99;
+        // z-index: 100000;
         opacity: .5;
         animation: noise 8s steps(10) infinite;
 

@@ -1,0 +1,4 @@
+{
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    "php.format.rules.addCommaAfterLastArrayElement": true
+}
