@@ -833,8 +833,8 @@ img {
         right: 0;
         bottom: 0;
         left: 0;
-        // z-index: 100000;
         opacity: .5;
+        z-index: -99;
         animation: noise 8s steps(10) infinite;
 
 

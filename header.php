@@ -47,7 +47,7 @@
                     <span>わたしたちの未来</span>
                 </li>
                 <li class="header__nav__ul__li">
-                    <a href="<?php echo home_url(); ?>/services">Services</a>
+                    <a href="<?php echo home_url(); ?>/service">Service</a>
                     <span>わたしたちの事業</span>
                 </li>
                 <li class="header__nav__ul__li">

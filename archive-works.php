@@ -1,5 +1,5 @@
 <?php
-// Template Name: page-Works
+// Template Name: Works
 ?>
 
 <?php get_header(); ?>

@@ -53,7 +53,7 @@
                                 </a>
                             </li>
                             <li class="hero__nav__ul__li">
-                                <a href="<?php echo home_url();?>/services">Services
+                                <a href="<?php echo home_url();?>/service">Service
                                     <span>わたしたちの事業</span>
                                 </a>
                             </li>

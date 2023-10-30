@@ -682,6 +682,7 @@ img {
   bottom: 0;
   left: 0;
   opacity: 0.5;
+  z-index: -99;
   animation: noise 8s steps(10) infinite;
 }
 @keyframes noise {
