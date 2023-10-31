@@ -149,19 +149,22 @@ $fNum: 'Noto Nastaliq Urdu', serif;
     }
 
     @keyframes titleActive {
-        0%{
+        0% {
             transform: scaleX(5%);
             transform-origin: right;
         }
-        50%{
+
+        50% {
             transform: scaleX(100%);
             transform-origin: right;
         }
-        51%{
+
+        51% {
             transform: scaleX(100%);
             transform-origin: left;
         }
-        100%{
+
+        100% {
             transform: scaleX(7%);
             transform-origin: left;
         }
@@ -280,6 +283,7 @@ img {
     width: 150px;
     position: relative;
     clip-path: polygon(0 0, 110% 0, 110% 100%, 0 100%);
+    z-index: 100;
 
     &__name {
         @extend .font-lg;
@@ -532,7 +536,8 @@ img {
             display: block;
             width: 50px;
             height: 1px;
-            background-color: white;
+            background-color: $cBlack;
+            mix-blend-mode: color;
             transition: all 1s $ease;
 
             &:nth-child(1) {
@@ -546,6 +551,8 @@ img {
 
         &.onClick {
             & .header__icon__bar {
+                background-color: white;
+
                 &:nth-child(1) {
                     transform: rotate(10deg);
                 }

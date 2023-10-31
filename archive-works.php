@@ -14,43 +14,50 @@
             </span>
         </h1>
         <div class="subHero__image">
-            <img src="/images/works-images/worksHero.jpg" alt="" class="subHero__image__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/works-images/worksHero.jpg" alt="" class="subHero__image__img">
         </div>
     </section>
 
-    <section class="contents container">
-        <div class="contents__header">
-            <div class="contents__header__inner">
-                <span class="contents__header__bar"></span>
-                <h3 class="contents__header__enName">
-                    support
-                </h3>
-                <span class="contents__header__jaName">
-                    直営給食サポートサービス
-                </span>
-            </div>
-            <div class="contents__header__image">
-                <img src="/images/main-images/catering4.JPG" alt="">
-            </div>
-        </div>
 
-        <div class="contents__description">
-            <div class="contents__description__author">
-                <p>
-                    <span>customer:</span>
-                    千曲市ワーケーションウエルカムデイズ　さま
-                </p>
-            </div>
-            <p class="contents__description__p">
-                千曲市観光局と株式会社ふろしきやが運営する「千曲市ワーケーションウェルカムデイズ」にて、出張シェフを実施。千曲市・あんずの里や姨捨の棚田などあらゆるロケーションで青空レストランを行いました。
-            </p>
-        </div>
-        <div class="contents__image">
-            <img src="/images/main-images/catering2.jpg" alt="" class="contents__image__img">
-        </div>
-    </section>
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    <section class="contents container">
+            <section class="contents container" id="<?php the_field("service-name") ?>">
+                <div class="contents__header">
+                    <div class="contents__header__inner">
+                        <span class="contents__header__bar"></span>
+                        <h3 class="contents__header__enName">
+                            <?php the_field("service-name"); ?>
+                        </h3>
+                        <span class="contents__header__jaName">
+                            <?php the_field("service-jaName"); ?>
+
+                        </span>
+                    </div>
+                    <div class="contents__header__image">
+                        <img src="<?php the_field("image"); ?>" alt="">
+                    </div>
+                </div>
+
+                <div class="contents__description">
+                    <div class="contents__description__author">
+                        <p>
+                            <span>customer:</span>
+                            <?php the_field("author"); ?>
+                        </p>
+                    </div>
+                    <p class="contents__description__p">
+                        <?php the_field("description") ?>
+                    </p>
+                </div>
+                <div class="contents__image">
+                    <img src="<?php the_field("image2") ?>" alt="" class="contents__image__img">
+                </div>
+            </section>
+
+    <?php endwhile;
+    endif; ?>
+
+    <!-- <section class="contents container">
         <div class="contents__header">
             <div class="contents__header__inner">
                 <span class="contents__header__bar"></span>
@@ -80,7 +87,7 @@
         <div class="contents__image">
             <img src="/images/main-images/catering2.jpg" alt="" class="contents__image__img">
         </div>
-    </section>
+    </section> -->
 
     <div class="contact__button">
         <a href="/contact" class="contact__button__a">
