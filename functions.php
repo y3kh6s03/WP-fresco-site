@@ -47,6 +47,7 @@ function add_works_posts()
         "has_archive" => true,
         "show_in_rest" => true,
         "menu_position" => 5,
+        "hierarchical" => true,
         "supports" => array(
           "title",
           "editor",
