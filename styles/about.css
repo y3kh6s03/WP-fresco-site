@@ -242,6 +242,7 @@ img {
   position: relative;
   -webkit-clip-path: polygon(0 0, 110% 0, 110% 100%, 0 100%);
           clip-path: polygon(0 0, 110% 0, 110% 100%, 0 100%);
+  z-index: 100;
 }
 .pagelink__name {
   font-family: "Noto Sans", sans-serif;
@@ -445,7 +446,8 @@ img {
   display: block;
   width: 50px;
   height: 1px;
-  background-color: white;
+  background-color: #333333;
+  mix-blend-mode: color;
   transition: all 1s cubic-bezier(1, 0, 0.01, 1);
 }
 .header__icon__bar:nth-child(1) {
@@ -453,6 +455,9 @@ img {
 }
 .header__icon__bar:nth-child(2) {
   transform: translateY(3px) rotate(0deg);
+}
+.header__icon.onClick .header__icon__bar {
+  background-color: white;
 }
 .header__icon.onClick .header__icon__bar:nth-child(1) {
   transform: rotate(10deg);

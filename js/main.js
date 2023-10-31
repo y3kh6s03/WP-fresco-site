@@ -54,6 +54,8 @@ gsap.timeline({
     .to(hero, {
         opacity: 0,
     }, "-=.4")
+
+
 //////////////////////////////
 // about scrub animation
 //////////////////////////////
@@ -80,7 +82,7 @@ gsap.to(imgEl2, {
 
 
 //////////////////////////////
-// works swiper animation
+// future animation
 //////////////////////////////
 
 const futureEl = document.querySelector(".future__description__wrapper");
@@ -96,7 +98,7 @@ const tl = gsap.timeline({
 tl.to(futureEl, {
     clipPath: "polygon(-20% 0, 120% 0, 120% 100%, 0 100%)",
     duration: 1.5,
-    delay: 1,
+    delay: .5,
     ease: "expo",
 }).to(futureImg, {
     scale: 1.5,
@@ -106,7 +108,7 @@ tl.to(futureEl, {
 })
 
 //////////////////////////////
-// works swiper animation
+// content title animation
 //////////////////////////////
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -149,7 +151,7 @@ const swiper = new Swiper('.swiper', {
 
 
 //////////////////////////////
-// Recruit swiper animation
+// Recruit animation
 //////////////////////////////
 
 const recruitImg = document.querySelector(".recruit__image");
@@ -158,9 +160,9 @@ gsap.to(recruitImg, {
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
     duration: 1.2,
     ease: "expo",
-    scrollTrigger:{
+    scrollTrigger: {
         trigger: recruitImg,
-        start:"top 90%",
+        start: "top 90%",
         toggleActions: "play none none reset",
     }
 })

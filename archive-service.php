@@ -41,20 +41,20 @@
                             </h4>
                             <span class="contents__headline__bar"></span>
                             <span class="contents__headline__en">
-                            <?php the_field("description-enHeadline") ?>
+                                <?php the_field("description-enHeadline") ?>
                             </span>
                         </div>
                         <p class="contents__description">
-                        <?php the_field("description-text1") ?>
+                            <?php the_field("description-text1") ?>
                         </p>
                     </div>
                     <div class="contents__image">
                         <img src="<?php the_field("description-image1") ?>" alt="" class="contents__image__img">
                     </div>
                 </div>
-                <a href="<?php the_permalink();?>" class="pagelink">
+                <a href="<?php the_permalink(); ?>" class="pagelink">
                     <span class="pagelink__name">
-                    <?php the_field("name") ?>
+                        <?php the_field("name") ?>
                     </span>
                     <span class="pagelink__bar"></span>
                     <span class="pagelink__arrow"></span>
