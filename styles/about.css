@@ -834,6 +834,8 @@ small {
 }
 .philosophy__headline {
   font-family: "Noto Sans", sans-serif;
+  opacity: 0;
+  transform: translateX(100px);
 }
 .philosophy__description {
   font-family: "Noto Sans JP", sans-serif;
@@ -875,6 +877,8 @@ small {
 }
 .aboutContents__description {
   font-family: "Noto Sans JP", sans-serif;
+  opacity: 0;
+  transform: translateX(100px);
 }
 @media (min-width: 960px) {
   .aboutContents__description {
@@ -895,6 +899,8 @@ small {
   height: 300px;
   max-height: 500px;
   margin-left: calc(50% - 50vw);
+  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+          clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 }
 @media (min-width: 960px) {
   .message__inner__image {

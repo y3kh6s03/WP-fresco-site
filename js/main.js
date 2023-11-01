@@ -35,7 +35,6 @@ window.addEventListener("DOMContentLoaded", () => {
     })
 })
 
-console.log("main.jsの読み込み成功")
 
 
 
