@@ -37,10 +37,12 @@ function add_js()
         wp_enqueue_script("sub-js", get_template_directory_uri() . "/js/sub.js", array(), null, true);
     }
 
-    if(is_page("about")){
+    if (is_page("about")) {
         wp_enqueue_script("about-js", get_template_directory_uri() . "/js/about.js", array(), null, true);
-    }elseif(is_page("future")){
+    } elseif (is_page("future")) {
         wp_enqueue_script("future-js", get_template_directory_uri() . "/js/future.js", array(), null, true);
+    } elseif (is_post_type_archive("service")) {
+        wp_enqueue_script("service-js", get_template_directory_uri() . "/js/service.js", array(), null, true);
     }
 }
 add_action("wp_enqueue_scripts", "add_js");

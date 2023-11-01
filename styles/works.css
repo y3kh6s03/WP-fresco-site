@@ -7,36 +7,36 @@
   }
 }
 
-.font-md, .footer td, .footer th, .header__nav__title, * {
+.font-md, .footer td, .footer th, .header__nav__title, .pagelink__name, * {
   font-size: 14px;
   line-height: 1.7;
 }
 @media (min-width: 600px) {
-  .font-md, .footer td, .footer th, .header__nav__title, * {
+  .font-md, .footer td, .footer th, .header__nav__title, .pagelink__name, * {
     font-size: 15px;
   }
 }
 @media (min-width: 960px) {
-  .font-md, .footer td, .footer th, .header__nav__title, * {
+  .font-md, .footer td, .footer th, .header__nav__title, .pagelink__name, * {
     font-size: 16px;
   }
 }
 
-.font-lg, .contents__header__enName, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
+.font-lg, .contents__header__enName, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja {
   font-size: 18px;
 }
 @media (min-width: 600px) {
-  .font-lg, .contents__header__enName, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
+  .font-lg, .contents__header__enName, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja {
     font-size: 20px;
   }
 }
 @media (min-width: 960px) {
-  .font-lg, .contents__header__enName, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
+  .font-lg, .contents__header__enName, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja {
     font-size: 24px;
   }
 }
 @media (min-width: 1280px) {
-  .font-lg, .contents__header__enName, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
+  .font-lg, .contents__header__enName, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja {
     font-size: 26px;
   }
 }
@@ -250,7 +250,7 @@ img {
 }
 .pagelink__name {
   font-family: "Noto Sans", sans-serif;
-  font-weight: bold;
+  font-weight: normal;
 }
 .pagelink__bar {
   display: block;
