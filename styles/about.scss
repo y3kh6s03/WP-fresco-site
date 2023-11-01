@@ -11,6 +11,8 @@
         font-family: $fNoto;
         @extend .font-xxl;
         @extend .mb-md;
+        opacity: 0;
+        transform: translateX(100px);
     }
 
     &__description {
@@ -56,6 +58,8 @@
 
     &__description {
         font-family: $fNotoJP;
+        opacity: 0;
+        transform: translateX(100px);
 
         @include mq(lg) {
             flex: 1;
@@ -80,6 +84,7 @@
             max-height: 500px;
             margin-left: calc(50% - 50vw);
             @extend .mb-md;
+            clip-path: polygon(0 0,0 0,0 100%,0 100%);
 
             @include mq(lg) {
                 flex: 2;
