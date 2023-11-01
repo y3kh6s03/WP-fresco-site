@@ -29,11 +29,13 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         }
 
-        &__span {
+        &__p {
             font-family: $fNoto;
-            display: block;
+            transform: translateY(-100%);
+            transition: all 1s .5s $ease;
         }
 
         &__num {
@@ -46,6 +48,22 @@
             width: 100%;
             height: 1px;
             background-color: $cBlack;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: all 1s $ease;
+        }
+
+        &.active {
+            & .contents__enHeadline {
+                &__p {
+                    transform: translateY(0%);
+
+                }
+
+                &__bar {
+                    transform: scaleX(1)
+                }
+            }
         }
     }
 
@@ -56,9 +74,12 @@
 
         &__jaHeadline {
             @extend .mb-md;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
             & h3 {
                 @extend .font-lg;
+                opacity: 0;
+                transform: translateY(100%);
             }
         }
 
@@ -299,11 +320,12 @@
             height: 100%;
             margin-left: calc(60% - 10vw);
 
-            @include mq(lg){
+            @include mq(lg) {
                 margin-left: auto;
             }
         }
     }
+
     &:nth-of-type(4) {
 
         & .contents__imgInner {
@@ -312,7 +334,7 @@
             height: 100%;
             margin-left: calc(60% - 10vw);
 
-            @include mq(lg){
+            @include mq(lg) {
                 margin-left: auto;
             }
         }

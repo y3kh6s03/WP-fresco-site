@@ -39,6 +39,8 @@ function add_js()
 
     if(is_page("about")){
         wp_enqueue_script("about-js", get_template_directory_uri() . "/js/about.js", array(), null, true);
+    }elseif(is_page("future")){
+        wp_enqueue_script("future-js", get_template_directory_uri() . "/js/future.js", array(), null, true);
     }
 }
 add_action("wp_enqueue_scripts", "add_js");
