@@ -55,9 +55,9 @@
 
             & h1 {
                 @extend .font-xxl;
+                display: block;
                 color: white;
                 transform: translateY(100%);
-                transition: all 1s .1s $ease;
             }
 
         }
@@ -85,7 +85,6 @@
             @extend .font-lg;
             opacity: 0;
             transform: translateX(100px);
-            transition: all 1s 1s $ease;
 
             @include mq(lg) {
                 margin-left: 5px;
@@ -100,7 +99,7 @@
 
                 &__inner {
                     & h1 {
-                        transform: translateY(0);
+                        animation: loadedTitleH1 1.5s .35s $ease forwards;
                     }
                 }
 
@@ -109,9 +108,30 @@
                 }
 
                 &__subtitle {
-                    opacity: 1;
-                    transform: translateX(0);
+                    animation: loadedTitleSubtitle 1s 1s $ease forwards;
                 }
+            }
+        }
+
+        @keyframes loadedTitleH1 {
+            0% {
+                transform: translateY(100%);
+            }
+
+            100% {
+                transform: translateY(0%);
+            }
+        }
+
+        @keyframes loadedTitleSubtitle {
+            0% {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0px);
             }
         }
 

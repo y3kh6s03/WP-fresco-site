@@ -776,9 +776,9 @@ small {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .hero__title__inner h1 {
+  display: block;
   color: white;
   transform: translateY(100%);
-  transition: all 1s 0.1s cubic-bezier(1, 0, 0.01, 1);
 }
 .hero__title__bar {
   display: block;
@@ -803,7 +803,6 @@ small {
   color: white;
   opacity: 0;
   transform: translateX(100px);
-  transition: all 1s 1s cubic-bezier(1, 0, 0.01, 1);
 }
 @media (min-width: 960px) {
   .hero__title__subtitle {
@@ -811,14 +810,31 @@ small {
   }
 }
 .hero__title.loaded .hero__title__inner h1 {
-  transform: translateY(0);
+  animation: loadedTitleH1 1.5s 0.35s cubic-bezier(1, 0, 0.01, 1) forwards;
 }
 .hero__title.loaded .hero__title__bar {
   animation: loadedTitleBar 2s cubic-bezier(1, 0, 0.01, 1) forwards;
 }
 .hero__title.loaded .hero__title__subtitle {
-  opacity: 1;
-  transform: translateX(0);
+  animation: loadedTitleSubtitle 1s 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+}
+@keyframes loadedTitleH1 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes loadedTitleSubtitle {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 @keyframes loadedTitleBar {
   0% {
