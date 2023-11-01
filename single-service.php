@@ -14,7 +14,7 @@
             </span>
         </div>
         <div class="subHero__image">
-            <img src="<?php the_field("main-image") ?>" alt="" class="subHero__image__img">
+            <img src="<?php the_field("main-image") ?>" alt="service-image" class="subHero__image__img">
         </div>
     </section>
 
@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="contents__inner__image">
-            <img src=<?php the_field("description-image1") ?> alt="">
+            <img src=<?php the_field("description-image1") ?> alt="service-image">
         </div>
     </section>
     <section class="contents container">
@@ -50,7 +50,7 @@
             </div>
         </div>
         <div class="contents__inner__image">
-            <img src=<?php the_field("description-image2") ?> alt="">
+            <img src=<?php the_field("description-image2") ?> alt="service-image">
         </div>
     </section>
 

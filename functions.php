@@ -38,13 +38,15 @@ function add_js()
     }
 
     if (is_page("about")) {
-        wp_enqueue_script("about-js", get_template_directory_uri() . "/js/about.js", array(), null, true);
+        wp_enqueue_script("about-js", get_template_directory_uri() . "/js/about.js", array("gsap", "gsap-scrollTrigger", "gsap-observer"), null, true);
     } elseif (is_page("future")) {
-        wp_enqueue_script("future-js", get_template_directory_uri() . "/js/future.js", array(), null, true);
+        wp_enqueue_script("future-js", get_template_directory_uri() . "/js/future.js", array("gsap", "gsap-scrollTrigger", "gsap-observer"), null, true);
     } elseif (is_post_type_archive("service")) {
-        wp_enqueue_script("service-js", get_template_directory_uri() . "/js/service.js", array(), null, true);
+        wp_enqueue_script("service-js", get_template_directory_uri() . "/js/service.js", array("gsap", "gsap-scrollTrigger", "gsap-observer"), null, true);
     } elseif (is_singular("service")) {
-        wp_enqueue_script("detail-js", get_template_directory_uri() . "/js/detail.js", array(), null, true);
+        wp_enqueue_script("detail-js", get_template_directory_uri() . "/js/detail.js", array("gsap", "gsap-scrollTrigger", "gsap-observer"), null, true);
+    } elseif (is_post_type_archive("works")) {
+        wp_enqueue_script("works-js", get_template_directory_uri() . "/js/works.js", array("gsap", "gsap-scrollTrigger", "gsap-observer"), null, true);
     }
 }
 add_action("wp_enqueue_scripts", "add_js");

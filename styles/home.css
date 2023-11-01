@@ -96,7 +96,7 @@
   font-family: "Noto Sans", sans-serif;
   line-height: 1;
   transform: translateY(100%);
-  transition: all 1s 0.2s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s 0.15s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .content__title__bar {
   display: block;
@@ -105,21 +105,21 @@
   background-color: #333333;
   transform: scaleX(0%) translateY(-300px);
   transform-origin: right;
-  transition: all 1s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .content__title__ja {
   display: block;
   font-family: "Noto Sans JP", sans-serif;
   transform: translateX(50px);
   opacity: 0;
-  transition: all 1s 0.6s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s 0.3s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .content__title .active .content__title__en {
   transform: translateY(0);
 }
 .content__title .active .content__title__bar {
   transform: scaleX(7%);
-  animation: titleActive 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+  animation: titleActive 1s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 .content__title .active .content__title__ja {
   opacity: 1;
@@ -259,7 +259,7 @@ img {
   background-color: #333333;
   transform: scaleX(10%);
   transform-origin: left;
-  animation: pagelink_bar_out 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+  animation: pagelink_bar_out 1s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 .pagelink__arrow {
   display: block;
@@ -298,7 +298,7 @@ img {
   position: absolute;
   top: 0;
   right: 0;
-  transition: all 0.5s 0.5s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 0.5s 0.5s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .pagelink__arrow::before {
   transform: rotate(320deg) translateX(2px) translateY(3.5px);
@@ -311,10 +311,10 @@ img {
   display: block;
   text-align: end;
   transform: translateY(100%);
-  transition: all 1s 0.3s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s 0.3s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .pagelink:hover .pagelink__bar {
-  animation: pagelink_bar_hover 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+  animation: pagelink_bar_hover 1s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 .pagelink:hover .pagelink__arrow::before {
   transform: rotate(0deg) translateX(3px) translateY(0.01px);
@@ -385,7 +385,7 @@ img {
   color: white;
   line-height: 40px;
   position: relative;
-  transition: all 0.5s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 0.5s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .contact__button__textinner__ja::before {
   content: "Contact";
@@ -393,7 +393,7 @@ img {
   top: 0;
   left: 50%;
   transform: translate(-50%, -100%);
-  transition: all 0.5s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 0.5s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .contact__button__textinner__bar {
   display: block;
@@ -413,7 +413,7 @@ img {
   font-family: "Noto Sans", sans-serif;
   text-align: center;
   line-height: 50px;
-  transition: all 1s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .contact__button:hover .contact__button__textinner__ja {
   transform: translateY(-100%);
@@ -452,7 +452,8 @@ img {
   height: 1px;
   background-color: #333333;
   mix-blend-mode: color;
-  transition: all 1s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s cubic-bezier(0.88, -0.01, 0.22, 1);
+  box-shadow: 0px 0px 0.5px white;
 }
 .header__icon__bar:nth-child(1) {
   transform: translateY(50%) rotate(180deg);
@@ -482,7 +483,7 @@ img {
   right: 0;
   transform: translateX(100%);
   z-index: 99;
-  transition: all 1s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 @media (min-width: 600px) {
   .header__nav {
@@ -529,7 +530,7 @@ img {
   z-index: 98;
   opacity: 0;
   pointer-events: none;
-  transition: all 1s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .header__bcc.onClick {
   opacity: 0.5;
@@ -814,13 +815,13 @@ small {
   }
 }
 .hero__title.loaded .hero__title__inner h1 {
-  animation: loadedTitleH1 1.5s 0.35s cubic-bezier(1, 0, 0.01, 1) forwards;
+  animation: loadedTitleH1 1.5s 0.35s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 .hero__title.loaded .hero__title__bar {
-  animation: loadedTitleBar 2s cubic-bezier(1, 0, 0.01, 1) forwards;
+  animation: loadedTitleBar 2s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 .hero__title.loaded .hero__title__subtitle {
-  animation: loadedTitleSubtitle 1s 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+  animation: loadedTitleSubtitle 1s 1s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 @keyframes loadedTitleH1 {
   0% {
@@ -1278,7 +1279,7 @@ small {
   .service__list__item__image img {
     height: 100%;
     transform: translateY(100%);
-    transition: all 0.5s cubic-bezier(1, 0, 0.01, 1);
+    transition: all 0.5s cubic-bezier(0.88, -0.01, 0.22, 1);
   }
 }
 .service__list__item__image p {
@@ -1294,7 +1295,7 @@ small {
     left: 10%;
     opacity: 0;
     transform: translateX(100px);
-    transition: all 0.5s cubic-bezier(1, 0, 0.01, 1);
+    transition: all 0.5s cubic-bezier(0.88, -0.01, 0.22, 1);
   }
 }
 .service__list__item__image p span {
@@ -1315,7 +1316,7 @@ small {
   background-color: #333333;
   transform: scaleX(5%);
   transform-origin: left;
-  animation: service-link-out 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+  animation: service-link-out 1s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 @media (min-width: 960px) {
   .service__list__item__link span:nth-child(3) {
@@ -1328,7 +1329,7 @@ small {
   }
 }
 .service__list__item:hover .service__list__item__link span:nth-child(3) {
-  animation: service-link-hover 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+  animation: service-link-hover 1s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 .service .circle {
   position: absolute;
@@ -1451,7 +1452,7 @@ small {
   width: 120px;
   height: 1px;
   background-color: white;
-  animation: swipe-animation 2s cubic-bezier(1, 0, 0.01, 1) infinite;
+  animation: swipe-animation 2s cubic-bezier(0.88, -0.01, 0.22, 1) infinite;
 }
 .works .swiper-wrapper {
   transition-timing-function: linear;
@@ -1586,7 +1587,7 @@ small {
   transform: translateY(100%);
 }
 .info__inner:nth-of-type(1):hover .info__item__text__bar {
-  animation: info-hover 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+  animation: info-hover 1s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 .info__inner:nth-of-type(1):hover .info__item__text__arrow::after {
   transform: rotate(0) translateY(3px);
@@ -1616,7 +1617,7 @@ small {
   transform: translateY(100%);
 }
 .info__inner:nth-of-type(2):hover .info__item__text__bar {
-  animation: info-hover 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+  animation: info-hover 1s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 .info__inner:nth-of-type(2):hover .info__item__text__arrow::after {
   transform: rotate(0) translateY(3px);
@@ -1646,7 +1647,7 @@ small {
   transform: translateY(100%);
 }
 .info__inner:nth-of-type(3):hover .info__item__text__bar {
-  animation: info-hover 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+  animation: info-hover 1s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 .info__inner:nth-of-type(3):hover .info__item__text__arrow::after {
   transform: rotate(0) translateY(3px);
@@ -1687,7 +1688,7 @@ small {
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 0.5s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 0.5s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .info__item__text {
   position: relative;
@@ -1705,7 +1706,7 @@ small {
   background-color: #333333;
   transform: scaleX(5%);
   transform-origin: left;
-  animation: info-out 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+  animation: info-out 1s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 .info__item__text__arrow {
   display: block;
@@ -1721,7 +1722,7 @@ small {
   height: 100%;
   background-color: #333333;
   position: absolute;
-  transition: all 1s 0.1s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s 0.1s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .info__item__text__arrow::before {
   transform: rotate(40deg) translate(1.3px, 0.9px);
@@ -1751,14 +1752,14 @@ small {
 }
 .info__item__text__ja {
   display: block;
-  transition: all 0.5s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 0.5s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .info__item__text__click {
   position: absolute;
   bottom: 0;
   right: 3%;
   transform: translateY(100%);
-  transition: all 0.5s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 0.5s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 @keyframes info-hover {
   0% {

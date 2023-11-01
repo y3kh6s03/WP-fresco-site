@@ -18,7 +18,7 @@
             </span>
         </div>
         <div class="subHero__image">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/futureHero.jpg" alt="" class="subHero__image__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/futureHero.jpg" alt="future-image" class="subHero__image__img">
         </div>
     </section>
 
@@ -61,14 +61,14 @@
 
         <div class="contents__imgInner">
             <div class="contents__imgInner__image1">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/fruits.jpg" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/liveAndMeal.jpg" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/rice.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/fruits.jpg" alt="future-image">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/liveAndMeal.jpg" alt="future-image">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/rice.jpg" alt="future-image">
             </div>
             <div class="contents__imgInner__image2">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/liveAndMeal2.jpg" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/rice2.jpg" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/meal-kit.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/liveAndMeal2.jpg" alt="future-image">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/rice2.jpg" alt="future-image">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/meal-kit.jpg" alt="future-image">
             </div>
         </div>
     </section>
@@ -103,7 +103,7 @@
 
         <div class="contents__imgInner">
             <div class="contents__imgInner__image1" id="imageTarget">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/healthy.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/healthy.jpg" alt="future-image">
             </div>
     </section>
 
@@ -140,7 +140,7 @@
 
         <div class="contents__imgInner">
             <div class="contents__imgInner__image1" id="imageTarget">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/sun.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/sun.jpg" alt="future-image">
             </div>
     </section>
 

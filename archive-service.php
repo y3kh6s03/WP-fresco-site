@@ -18,7 +18,7 @@
             </span>
         </div>
         <div class="subHero__image">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/service-images/serviceHero.jpg" alt="" class="subHero__image__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/service-images/serviceHero.jpg" alt="service-image" class="subHero__image__img">
         </div>
     </section>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -53,7 +53,7 @@
                         </p>
                     </div>
                     <div class="contents__image">
-                        <img src="<?php the_field("description-image1") ?>" alt="" class="contents__image__img">
+                        <img src="<?php the_field("description-image1") ?>" alt="service-image" class="contents__image__img">
                     </div>
                 </div>
                 <a href="<?php the_permalink(); ?>" class="pagelink">

@@ -20,20 +20,21 @@ navBackground.addEventListener("click", toggleOnClick)
 //////////////////////////////
 
 window.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+    const titleEl = gsap.utils.toArray(".content__title__container")
 
-    gsap.utils.toArray(".content__title__container").forEach((el) => {
-        const selectEl = gsap.utils.selector(el);
+    titleEl.forEach((el) => {
 
-        gsap.timeline({
+        gsap.set(el, {
             scrollTrigger: {
                 trigger: el,
                 start: "top 100%",
                 toggleClass: "active",
                 toggleActions: "play none none reset",
-            },
-        }).to(selectEl, {})
+            }
+        })
     })
-})
+});
 
 
 

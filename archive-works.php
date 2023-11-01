@@ -18,7 +18,7 @@
             </span>
         </div>
         <div class="subHero__image">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/works-images/worksHero.jpg" alt="" class="subHero__image__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/works-images/worksHero.jpg" alt="works-image" class="subHero__image__img">
         </div>
     </section>
 
@@ -38,7 +38,7 @@
                         </span>
                     </div>
                     <div class="contents__header__image">
-                        <img src="<?php the_field("image"); ?>" alt="">
+                        <img src="<?php the_field("image"); ?>" alt="works-image">
                     </div>
                 </div>
 
@@ -54,44 +54,12 @@
                     </p>
                 </div>
                 <div class="contents__image">
-                    <img src="<?php the_field("image2") ?>" alt="" class="contents__image__img">
+                    <img src="<?php the_field("image2") ?>" alt="works-image" class="contents__image__img">
                 </div>
             </section>
 
     <?php endwhile;
     endif; ?>
-
-    <!-- <section class="contents container">
-        <div class="contents__header">
-            <div class="contents__header__inner">
-                <span class="contents__header__bar"></span>
-                <h3 class="contents__header__enName">
-                    Catering
-                </h3>
-                <span class="contents__header__jaName">
-                    ケータリング事業
-                </span>
-            </div>
-            <div class="contents__header__image">
-                <img src="/images/works-images/bento.jpg" alt="">
-            </div>
-        </div>
-
-        <div class="contents__description">
-            <div class="contents__description__author">
-                <p>
-                    <span>customer:</span>
-                    建設コンサルタンツ協会　さま
-                </p>
-            </div>
-            <p class="contents__description__p">
-                建設コンサルタンツ協会若手の会さま向けに、千曲市環境局主催で実施した腸内環境セミナーにて、お弁当のご提供を行いました。当日は、腸内環境に関する健康セミナーの内容に合わせてアレンジした、食物繊維や発酵食品たっぷりのメニューを作成。セミナーの内容を食事で体験し、実感できるコンテンツとしてご好評をいただきました。
-            </p>
-        </div>
-        <div class="contents__image">
-            <img src="/images/main-images/catering2.jpg" alt="" class="contents__image__img">
-        </div>
-    </section> -->
 
     <div class="contact__button">
         <a href="/contact" class="contact__button__a">

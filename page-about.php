@@ -19,7 +19,7 @@
             </span>
         </div>
         <div class="subHero__image">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/about-images/aboutHero.jpg" alt="" class="subHero__image__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/about-images/aboutHero.jpg" alt="about-image" class="subHero__image__img">
         </div>
     </section>
 
@@ -139,7 +139,7 @@
 
         <div class="message__inner">
             <div class="message__inner__image">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/about-images/president.jpg" alt="" class="message__inner__image__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/about-images/president.jpg" alt="about-image" class="message__inner__image__img">
             </div>
             <div class="message__inner__description">
                 <h3>
