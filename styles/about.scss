@@ -87,7 +87,7 @@
                 margin-left: auto;
                 margin-right: calc(50% - 50vw);
 
-                &__img{
+                &__img {
                     max-height: 500px;
                 }
             }
@@ -115,10 +115,15 @@
                 @include mq(lg) {
                     text-align: end
                 }
+
                 & span {
                     @extend .font-sm;
                     font-family: $fNotoJP;
-                    margin-right: 60px
+                    margin-right: 60px;
+
+                    @include mq(lg) {
+                        margin-right: 70px
+                    }
                 }
 
                 & p {

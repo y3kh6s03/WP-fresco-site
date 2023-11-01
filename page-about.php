@@ -7,15 +7,19 @@
 
 <main>
     <section class="subHero">
-        <h1 class="subHero__title">
-            About
+        <div class="subHero__title">
+            <div class="subHero__title__inner">
+                <h1 class="subHero__title__h1">
+                    ABOUT
+                </h1>
+            </div>
             <span class="subHero__title__bar"></span>
             <span class="subHero__title__ja">
                 わたしたちについて
             </span>
-        </h1>
+        </div>
         <div class="subHero__image">
-            <img src="<?php echo get_template_directory_uri();?>/images/about-images/aboutHero.jpg" alt="" class="subHero__image__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/about-images/aboutHero.jpg" alt="" class="subHero__image__img">
         </div>
     </section>
 
@@ -135,7 +139,7 @@
 
         <div class="message__inner">
             <div class="message__inner__image">
-                <img src="<?php echo get_template_directory_uri();?>/images/about-images/president.jpg" alt="" class="message__inner__image__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/about-images/president.jpg" alt="" class="message__inner__image__img">
             </div>
             <div class="message__inner__description">
                 <h3>
