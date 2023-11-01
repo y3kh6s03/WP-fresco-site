@@ -22,40 +22,40 @@
   }
 }
 
-.font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
+.font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
   font-size: 18px;
 }
 @media (min-width: 600px) {
-  .font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
+  .font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
     font-size: 20px;
   }
 }
 @media (min-width: 960px) {
-  .font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
+  .font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
     font-size: 24px;
   }
 }
 @media (min-width: 1280px) {
-  .font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
+  .font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
     font-size: 26px;
   }
 }
 
-.font-xl, .content__title__en {
+.font-xl, .section__headline, .content__title__en {
   font-size: 30px;
 }
 @media (min-width: 600px) {
-  .font-xl, .content__title__en {
+  .font-xl, .section__headline, .content__title__en {
     font-size: 36px;
   }
 }
 @media (min-width: 960px) {
-  .font-xl, .content__title__en {
+  .font-xl, .section__headline, .content__title__en {
     font-size: 42px;
   }
 }
 @media (min-width: 1280px) {
-  .font-xl, .content__title__en {
+  .font-xl, .section__headline, .content__title__en {
     font-size: 60px;
   }
 }
@@ -226,6 +226,10 @@ img {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  -webkit-clip-path: polygon(0 0, 0 0%, 0 100%, 0 100%);
+          clip-path: polygon(0 0, 0 0%, 0 100%, 0 100%);
+  opacity: 0;
+  transform: translateX(50px);
 }
 @media (min-width: 960px) {
   .section__headline {
@@ -850,10 +854,13 @@ small {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
-.contents__enHeadline__span {
+.contents__enHeadline__p {
   font-family: "Noto Sans", sans-serif;
-  display: block;
+  transform: translateY(-100%);
+  transition: all 1s 0.5s cubic-bezier(1, 0, 0.01, 1);
 }
 .contents__enHeadline__num {
   font-family: "Noto Nastaliq Urdu", serif;
@@ -864,6 +871,23 @@ small {
   width: 100%;
   height: 1px;
   background-color: #333333;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all 1s cubic-bezier(1, 0, 0.01, 1);
+}
+.contents__enHeadline.active .contents__enHeadline__p {
+  transform: translateY(0%);
+}
+.contents__enHeadline.active .contents__enHeadline__bar {
+  transform: scaleX(1);
+}
+.contents__description__jaHeadline {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.contents__description__jaHeadline h3 {
+  opacity: 0;
+  transform: translateY(100%);
 }
 .contents__imgInner {
   height: 300px;

@@ -44,7 +44,7 @@
             </div>
             <div class="contents__description">
                 <div class="contents__description__jaHeadline">
-                    <h3>
+                    <h3 id="jaHeadline__h3">
                         食べることは、 生きること。
                     </h3>
                 </div>
@@ -78,17 +78,19 @@
     <section class="contents container">
         <div class="contents__inner">
             <div class="contents__enHeadline">
-                <p class="contents__enHeadline__p">
-                    Create Healthy.
-                </p>
-                <span class="contents__enHeadline__num">
-                    02
-                </span>
+                <div class="contents__enHeadline__inner">
+                    <p class="contents__enHeadline__p">
+                        Create Healthy.
+                    </p>
+                    <span class="contents__enHeadline__num">
+                        02
+                    </span>
+                </div>
                 <span class="contents__enHeadline__bar"></span>
             </div>
             <div class="contents__description">
                 <div class="contents__description__jaHeadline">
-                    <h3>
+                    <h3 id="jaHeadline__h3">
                         人生100年時代の健康をつくる。
                     </h3>
                 </div>
@@ -100,7 +102,7 @@
         </div>
 
         <div class="contents__imgInner">
-            <div class="contents__imgInner__image1">
+            <div class="contents__imgInner__image1" id="imageTarget">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/healthy.jpg" alt="">
             </div>
     </section>
@@ -110,17 +112,19 @@
     <section class="contents container">
         <div class="contents__inner">
             <div class="contents__enHeadline">
-                <p class="contents__enHeadline__p">
-                    Energize Those Around You.
-                </p>
-                <span class="contents__enHeadline__num">
-                    03
-                </span>
+                <div class="contents__enHeadline__inner">
+                    <p class="contents__enHeadline__p">
+                        Energize Those Around You.
+                    </p>
+                    <span class="contents__enHeadline__num">
+                        03
+                    </span>
+                </div>
                 <span class="contents__enHeadline__bar"></span>
             </div>
             <div class="contents__description">
                 <div class="contents__description__jaHeadline">
-                    <h3>
+                    <h3 id="jaHeadline__h3">
                         地域のみなさまとともに 長野を元気に
                     </h3>
                 </div>
@@ -135,7 +139,7 @@
         </div>
 
         <div class="contents__imgInner">
-            <div class="contents__imgInner__image1">
+            <div class="contents__imgInner__image1" id="imageTarget">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/sun.jpg" alt="">
             </div>
     </section>
