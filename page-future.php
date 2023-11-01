@@ -6,15 +6,19 @@
 
 <main>
     <section class="subHero">
-        <h1 class="subHero__title">
-            Future
+        <div class="subHero__title">
+            <div class="subHero__title__inner">
+                <h1 class="subHero__title__h1">
+                    FUTURE
+                </h1>
+            </div>
             <span class="subHero__title__bar"></span>
             <span class="subHero__title__ja">
                 わたしたちの未来
             </span>
-        </h1>
+        </div>
         <div class="subHero__image">
-            <img src="<?php echo get_template_directory_uri();?>/images/future-images/futureHero.jpg" alt="" class="subHero__image__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/futureHero.jpg" alt="" class="subHero__image__img">
         </div>
     </section>
 
@@ -57,14 +61,14 @@
 
         <div class="contents__imgInner">
             <div class="contents__imgInner__image1">
-                <img src="<?php echo get_template_directory_uri();?>/images/future-images/fruits.jpg" alt="">
-                <img src="<?php echo get_template_directory_uri();?>/images/future-images/liveAndMeal.jpg" alt="">
-                <img src="<?php echo get_template_directory_uri();?>/images/future-images/rice.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/fruits.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/liveAndMeal.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/rice.jpg" alt="">
             </div>
             <div class="contents__imgInner__image2">
-                <img src="<?php echo get_template_directory_uri();?>/images/future-images/liveAndMeal2.jpg" alt="">
-                <img src="<?php echo get_template_directory_uri();?>/images/future-images/rice2.jpg" alt="">
-                <img src="<?php echo get_template_directory_uri();?>/images/future-images/meal-kit.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/liveAndMeal2.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/rice2.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/meal-kit.jpg" alt="">
             </div>
         </div>
     </section>
@@ -97,7 +101,7 @@
 
         <div class="contents__imgInner">
             <div class="contents__imgInner__image1">
-                <img src="<?php echo get_template_directory_uri();?>/images/future-images/healthy.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/healthy.jpg" alt="">
             </div>
     </section>
 
@@ -132,7 +136,7 @@
 
         <div class="contents__imgInner">
             <div class="contents__imgInner__image1">
-                <img src="<?php echo get_template_directory_uri();?>/images/future-images/sun.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/future-images/sun.jpg" alt="">
             </div>
     </section>
 

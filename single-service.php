@@ -2,16 +2,19 @@
 
 <main>
     <section class="subHero">
-        <h1 class="subHero__title">
-            <?php the_field("name"); ?>
-
+        <div class="subHero__title">
+            <div class="subHero__title__inner">
+                <h1 class="subHero__title__h1">
+                    <?php the_field("name") ?>
+                </h1>
+            </div>
             <span class="subHero__title__bar"></span>
             <span class="subHero__title__ja">
                 <?php the_field("ja-name") ?>
             </span>
-        </h1>
+        </div>
         <div class="subHero__image">
-            <img src="<?php the_field("main-image")?>" alt="" class="subHero__image__img">
+            <img src="<?php the_field("main-image") ?>" alt="" class="subHero__image__img">
         </div>
     </section>
 

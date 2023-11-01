@@ -13,8 +13,9 @@
     align-items: center;
     padding-left: 5%;
 
-    @include mq(lg){
-        padding-left: 10%;;
+    @include mq(lg) {
+        padding-left: 10%;
+        ;
     }
 
     &__title {
@@ -24,8 +25,18 @@
         line-height: 1.2;
         margin-right: -10vw;
         z-index: 1;
-
         margin-right: -20vw;
+
+        &__inner {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        &__h1 {
+            font-family: $fNoto;
+            @extend .font-xxl;
+            transform: translateY(100%);
+            transition: all 1s .15s $ease;
+        }
 
         &__bar {
             display: block;
@@ -36,22 +47,74 @@
             box-shadow: -1px 0px 2px 1px white;
             z-index: 10;
             position: relative;
+            transform: scaleX(0);
+            transform-origin: right;
         }
 
         &__ja {
             display: block;
-
+            @extend .font-lg;
+            font-family: $fNotoJP;
+            transform: translateX(50px);
+            opacity: 0;
+            transition: all 1s .3s $ease;
         }
     }
+
     &__image {
         flex: 5;
         max-width: 550px;
         height: 100vh;
         max-height: 450px;
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        transition: all 1s .3s $ease;
 
-        @include mq(lg){
+        @include mq(lg) {
             max-width: 700px;
             max-height: 600px;
+        }
+    }
+
+    &.loaded {
+        & .subHero__title {
+            &__h1 {
+                transform: translateY(0);
+            }
+
+            &__bar {
+                animation: loadedBar 1s $ease forwards;
+            }
+
+            &__ja {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        & .subHero__image {
+            clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+    }
+
+    @keyframes loadedBar {
+        0% {
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+
+        50% {
+            transform: scaleX(1);
+            transform-origin: right;
+        }
+
+        51% {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        100% {
+            transform: scaleX(5%);
+            transform-origin: left;
         }
     }
 }

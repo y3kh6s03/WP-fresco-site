@@ -22,14 +22,23 @@ add_action("wp_enqueue_scripts", "add_style");
 function add_js()
 {
     wp_enqueue_script("gsap", "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js");
+
     wp_enqueue_script("gsap-scrollTrigger", "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js", array("gsap"), null, true);
+
     wp_enqueue_script("gsap-observer", "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js", array("gsap"), null, true);
-    wp_enqueue_script("swiper", "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js", array(), null, true);
 
 
-    wp_enqueue_script("main-js", get_template_directory_uri() . "/js/main.js", array("gsap", "gsap-scrollTrigger", "gsap-observer", "swiper"), null, true);
-    // if (is_front_page() || is_home()) {
-    // }
+    wp_enqueue_script("main-js", get_template_directory_uri() . "/js/main.js", array("gsap", "gsap-scrollTrigger", "gsap-observer"), null, true);
+
+    if (is_front_page() || is_home()) {
+
+        wp_enqueue_script("swiper", "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js", array(), null, true);
+
+        wp_enqueue_script("home-js", get_template_directory_uri() . "/js/home.js", array("gsap", "gsap-scrollTrigger", "gsap-observer", "swiper"), null, true);
+    } elseif (!is_front_page() || !is_home()) {
+
+        wp_enqueue_script("sub-js", get_template_directory_uri() . "/js/sub.js", array(), null, true);
+    }
 }
 add_action("wp_enqueue_scripts", "add_js");
 

@@ -6,13 +6,17 @@
 
 <main>
     <section class="subHero">
-        <h1 class="subHero__title">
-            Works
+        <div class="subHero__title">
+            <div class="subHero__title__inner">
+                <h1 class="subHero__title__h1">
+                    WORKS
+                </h1>
+            </div>
             <span class="subHero__title__bar"></span>
             <span class="subHero__title__ja">
                 わたしたちの歩み
             </span>
-        </h1>
+        </div>
         <div class="subHero__image">
             <img src="<?php echo get_template_directory_uri(); ?>/images/works-images/worksHero.jpg" alt="" class="subHero__image__img">
         </div>

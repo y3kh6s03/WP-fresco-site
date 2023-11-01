@@ -22,21 +22,21 @@
   }
 }
 
-.font-lg, .contents__description__jaHeadline h3, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
+.font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
   font-size: 18px;
 }
 @media (min-width: 600px) {
-  .font-lg, .contents__description__jaHeadline h3, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
+  .font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
     font-size: 20px;
   }
 }
 @media (min-width: 960px) {
-  .font-lg, .contents__description__jaHeadline h3, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
+  .font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
     font-size: 24px;
   }
 }
 @media (min-width: 1280px) {
-  .font-lg, .contents__description__jaHeadline h3, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
+  .font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name, .section__headline {
     font-size: 26px;
   }
 }
@@ -60,29 +60,29 @@
   }
 }
 
-.font-xxl, .subHero__title {
+.font-xxl, .subHero__title, .subHero__title__h1 {
   font-size: 50px;
   line-height: 1.2;
 }
 @media (min-width: 480px) {
-  .font-xxl, .subHero__title {
+  .font-xxl, .subHero__title, .subHero__title__h1 {
     font-size: 60px;
   }
 }
 @media (min-width: 600px) {
-  .font-xxl, .subHero__title {
+  .font-xxl, .subHero__title, .subHero__title__h1 {
     font-size: 70px;
     line-height: 1;
   }
 }
 @media (min-width: 960px) {
-  .font-xxl, .subHero__title {
+  .font-xxl, .subHero__title, .subHero__title__h1 {
     font-size: 80px;
     line-height: 1;
   }
 }
 @media (min-width: 1280px) {
-  .font-xxl, .subHero__title {
+  .font-xxl, .subHero__title, .subHero__title__h1 {
     font-size: 90px;
     line-height: 1;
   }
@@ -752,6 +752,15 @@ small {
   z-index: 1;
   margin-right: -20vw;
 }
+.subHero__title__inner {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.subHero__title__h1 {
+  font-family: "Noto Sans", sans-serif;
+  transform: translateY(100%);
+  transition: all 1s 0.15s cubic-bezier(1, 0, 0.01, 1);
+}
 .subHero__title__bar {
   display: block;
   width: 50vw;
@@ -761,20 +770,61 @@ small {
   box-shadow: -1px 0px 2px 1px white;
   z-index: 10;
   position: relative;
+  transform: scaleX(0);
+  transform-origin: right;
 }
 .subHero__title__ja {
   display: block;
+  font-family: "Noto Sans JP", sans-serif;
+  transform: translateX(50px);
+  opacity: 0;
+  transition: all 1s 0.3s cubic-bezier(1, 0, 0.01, 1);
 }
 .subHero__image {
   flex: 5;
   max-width: 550px;
   height: 100vh;
   max-height: 450px;
+  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  transition: all 1s 0.3s cubic-bezier(1, 0, 0.01, 1);
 }
 @media (min-width: 960px) {
   .subHero__image {
     max-width: 700px;
     max-height: 600px;
+  }
+}
+.subHero.loaded .subHero__title__h1 {
+  transform: translateY(0);
+}
+.subHero.loaded .subHero__title__bar {
+  animation: loadedBar 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+}
+.subHero.loaded .subHero__title__ja {
+  transform: translateX(0px);
+  opacity: 1;
+}
+.subHero.loaded .subHero__image {
+  -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+}
+@keyframes loadedBar {
+  0% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  51% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(5%);
+    transform-origin: left;
   }
 }
 
