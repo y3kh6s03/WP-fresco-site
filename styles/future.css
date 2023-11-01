@@ -7,36 +7,36 @@
   }
 }
 
-.font-md, .footer td, .footer th, .header__nav__title, .pagelink__name, * {
+.font-md, .footer td, .footer th, .header__nav__title, * {
   font-size: 14px;
   line-height: 1.7;
 }
 @media (min-width: 600px) {
-  .font-md, .footer td, .footer th, .header__nav__title, .pagelink__name, * {
+  .font-md, .footer td, .footer th, .header__nav__title, * {
     font-size: 15px;
   }
 }
 @media (min-width: 960px) {
-  .font-md, .footer td, .footer th, .header__nav__title, .pagelink__name, * {
+  .font-md, .footer td, .footer th, .header__nav__title, * {
     font-size: 16px;
   }
 }
 
-.font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja {
+.font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
   font-size: 18px;
 }
 @media (min-width: 600px) {
-  .font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja {
+  .font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
     font-size: 20px;
   }
 }
 @media (min-width: 960px) {
-  .font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja {
+  .font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
     font-size: 24px;
   }
 }
 @media (min-width: 1280px) {
-  .font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja {
+  .font-lg, .contents__description__jaHeadline h3, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
     font-size: 26px;
   }
 }

@@ -43,6 +43,8 @@ function add_js()
         wp_enqueue_script("future-js", get_template_directory_uri() . "/js/future.js", array(), null, true);
     } elseif (is_post_type_archive("service")) {
         wp_enqueue_script("service-js", get_template_directory_uri() . "/js/service.js", array(), null, true);
+    } elseif (is_singular("service")) {
+        wp_enqueue_script("detail-js", get_template_directory_uri() . "/js/detail.js", array(), null, true);
     }
 }
 add_action("wp_enqueue_scripts", "add_js");

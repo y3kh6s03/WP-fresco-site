@@ -54,6 +54,16 @@
         </div>
     </section>
 
+    <a href="<?php echo home_url() ?>/service" class="pagelink">
+        <span class="pagelink__name">
+            Service list
+        </span>
+        <span class="pagelink__bar"></span>
+        <span class="pagelink__arrow"></span>
+        <span class="pagelink__text">Read more ...</span>
+    </a>
+
+
     <div class="contact__button">
         <a href="/contact" class="contact__button__a">
             <div class="contact__button__textinner">

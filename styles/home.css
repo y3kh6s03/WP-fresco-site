@@ -7,36 +7,36 @@
   }
 }
 
-.font-md, .hero__link__a__enTitle, .hero__nav__ul__li a, .contact__contents__p, .footer td, .footer th, .header__nav__title, .pagelink__name, * {
+.font-md, .hero__link__a__enTitle, .hero__nav__ul__li a, .contact__contents__p, .footer td, .footer th, .header__nav__title, * {
   font-size: 14px;
   line-height: 1.7;
 }
 @media (min-width: 600px) {
-  .font-md, .hero__link__a__enTitle, .hero__nav__ul__li a, .contact__contents__p, .footer td, .footer th, .header__nav__title, .pagelink__name, * {
+  .font-md, .hero__link__a__enTitle, .hero__nav__ul__li a, .contact__contents__p, .footer td, .footer th, .header__nav__title, * {
     font-size: 15px;
   }
 }
 @media (min-width: 960px) {
-  .font-md, .hero__link__a__enTitle, .hero__nav__ul__li a, .contact__contents__p, .footer td, .footer th, .header__nav__title, .pagelink__name, * {
+  .font-md, .hero__link__a__enTitle, .hero__nav__ul__li a, .contact__contents__p, .footer td, .footer th, .header__nav__title, * {
     font-size: 16px;
   }
 }
 
-.font-lg, .hero__title__p, .hero__title__subtitle, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .recruit__description__title h3, .info__item__text__p, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja {
+.font-lg, .hero__title__p, .hero__title__subtitle, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .recruit__description__title h3, .info__item__text__p, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
   font-size: 18px;
 }
 @media (min-width: 600px) {
-  .font-lg, .hero__title__p, .hero__title__subtitle, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .recruit__description__title h3, .info__item__text__p, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja {
+  .font-lg, .hero__title__p, .hero__title__subtitle, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .recruit__description__title h3, .info__item__text__p, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
     font-size: 20px;
   }
 }
 @media (min-width: 960px) {
-  .font-lg, .hero__title__p, .hero__title__subtitle, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .recruit__description__title h3, .info__item__text__p, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja {
+  .font-lg, .hero__title__p, .hero__title__subtitle, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .recruit__description__title h3, .info__item__text__p, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
     font-size: 24px;
   }
 }
 @media (min-width: 1280px) {
-  .font-lg, .hero__title__p, .hero__title__subtitle, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .recruit__description__title h3, .info__item__text__p, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja {
+  .font-lg, .hero__title__p, .hero__title__subtitle, .future__description__title, .service__list__item__image p, .service__list__item__image p span, .service__list__item__link span:nth-child(1), .works__swipe__text, .recruit__description__title h3, .info__item__text__p, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
     font-size: 26px;
   }
 }
