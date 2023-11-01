@@ -130,7 +130,7 @@
             </div>
 
             <div class="future__description__wrapper">
-                <img id="future__img" src="<?php echo get_template_directory_uri() ?>/images/main-images/healthy-body.jpg" alt="">
+                <img id="future__img" src="<?php echo get_template_directory_uri() ?>/images/main-images/healthy-body.jpg" alt="index-image">
                 <div class="future__description">
                     <h3 class="future__description__title">
                         食を通じて、<br>すこやかな未来をつくりたい

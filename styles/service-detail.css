@@ -96,7 +96,7 @@
   font-family: "Noto Sans", sans-serif;
   line-height: 1;
   transform: translateY(100%);
-  transition: all 1s 0.2s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s 0.15s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .content__title__bar {
   display: block;
@@ -105,21 +105,21 @@
   background-color: #333333;
   transform: scaleX(0%) translateY(-300px);
   transform-origin: right;
-  transition: all 1s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .content__title__ja {
   display: block;
   font-family: "Noto Sans JP", sans-serif;
   transform: translateX(50px);
   opacity: 0;
-  transition: all 1s 0.6s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s 0.3s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .content__title .active .content__title__en {
   transform: translateY(0);
 }
 .content__title .active .content__title__bar {
   transform: scaleX(7%);
-  animation: titleActive 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+  animation: titleActive 1s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 .content__title .active .content__title__ja {
   opacity: 1;
@@ -259,7 +259,7 @@ img {
   background-color: #333333;
   transform: scaleX(10%);
   transform-origin: left;
-  animation: pagelink_bar_out 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+  animation: pagelink_bar_out 1s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 .pagelink__arrow {
   display: block;
@@ -298,7 +298,7 @@ img {
   position: absolute;
   top: 0;
   right: 0;
-  transition: all 0.5s 0.5s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 0.5s 0.5s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .pagelink__arrow::before {
   transform: rotate(320deg) translateX(2px) translateY(3.5px);
@@ -311,10 +311,10 @@ img {
   display: block;
   text-align: end;
   transform: translateY(100%);
-  transition: all 1s 0.3s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s 0.3s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .pagelink:hover .pagelink__bar {
-  animation: pagelink_bar_hover 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+  animation: pagelink_bar_hover 1s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 .pagelink:hover .pagelink__arrow::before {
   transform: rotate(0deg) translateX(3px) translateY(0.01px);
@@ -385,7 +385,7 @@ img {
   color: white;
   line-height: 40px;
   position: relative;
-  transition: all 0.5s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 0.5s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .contact__button__textinner__ja::before {
   content: "Contact";
@@ -393,7 +393,7 @@ img {
   top: 0;
   left: 50%;
   transform: translate(-50%, -100%);
-  transition: all 0.5s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 0.5s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .contact__button__textinner__bar {
   display: block;
@@ -413,7 +413,7 @@ img {
   font-family: "Noto Sans", sans-serif;
   text-align: center;
   line-height: 50px;
-  transition: all 1s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .contact__button:hover .contact__button__textinner__ja {
   transform: translateY(-100%);
@@ -452,7 +452,8 @@ img {
   height: 1px;
   background-color: #333333;
   mix-blend-mode: color;
-  transition: all 1s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s cubic-bezier(0.88, -0.01, 0.22, 1);
+  box-shadow: 0px 0px 0.5px white;
 }
 .header__icon__bar:nth-child(1) {
   transform: translateY(50%) rotate(180deg);
@@ -482,7 +483,7 @@ img {
   right: 0;
   transform: translateX(100%);
   z-index: 99;
-  transition: all 1s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 @media (min-width: 600px) {
   .header__nav {
@@ -529,7 +530,7 @@ img {
   z-index: 98;
   opacity: 0;
   pointer-events: none;
-  transition: all 1s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .header__bcc.onClick {
   opacity: 0.5;
@@ -763,7 +764,7 @@ small {
 .subHero__title__h1 {
   font-family: "Noto Sans", sans-serif;
   transform: translateY(100%);
-  transition: all 1s 0.15s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s 0.15s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .subHero__title__bar {
   display: block;
@@ -782,7 +783,7 @@ small {
   font-family: "Noto Sans JP", sans-serif;
   transform: translateX(50px);
   opacity: 0;
-  transition: all 1s 0.3s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s 0.3s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 .subHero__image {
   flex: 5;
@@ -791,7 +792,7 @@ small {
   max-height: 450px;
   -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
           clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-  transition: all 1s 0.3s cubic-bezier(1, 0, 0.01, 1);
+  transition: all 1s 0.3s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 @media (min-width: 960px) {
   .subHero__image {
@@ -803,7 +804,7 @@ small {
   transform: translateY(0);
 }
 .subHero.loaded .subHero__title__bar {
-  animation: loadedBar 1s cubic-bezier(1, 0, 0.01, 1) forwards;
+  animation: loadedBar 1s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 .subHero.loaded .subHero__title__ja {
   transform: translateX(0px);

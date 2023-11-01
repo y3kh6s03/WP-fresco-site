@@ -4,25 +4,51 @@
 
 .contents {
     @extend .mb-lg;
+
     &__header {
         display: flex;
         @extend .mb-md;
 
+        &.active {
+            & .contents__header__bar {
+                transform: scaleX(100%);
+            }
+
+            & .contents__header__enName {
+                transform: translateY(0%);
+            }
+
+            & .contents__header__jaName {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+
+            & .contents__header__image {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+
         &__inner {
             flex: 1;
             position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         }
 
-        &__bar{
+        &__bar {
             display: block;
             width: 93%;
             height: 1px;
             background-color: $cBlack;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: all 1s $ease;
         }
 
         &__enName {
             @extend .font-lg;
             font-family: $fNoto;
+            transform: translateY(-100%);
+            transition: all 1s .6s $ease;
         }
 
         &__jaName {
@@ -34,13 +60,18 @@
             top: 50%;
             right: 7%;
             border: 1px solid $cBlack;
+            transform: translateY(10px);
+            opacity: 0;
+            transition: all .5s 1s linear;
         }
 
         &__image {
             flex: 1;
             height: 300px;
+            clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+            transition: all 1s $ease;
 
-            @include mq(lg){
+            @include mq(lg) {
                 width: 50vw;
                 max-width: 700px;
                 height: 450px;
@@ -54,13 +85,14 @@
 
         &__author {
             @extend .mb-sm;
-            & span{
+
+            & span {
                 display: block;
                 font-family: $fNoto;
                 font-weight: normal;
             }
 
-            & p{
+            & p {
                 font-family: $fNotoJP;
                 font-weight: bold;
             }
@@ -74,26 +106,26 @@
     &__image {
         width: 40vw;
 
-        @include mq(md){
+        @include mq(md) {
             width: 35vw;
             max-width: 300px;
         }
 
     }
 
-    &:nth-of-type(odd){
+    &:nth-of-type(odd) {
 
-        & .contents__header{
+        & .contents__header {
             flex-direction: row-reverse;
             width: 100%;
             gap: 3%;
 
-            &__bar{
+            &__bar {
                 width: 100%;
                 text-align: end;
             }
 
-            &__jaName{
+            &__jaName {
                 right: auto;
                 left: 0;
             }
@@ -102,10 +134,11 @@
         & .contents__image {
             margin-left: calc(100% - 50vw);
 
-            @include mq(xl){
+            @include mq(xl) {
                 margin-left: auto;
                 margin-right: calc(50% - 20vw);
             }
+
             &__img {}
 
         }
