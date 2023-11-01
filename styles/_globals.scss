@@ -289,10 +289,9 @@ img {
     z-index: 100;
 
     &__name {
-        @extend .font-lg;
+        @extend .font-md;
         font-family: $fNoto;
-
-        font-weight: bold;
+        font-weight: normal;
     }
 
     &__bar {

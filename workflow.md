@@ -24,6 +24,11 @@
 
 - imgタグのalt設定をきにゅうする
 
+- header iconを見やすくする
+　mix-brend modeかボックスシャドウか、ほかの色を検討するかためhしてみる
+
+- contents__titleの日本語表記の表示を早くする
+
 # subpage
 
 <!-- - subpage-heroのタイトルアニメーションの実装 -->
@@ -55,13 +60,13 @@
 
 # service
 
-- descriptionヘッドラインをfutureと同じようにゆっくりと表示させる
+<!-- - descriptionヘッドラインをfutureと同じようにゆっくりと表示させる -->
 
-- imageをスクロールに合わせてアニメーションさせる
+<!-- - imageをスクロールに合わせてアニメーションさせる -->
 
-- cateringの.を取り除く
+<!-- - cateringの.を取り除く -->
 
-- linkボタンのfont-weightをnomalに変更する
+<!-- - linkボタンのfont-weightをnomalに変更する -->
 
 # service詳細
 
