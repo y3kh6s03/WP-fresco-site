@@ -18,3 +18,15 @@ const scrollToggleClass = (array) => {
 
 scrollToggleClass(headlineEls);
 scrollToggleClass(imageEls);
+
+imageEls.forEach((el)=>{
+    gsap.to(el,{
+        y: 30,
+        scrollTrigger:{
+            trigger: el,
+            start: "top 90%",
+            end: "top 20%",
+            scrub: true
+        }
+    })
+})
