@@ -815,13 +815,13 @@ small {
   }
 }
 .hero__title.loaded .hero__title__inner h1 {
-  animation: loadedTitleH1 1.5s 0.35s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
+  animation: loadedTitleH1 1s 0.1s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 .hero__title.loaded .hero__title__bar {
-  animation: loadedTitleBar 2s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
+  animation: loadedTitleBar 1.2s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 .hero__title.loaded .hero__title__subtitle {
-  animation: loadedTitleSubtitle 1s 1s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
+  animation: loadedTitleSubtitle 1s 0.5s cubic-bezier(0.88, -0.01, 0.22, 1) forwards;
 }
 @keyframes loadedTitleH1 {
   0% {

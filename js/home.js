@@ -9,10 +9,10 @@ window.addEventListener('DOMContentLoaded', function () {
     gsap.to(navItems, {
         x: 0,
         opacity: 1,
-        delay: 1.5,
+        delay: 1,
         duration: .3,
         ease: "expo.out",
-        stagger: .1
+        stagger: .05
     })
 });
 
