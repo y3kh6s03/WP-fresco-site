@@ -9,11 +9,13 @@ function add_style()
         wp_enqueue_style("page-about", get_template_directory_uri() . "/styles/about.css");
     } elseif (is_page("future")) {
         wp_enqueue_style("page-future", get_template_directory_uri() . "/styles/future.css");
+    } elseif (is_page("contact")) {
+        wp_enqueue_style("page-contact", get_template_directory_uri() . "/styles/contact.css");
     } elseif (is_singular("service")) {
         wp_enqueue_style("service-detail", get_template_directory_uri() . "/styles/service-detail.css");
     } elseif (is_post_type_archive("works")) {
         wp_enqueue_style("archive-works", get_template_directory_uri() . "/styles/works.css");
-    } elseif (is_archive("service")) {
+    } elseif (is_post_type_archive("service")) {
         wp_enqueue_style("archive-service", get_template_directory_uri() . "/styles/service.css");
     }
 }
