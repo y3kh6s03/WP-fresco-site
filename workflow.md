@@ -86,4 +86,3 @@
 # contact
 
 <!-- - wordpressのプラグインを利用してcontactページの実装 -->
-test
