@@ -105,124 +105,115 @@
             text-align: center;
             @extend .mb-md;
         }
+    }
 
-        &__button {
-            width: 60vw;
-            max-width: 250px;
-            text-align: center;
+    &__button {
+        width: 40%;
+        max-width: 150px;
+        line-height: 1;
+        background-color: transparent;
+        border-style: none;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            content: "";
+            width: 10px;
+            height: 1px;
+            background-color: $cBlack;
+            position: absolute;
+            top: 70%;
+            right: 0;
+        }
+
+        &::after {
+            transform: rotate(45deg) translate(-2px, -3px);
+        }
+    }
+
+    & p {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        & .return__button,
+        & .submit__button {
+            background-color: transparent;
+            border-style: none;
+            flex: 1;
             position: relative;
-            margin: 0 auto;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            cursor: pointer;
 
-            &::before {
+        }
+
+        & .return__button {
+
+            &::before,
+            &::after {
                 content: "";
-                width: 95%;
+                width: 10px;
                 height: 1px;
                 background-color: $cBlack;
                 position: absolute;
-                bottom: 45%;
+                top: 70%;
                 left: 0;
-                transform: scaleX(5%);
-                transform-origin: left;
-                animation: outHolizonAnimation .5s forwards;
-
-                @keyframes outHolizonAnimation {
-                    0% {
-                        transform: scaleX(30%);
-                        transform-origin: right;
-                    }
-
-                    50% {
-                        transform: scaleX(100%);
-                        transform-origin: right;
-                    }
-
-                    51% {
-                        transform: scaleX(100%);
-                        transform-origin: left;
-                    }
-
-                    100% {
-                        transform-origin: left;
-                        transform: scaleX(5%);
-                    }
-                }
             }
 
-            & button {
-                @extend .font-md;
-                display: block;
-                border-style: none;
-                background-color: transparent;
-                position: relative;
-                cursor: pointer;
+            &::after {
+                transform: rotate(-45deg) translate(1.6px, -3.3px);
+            }
+        }
+
+        & .submit__button {
+
+            &::before,
+            &::after {
+                content: "";
+                width: 10px;
+                height: 1px;
+                background-color: $cBlack;
+                position: absolute;
+                top: 70%;
+                right: 0;
             }
 
-            &__enText {
-                display: block;
-                padding-right: 5%;
-                text-align: end;
-                transform: translateY(100%);
-                transition: all .5s .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-            }
-
-            &__arrow {
-
-                &::before,
-                &::after {
-                    content: "";
-                    width: 10px;
-                    height: 1px;
-                    background-color: $cBlack;
-                    position: absolute;
-                    bottom: 45%;
-                    right: 0;
-                }
-
-
-                &::before {
-                    transform: translateY(-3px) rotate(45deg);
-                }
-
-                &::after {
-                    transform: translateY(3px) rotate(-45deg);
-                }
-            }
-
-
-            &:hover {
-                &::before {
-                    animation: hoverHolizonAnimation .5s forwards;
-
-                    @keyframes hoverHolizonAnimation {
-                        0% {
-                            transform: scaleX(5%);
-                            transform-origin: left;
-                        }
-
-                        50% {
-                            transform: scaleX(100%);
-                            transform-origin: left;
-                        }
-
-                        51% {
-                            transform: scaleX(100%);
-                            transform-origin: right;
-                        }
-
-                        100% {
-                            transform: scaleX(30%);
-                            transform-origin: right;
-                        }
-                    }
-                }
-
-                & .form__form__button__enText {
-                    transform: translateY(0%);
-                }
+            &::after {
+                transform: rotate(45deg) translate(-2px, -3px);
             }
         }
     }
+}
+
+.success {
+
+    &__title {
+        display: inline-block;
+        font-family: $fNotoJP;
+        @extend .font-lg;
+        @extend .mb-md;
+        position: relative;
+
+        &:before{
+            content: "";
+            width: 110%;
+            height: 1px;
+            background-color: $cBlack;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &__p {
+        font-family: $fNotoJP;
+        @extend .mb-lg;
+    }
+}
+
+.pagelink {
+    @extend .mb-lg;
+
 }

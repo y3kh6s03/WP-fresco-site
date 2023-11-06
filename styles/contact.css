@@ -8,36 +8,36 @@
   }
 }
 
-.font-md, .form__form__button button, .footer td, .footer th, .header__nav__title, * {
+.font-md, .footer td, .footer th, .header__nav__title, * {
   font-size: 14px;
   line-height: 1.7;
 }
 @media (min-width: 600px) {
-  .font-md, .form__form__button button, .footer td, .footer th, .header__nav__title, * {
+  .font-md, .footer td, .footer th, .header__nav__title, * {
     font-size: 15px;
   }
 }
 @media (min-width: 960px) {
-  .font-md, .form__form__button button, .footer td, .footer th, .header__nav__title, * {
+  .font-md, .footer td, .footer th, .header__nav__title, * {
     font-size: 16px;
   }
 }
 
-.font-lg, .form__title, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
+.font-lg, .form__title, .success__title, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
   font-size: 18px;
 }
 @media (min-width: 600px) {
-  .font-lg, .form__title, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
+  .font-lg, .form__title, .success__title, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
     font-size: 20px;
   }
 }
 @media (min-width: 960px) {
-  .font-lg, .form__title, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
+  .font-lg, .form__title, .success__title, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
     font-size: 24px;
   }
 }
 @media (min-width: 1280px) {
-  .font-lg, .form__title, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
+  .font-lg, .form__title, .success__title, .subHero__title__ja, .footer__nav__ul li a, .header__nav__ul__li a, .contact__button__textinner__ja, .pagelink__name {
     font-size: 26px;
   }
 }
@@ -149,11 +149,11 @@
   margin-bottom: 20px;
 }
 
-.mb-md, .form__title, .form__form__item textarea, .form__form__checkbox, .footer, .header__nav__title, .content__title {
+.mb-md, .form__title, .form__form__item textarea, .form__form__checkbox, .success__title, .footer, .header__nav__title, .content__title {
   margin-bottom: 50px;
 }
 
-.mb-lg, .form, .section__headline {
+.mb-lg, .form, .success__p, .pagelink, .section__headline {
   margin-bottom: 200px;
 }
 
@@ -916,96 +916,80 @@ small {
 .form__form__checkbox {
   text-align: center;
 }
-.form__form__button {
-  width: 60vw;
-  max-width: 250px;
-  text-align: center;
-  position: relative;
-  margin: 0 auto;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  cursor: pointer;
-}
-.form__form__button::before {
-  content: "";
-  width: 95%;
-  height: 1px;
-  background-color: #333333;
-  position: absolute;
-  bottom: 45%;
-  left: 0;
-  transform: scaleX(5%);
-  transform-origin: left;
-  animation: outHolizonAnimation 0.5s forwards;
-}
-@keyframes outHolizonAnimation {
-  0% {
-    transform: scaleX(30%);
-    transform-origin: right;
-  }
-  50% {
-    transform: scaleX(100%);
-    transform-origin: right;
-  }
-  51% {
-    transform: scaleX(100%);
-    transform-origin: left;
-  }
-  100% {
-    transform-origin: left;
-    transform: scaleX(5%);
-  }
-}
-.form__form__button button {
-  display: block;
-  border-style: none;
+.form__button {
+  width: 40%;
+  max-width: 150px;
+  line-height: 1;
   background-color: transparent;
-  position: relative;
+  border-style: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   cursor: pointer;
 }
-.form__form__button__enText {
-  display: block;
-  padding-right: 5%;
-  text-align: end;
-  transform: translateY(100%);
-  transition: all 0.5s 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-.form__form__button__arrow::before, .form__form__button__arrow::after {
+.form__button::before, .form__button::after {
   content: "";
   width: 10px;
   height: 1px;
   background-color: #333333;
   position: absolute;
-  bottom: 45%;
+  top: 70%;
   right: 0;
 }
-.form__form__button__arrow::before {
-  transform: translateY(-3px) rotate(45deg);
+.form__button::after {
+  transform: rotate(45deg) translate(-2px, -3px);
 }
-.form__form__button__arrow::after {
-  transform: translateY(3px) rotate(-45deg);
+.form p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-.form__form__button:hover::before {
-  animation: hoverHolizonAnimation 0.5s forwards;
+.form p .return__button, .form p .submit__button {
+  background-color: transparent;
+  border-style: none;
+  flex: 1;
+  position: relative;
 }
-@keyframes hoverHolizonAnimation {
-  0% {
-    transform: scaleX(5%);
-    transform-origin: left;
-  }
-  50% {
-    transform: scaleX(100%);
-    transform-origin: left;
-  }
-  51% {
-    transform: scaleX(100%);
-    transform-origin: right;
-  }
-  100% {
-    transform: scaleX(30%);
-    transform-origin: right;
-  }
+.form p .return__button::before, .form p .return__button::after {
+  content: "";
+  width: 10px;
+  height: 1px;
+  background-color: #333333;
+  position: absolute;
+  top: 70%;
+  left: 0;
 }
-.form__form__button:hover .form__form__button__enText {
-  transform: translateY(0%);
+.form p .return__button::after {
+  transform: rotate(-45deg) translate(1.6px, -3.3px);
+}
+.form p .submit__button::before, .form p .submit__button::after {
+  content: "";
+  width: 10px;
+  height: 1px;
+  background-color: #333333;
+  position: absolute;
+  top: 70%;
+  right: 0;
+}
+.form p .submit__button::after {
+  transform: rotate(45deg) translate(-2px, -3px);
+}
+
+.success__title {
+  display: inline-block;
+  font-family: "Noto Sans JP", sans-serif;
+  position: relative;
+}
+.success__title:before {
+  content: "";
+  width: 110%;
+  height: 1px;
+  background-color: #333333;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.success__p {
+  font-family: "Noto Sans JP", sans-serif;
 }/*# sourceMappingURL=contact.css.map */
