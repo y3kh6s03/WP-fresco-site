@@ -14,11 +14,15 @@
 
 - contactのページ作成
 
+- homeのフォントを変更する
+
+-
+
 <!-- - serviceの画像のservice No.の表記のずれを修正する -->
 
 - content-titleのアニメーションのエラーが発生している修正
 
-- font errorのチェックをする
+<!-- - font errorのチェックをする -->
 
 <!-- - heroのlinkをもっと上にもっていく -->
 
@@ -105,3 +109,5 @@ fontの修正
 # contact
 
 <!-- - wordpressのプラグインを利用してcontactページの実装 -->
+
+- プライバシーポリシーを修正する

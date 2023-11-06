@@ -144,11 +144,11 @@
   }
 }
 
-.mb-sm, .hero__link__a:nth-child(1), .hero__nav__ul__li, .about__description__p, .future__description__title, .recruit__description__title, .info__item__image, .footer__nav__ul li:last-child, .footer__nav, .footer__logo, .header__nav__ul__li {
+.mb-sm, .hero__link__a:nth-child(1), .hero__nav__ul__li, .future__description__title, .recruit__description__title, .info__item__image, .footer__nav__ul li:last-child, .footer__nav, .footer__logo, .header__nav__ul__li {
   margin-bottom: 20px;
 }
 
-.mb-md, .hero, .about__title, .about__description, .future__title, .future__description__text, .works .swiper, .recruit__image, .recruit__description__text, .info__inner, .contact__contents__p, .footer, .header__nav__title, .content__title {
+.mb-md, .hero, .about__title, .about__description, .about__description__p, .future__title, .future__description__text, .works .swiper, .recruit__image, .recruit__description__text, .info__inner, .contact__contents__p, .footer, .header__nav__title, .content__title {
   margin-bottom: 50px;
 }
 
@@ -642,6 +642,7 @@ img {
 }
 .footer th {
   color: white;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 400;
   padding-right: 30px;
   text-align: start;
@@ -649,7 +650,9 @@ img {
   border-style: none;
 }
 .footer td {
-  color: white;
+  color: white !important;
+  font-family: "Noto Sans", sans-serif;
+  border-style: none;
 }
 .footer__nav {
   position: relative;
@@ -669,15 +672,18 @@ img {
 }
 .footer__nav__ul li {
   font-weight: bold;
+  font-family: "Noto Sans", sans-serif;
   flex: 1;
 }
 .footer__nav__ul li a {
   color: white;
+  font-family: "Noto Sans", sans-serif;
 }
 .footer__nav__ul li span {
   color: white;
   font-weight: normal;
   margin-left: 20px;
+  font-family: "Noto Sans", sans-serif;
 }
 @media (min-width: 960px) {
   .footer__nav__ul li span {
@@ -1054,6 +1060,9 @@ small {
     max-width: 600px;
   }
 }
+.about__description__p {
+  font-family: "Noto Sans JP", sans-serif;
+}
 .about__image {
   position: relative;
   height: 160px;
@@ -1167,6 +1176,7 @@ small {
   position: relative;
 }
 .future__description__title {
+  font-family: "Noto Sans JP", sans-serif;
   color: white;
   padding-top: 100px;
   position: relative;
@@ -1179,6 +1189,7 @@ small {
   }
 }
 .future__description__text {
+  font-family: "Noto Sans JP", sans-serif;
   width: 80vw;
   max-width: 700px;
   color: white;
@@ -1554,7 +1565,11 @@ small {
     padding-bottom: 100px;
   }
 }
+.recruit__description__title {
+  font-family: "Noto Sans JP", sans-serif;
+}
 .recruit__description__text {
+  font-family: "Noto Sans JP", sans-serif;
   width: 85vw;
   max-width: 600px;
 }
@@ -1764,6 +1779,7 @@ small {
 .info__item__text__ja {
   display: block;
   transition: all 0.5s cubic-bezier(0.88, -0.01, 0.22, 1);
+  font-family: "Noto Sans JP", sans-serif;
 }
 .info__item__text__click {
   position: absolute;

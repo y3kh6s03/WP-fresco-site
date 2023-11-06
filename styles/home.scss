@@ -390,7 +390,9 @@
         }
 
         &__p {
-            @extend .mb-sm;
+            @extend .mb-md;
+            font-family: $fNotoJP;
+
         }
     }
 
@@ -533,6 +535,7 @@
         &__title {
             @extend .font-lg;
             @extend .mb-sm;
+            font-family: $fNotoJP;
             color: white;
             padding-top: 100px;
             position: relative;
@@ -546,6 +549,7 @@
 
         &__text {
             @extend .mb-md;
+            font-family: $fNotoJP;
             width: 80vw;
             max-width: 700px;
             color: white;
@@ -1043,6 +1047,7 @@
 
         &__title {
             @extend .mb-sm;
+            font-family: $fNotoJP;
 
             & h3 {
                 @extend .font-lg;
@@ -1051,6 +1056,7 @@
 
         &__text {
             @extend .mb-md;
+            font-family: $fNotoJP;
             width: 85vw;
             max-width: 600px;
 
@@ -1306,6 +1312,8 @@
             &__ja {
                 display: block;
                 transition: all .5s $ease;
+                font-family: $fNotoJP;
+
             }
 
             &__click {

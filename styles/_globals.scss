@@ -773,6 +773,7 @@ img {
     & th {
         color: white;
         @extend .font-md;
+        font-family: $fNoto;
         font-weight: 400;
         padding-right: 30px;
         text-align: start;
@@ -781,8 +782,10 @@ img {
     }
 
     & td {
-        color: white;
+        color: white !important;
         @extend .font-md;
+        font-family: $fNoto;
+        border-style: none;
     }
 
 
@@ -806,6 +809,7 @@ img {
 
             & li {
                 font-weight: bold;
+                font-family: $fNoto;
                 flex: 1;
 
                 &:last-child {
@@ -814,6 +818,7 @@ img {
 
                 & a {
                     color: white;
+                    font-family: $fNoto;
                     @extend .font-lg;
                 }
 
@@ -822,6 +827,8 @@ img {
                     @extend .font-sm;
                     font-weight: normal;
                     margin-left: 20px;
+                    font-family: $fNoto;
+
 
                     @include mq(lg) {
                         display: block;

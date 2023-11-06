@@ -643,6 +643,7 @@ img {
 }
 .footer th {
   color: white;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 400;
   padding-right: 30px;
   text-align: start;
@@ -650,7 +651,9 @@ img {
   border-style: none;
 }
 .footer td {
-  color: white;
+  color: white !important;
+  font-family: "Noto Sans", sans-serif;
+  border-style: none;
 }
 .footer__nav {
   position: relative;
@@ -670,15 +673,18 @@ img {
 }
 .footer__nav__ul li {
   font-weight: bold;
+  font-family: "Noto Sans", sans-serif;
   flex: 1;
 }
 .footer__nav__ul li a {
   color: white;
+  font-family: "Noto Sans", sans-serif;
 }
 .footer__nav__ul li span {
   color: white;
   font-weight: normal;
   margin-left: 20px;
+  font-family: "Noto Sans", sans-serif;
 }
 @media (min-width: 960px) {
   .footer__nav__ul li span {
