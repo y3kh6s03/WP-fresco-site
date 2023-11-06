@@ -81,7 +81,7 @@ const tl = gsap.timeline({
 tl.to(futureEl, {
     clipPath: "polygon(-20% 0, 120% 0, 120% 100%, 0 100%)",
     duration: 1.5,
-    delay: .5,
+    delay: .3,
     ease: "expo",
 }).to(futureImg, {
     scale: 1.5,

@@ -27,12 +27,15 @@ titleEl.forEach((el) => {
     gsap.set(el, {
         scrollTrigger: {
             trigger: el,
-            start: "top 100%",
+            start: "top -10%",
             toggleClass: "active",
-            toggleActions: "play none none reset",
+            // toggleActions: "play none none none",
+            once: true,
+            markers: true
         }
     })
 })
+
 
 
 
