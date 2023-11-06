@@ -104,7 +104,7 @@
   width: 200px;
   height: 1px;
   background-color: #333333;
-  transform: scaleX(0%);
+  transform: scaleX(5%);
   transform-origin: right;
   transition: all 1s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
@@ -140,7 +140,7 @@
     transform-origin: left;
   }
   100% {
-    transform: scaleX(7%);
+    transform: scaleX(5%);
     transform-origin: left;
   }
 }
@@ -930,7 +930,7 @@ small {
   background-color: transparent;
   border-style: none;
   position: absolute;
-  bottom: 0;
+  bottom: -10%;
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;

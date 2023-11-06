@@ -118,7 +118,7 @@ $fNum: 'Noto Nastaliq Urdu', serif;
         width: 200px;
         height: 1px;
         background-color: $cBlack;
-        transform: scaleX(0%);
+        transform: scaleX(5%);
         transform-origin: right;
         transition: all 1s $ease;
     }
@@ -165,7 +165,7 @@ $fNum: 'Noto Nastaliq Urdu', serif;
         }
 
         100% {
-            transform: scaleX(7%);
+            transform: scaleX(5%);
             transform-origin: left;
         }
     }
