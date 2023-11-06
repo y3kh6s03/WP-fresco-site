@@ -118,7 +118,7 @@ $fNum: 'Noto Nastaliq Urdu', serif;
         width: 200px;
         height: 1px;
         background-color: $cBlack;
-        transform: scaleX(0%) translateY(-300px);
+        transform: scaleX(0%)
         transform-origin: right;
         transition: all 1s $ease;
     }
@@ -594,6 +594,7 @@ img {
             color: white;
             @extend .font-md;
             font-weight: bold;
+            font-family: $fNoto;
             @extend .mb-md;
             position: relative;
 
@@ -616,12 +617,14 @@ img {
             & a {
                 color: white;
                 @extend .font-lg;
+                font-family: $fNoto;
             }
 
             & span {
                 display: block;
                 color: white;
                 @extend .font-sm;
+                font-family: $fNotoJP;
             }
         }
 
