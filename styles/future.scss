@@ -25,6 +25,7 @@
         width: 100%;
         @extend .mb-md;
 
+
         &__inner {
             width: 100%;
             display: flex;
@@ -77,13 +78,16 @@
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
             & h3 {
+                font-family: $fNotoJP;
                 @extend .font-lg;
                 opacity: 0;
                 transform: translateY(100%);
             }
         }
 
-        & p {}
+        & p {
+            font-family: $fNotoJP;
+        }
     }
 
 

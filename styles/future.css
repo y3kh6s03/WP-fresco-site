@@ -892,8 +892,12 @@ small {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .contents__description__jaHeadline h3 {
+  font-family: "Noto Sans JP", sans-serif;
   opacity: 0;
   transform: translateY(100%);
+}
+.contents__description p {
+  font-family: "Noto Sans JP", sans-serif;
 }
 .contents__imgInner {
   height: 300px;
