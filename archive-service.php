@@ -5,7 +5,7 @@
 <?php get_header(); ?>
 
 <main>
-    <section class="subHero">
+    <section class="subHero" id="hero">
         <div class="subHero__title">
             <div class="subHero__title__inner">
                 <h1 class="subHero__title__h1">

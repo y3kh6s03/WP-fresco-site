@@ -161,7 +161,7 @@
     &__link {
         position: absolute;
         left: 5%;
-        bottom: 5%;
+        bottom: 20%;
 
         @include mq(lg) {
             bottom: 10%;
@@ -674,6 +674,7 @@
 
             &__image {
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                position: relative;
 
                 @include mq(lg) {
                     position: absolute;
@@ -789,6 +790,8 @@
                 }
 
                 &__text {
+                    font-family: $fNoto;
+                    font-weight: bold;
                     fill: $cBlack;
                     font-size: 12px;
                     letter-spacing: 0.03em;
@@ -906,6 +909,7 @@
     &__swipe {
         &__text {
             @extend .font-lg;
+            font-family: $fNoto;
             color: white;
         }
 
@@ -961,11 +965,14 @@
             & .works__service {
                 display: block;
                 color: white;
+                font-family: $fNotoJP;
 
             }
 
             & .works__service__author {
                 color: white;
+                font-family: $fNotoJP;
+
             }
         }
 

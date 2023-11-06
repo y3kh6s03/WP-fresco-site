@@ -642,6 +642,7 @@ img {
   padding-right: 30px;
   text-align: start;
   width: 100px;
+  border-style: none;
 }
 .footer td {
   color: white;
@@ -862,7 +863,7 @@ small {
 .hero__link {
   position: absolute;
   left: 5%;
-  bottom: 5%;
+  bottom: 20%;
 }
 @media (min-width: 960px) {
   .hero__link {
@@ -1256,6 +1257,7 @@ small {
 .service__list__item__image {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  position: relative;
 }
 @media (min-width: 960px) {
   .service__list__item__image {
@@ -1351,6 +1353,8 @@ small {
   fill: none;
 }
 .service .circle__wrapper__inner__text {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
   fill: #333333;
   font-size: 12px;
   letter-spacing: 0.03em;
@@ -1445,6 +1449,7 @@ small {
   }
 }
 .works__swipe__text {
+  font-family: "Noto Sans", sans-serif;
   color: white;
 }
 .works__swipe__bar {
@@ -1489,9 +1494,11 @@ small {
 .works .swiper-slide .works__service {
   display: block;
   color: white;
+  font-family: "Noto Sans JP", sans-serif;
 }
 .works .swiper-slide .works__service__author {
   color: white;
+  font-family: "Noto Sans JP", sans-serif;
 }
 @keyframes swipe-animation {
   0% {

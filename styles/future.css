@@ -642,6 +642,7 @@ img {
   padding-right: 30px;
   text-align: start;
   width: 100px;
+  border-style: none;
 }
 .footer td {
   color: white;

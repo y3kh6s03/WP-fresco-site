@@ -642,6 +642,7 @@ img {
   padding-right: 30px;
   text-align: start;
   width: 100px;
+  border-style: none;
 }
 .footer td {
   color: white;
@@ -861,7 +862,7 @@ small {
 .contents__inner__image {
   width: 90%;
   max-width: 450px;
-  margin-left: calc(60% - 0vw);
+  margin-left: calc(20% - 0vw);
 }
 @media (min-width: 960px) {
   .contents__inner__image {

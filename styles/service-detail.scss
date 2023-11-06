@@ -37,7 +37,7 @@
         &__image {
             width: 90%;
             max-width: 450px;
-            margin-left: calc(60% - 0vw);
+            margin-left: calc(20% - 0vw);
 
             @include mq(lg) {
                 margin-left: 0;

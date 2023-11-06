@@ -642,6 +642,7 @@ img {
   padding-right: 30px;
   text-align: start;
   width: 100px;
+  border-style: none;
 }
 .footer td {
   color: white;
@@ -922,4 +923,7 @@ small {
 }
 .contents__image.active .contents__image__img {
   transform: translateX(0px);
+}
+.contents .pagelink {
+  margin-top: 50px;
 }/*# sourceMappingURL=service.css.map */
