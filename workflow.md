@@ -12,6 +12,10 @@
 
 - index.phpが完了したら、front-page.phpとhome.phpを複製する
 
+<!-- - worksのカスタム投稿タイプと記事の作成 -->
+
+- contactのページ作成
+
 <!-- - informationセクションのホバーする前まですこし黒くフィルターをかけて、ホバーしたときに明るくなるように変更 -->
 
 <!-- - すべてのページ共通で読み込むjsとそれぞれのページのjsを切り分けて管理をする
@@ -27,6 +31,12 @@
 　mix-brend modeかボックスシャドウか、ほかの色を検討するかためhしてみる -->
 
 <!-- - contents__titleの日本語表記の表示を早くする -->
+
+- serviceの画像のservice No.の表記のずれを修正する
+
+- content-titleのアニメーションのエラーが発生している修正
+
+- font errorのチェックをする
 
 # subpage
 
@@ -86,4 +96,3 @@
 # contact
 
 <!-- - wordpressのプラグインを利用してcontactページの実装 -->
-test

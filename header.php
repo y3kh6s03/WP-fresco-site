@@ -61,3 +61,6 @@
         </nav>
         <span class="header__bcc"></span>
     </header>
+
+    <main>
+        <div class="body__wrapper">

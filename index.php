@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<main>
-    <div class="body__wrapper">
         <section id="hero" class="hero">
             <div class="hero__container">
                 <div class="hero__title">
@@ -448,7 +446,5 @@
                 </a>
             </div>
         </section>
-    </div>
-</main>
 
 <?php get_footer(); ?>

@@ -1,3 +1,6 @@
+</div>
+</main>
+
 <footer>
     <div class="footer__wrapper">
         <a class="footer__logo" href="<?php echo home_url(); ?>"></a>
