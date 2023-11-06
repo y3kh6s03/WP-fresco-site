@@ -147,7 +147,7 @@
 
 
     <div class="contact__button">
-        <a href="/contact" class="contact__button__a">
+        <a href="<?php echo home_url(); ?>/contact" class="contact__button__a">
             <div class="contact__button__textinner">
                 <span class="contact__button__textinner__ja">
                     お問い合わせ

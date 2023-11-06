@@ -16,4 +16,22 @@
 </section>
 <?php the_content(); ?>
 
+<section class="success container">
+    <h2 class="success__title">
+        お問い合わせが完了いたしました。
+    </h2>
+    <p class="success__p">
+        お問い合わせいただきありがとうございます。<br>
+        ２〜３営業日以内に担当者よりご連絡いたしますので、恐れ入りますがしばらくお待ちください。
+    </p>
+    <a href="<?php home_url(); ?>" class="pagelink">
+        <span class="pagelink__name">
+            HOME
+        </span>
+        <span class="pagelink__bar"></span>
+        <span class="pagelink__arrow"></span>
+        <span class="pagelink__text">Read more ...</span>
+    </a>
+</section>
+
 <?php get_footer(); ?>
