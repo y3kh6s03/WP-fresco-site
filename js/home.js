@@ -1,4 +1,25 @@
 //////////////////////////////
+// content title animation
+//////////////////////////////
+
+gsap.registerPlugin(ScrollTrigger);
+const titleEl = gsap.utils.toArray(".content__title__container")
+
+titleEl.forEach((el) => {
+
+    gsap.set(el, {
+        scrollTrigger: {
+            trigger: el,
+            start: "top -10%",
+            toggleClass: "active",
+            // toggleActions: "play none none none",
+            once: true,
+        }
+    })
+})
+
+
+//////////////////////////////
 // hero title animation
 //////////////////////////////
 window.addEventListener('DOMContentLoaded', function () {
@@ -89,6 +110,8 @@ tl.to(futureEl, {
         scrub: true
     }
 })
+
+
 
 
 //////////////////////////////
