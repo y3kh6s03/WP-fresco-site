@@ -1,7 +1,7 @@
 @forward "./mq";
 @use "./mq" as *;
 
-$ease: cubic-bezier(.88,-0.01,.22,1);
+$ease: cubic-bezier(.88, -0.01, .22, 1);
 
 /////////////////////////////////////
 //　color
@@ -617,6 +617,7 @@ img {
             & a {
                 color: white;
                 @extend .font-lg;
+                font-weight: bold;
                 font-family: $fNoto;
             }
 

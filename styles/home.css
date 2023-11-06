@@ -512,6 +512,7 @@ img {
 }
 .header__nav__ul__li a {
   color: white;
+  font-weight: bold;
   font-family: "Noto Sans", sans-serif;
 }
 .header__nav__ul__li span {
