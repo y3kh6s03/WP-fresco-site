@@ -103,7 +103,7 @@
   width: 200px;
   height: 1px;
   background-color: #333333;
-  transform: scaleX(0%) translateY(-300px);
+  transform: scaleX(0%);
   transform-origin: right;
   transition: all 1s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
@@ -498,6 +498,7 @@ img {
 .header__nav__title {
   color: white;
   font-weight: bold;
+  font-family: "Noto Sans", sans-serif;
   position: relative;
 }
 .header__nav__title:before {
@@ -511,10 +512,12 @@ img {
 }
 .header__nav__ul__li a {
   color: white;
+  font-family: "Noto Sans", sans-serif;
 }
 .header__nav__ul__li span {
   display: block;
   color: white;
+  font-family: "Noto Sans JP", sans-serif;
 }
 .header__nav.onClick {
   transform: translateX(0);
