@@ -69,7 +69,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="https://fresco-recruit2025.netlify.app/">
                             Recruit
                             <span>採用情報</span>
                         </a>
