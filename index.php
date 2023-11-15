@@ -25,7 +25,7 @@
                 </span>
                 <span class="hero__link__a__bar"></span>
             </a>
-            <a href="#" class="hero__link__a">
+            <a href="https://fresco-catering.netlify.app/" class="hero__link__a">
                 <span class="hero__link__a__enTitle">Catering Service</span>
                 <span class="hero__link__a__jaTitle">あなたの食べたいをプレオーダー
                 </span>
@@ -379,7 +379,7 @@
 
 
         <div class="info__inner">
-            <a href="#" class="info__item">
+            <a href="https://fresco-catering.netlify.app/" class="info__item">
                 <div class="info__item__image">
                     <img src="<?php echo get_template_directory_uri() ?>/images/main-images/catering4.JPG" alt="images" class="info__item__image__img">
                 </div>
