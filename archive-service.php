@@ -28,12 +28,16 @@
                     <div class="content__title__container">
                         <div class="content__title__inner">
                             <h2 class="content__title__en">
-                                <?php the_field("name") ?>
+                                <?php the_field("ja-name") ?>
                             </h2>
                         </div>
                         <span class="content__title__bar"></span>
                         <span class="content__title__ja">
-                            <?php the_field("ja-name") ?>
+                            <?php
+                            /**
+                            the_field("ja-name")
+                            */
+                            ?>
                         </span>
                     </div>
                 </div>

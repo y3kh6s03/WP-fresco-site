@@ -13,7 +13,7 @@
             </div>
             <span class="hero__title__bar"></span>
             <span class="hero__title__subtitle">
-                Bringing Joy Through Food.
+                人生に最高の食体験を
             </span>
         </div>
 
@@ -176,10 +176,10 @@
             </a>
             <a href="<?php echo home_url(); ?>/service/kyushoku" class="service__list__item__link">
                 <span>
-                    Kyushoku
+                    給食受託事業
                 </span>
                 <span>
-                    給食受託事業
+
                 </span>
                 <span></span>
             </a>
@@ -194,10 +194,10 @@
             </a>
             <a href="<?php echo home_url(); ?>/service/support" class="service__list__item__link">
                 <span>
-                    Support
+                    直営給食サポート事業
                 </span>
                 <span>
-                    直営給食サポート事業
+
                 </span>
                 <span></span>
             </a>
@@ -212,10 +212,9 @@
             </a>
             <a href="<?php echo home_url(); ?>/service/catering" class="service__list__item__link">
                 <span>
-                    Catering
+                    ケータリング事業
                 </span>
                 <span>
-                    ケータリング事業
                 </span>
                 <span></span>
             </a>
@@ -230,10 +229,9 @@
             </a>
             <a href="<?php echo home_url(); ?>/service/frozen-yogurt" class="service__list__item__link">
                 <span>
-                    Frozen yogurt
+                    フローズンヨーグルト事業
                 </span>
                 <span>
-                    フローズンヨーグルト事業
                 </span>
                 <span></span>
 
