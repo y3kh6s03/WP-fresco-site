@@ -361,7 +361,7 @@
 
     <div class="info__container">
         <div class="info__inner">
-            <a href="#" class="info__item">
+            <a href="https://fresco-support.netlify.app/" class="info__item">
                 <div class="info__item__image">
                     <img src="<?php echo get_template_directory_uri() ?>/images/main-images/dietician3.jpg" alt="images" class="info__item__image__img">
                 </div>
