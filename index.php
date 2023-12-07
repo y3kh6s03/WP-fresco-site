@@ -107,7 +107,7 @@
     <div class="about__image">
         <div class="about__image__container">
             <img src="<?php echo get_template_directory_uri() ?>/images/main-images/slide_004.png" alt="images" class="about__image__container__img1">
-            <img src="<?php echo get_template_directory_uri() ?>/images/main-images/dietician4.jpg" alt="images" class="about__image__container__img2">
+            <img src="<?php echo get_template_directory_uri() ?>/images/main-images/dietician.jpg" alt="images" class="about__image__container__img2">
         </div>
     </div>
 </section>
@@ -187,7 +187,7 @@
         <li class="service__list__item">
             <a href="<?php echo home_url(); ?>/service/support">
                 <div class="service__list__item__image">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/dietician4.jpg" alt="images" />
+                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/dietician.jpg" alt="images" />
                     <p>Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>02</span>
                     </p>
                 </div>
