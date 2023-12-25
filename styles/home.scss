@@ -168,7 +168,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 100px;
+            gap: 70px;
         }
 
         &__a {
@@ -177,6 +177,13 @@
             padding-left: 10px;
 
             &:nth-child(1) {
+                @extend .mb-sm;
+
+                @include mq(lg) {
+                    margin: 0
+                }
+            }
+            &:nth-child(2) {
                 @extend .mb-sm;
 
                 @include mq(lg) {
@@ -1230,7 +1237,9 @@
             overflow: hidden;
             position: relative;
 
-            & img {}
+            & img {
+                object-fit: contain;
+            }
 
             &:before {
                 content: "";

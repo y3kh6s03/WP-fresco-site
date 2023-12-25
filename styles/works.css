@@ -89,8 +89,7 @@
 }
 
 .content__title__inner {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .content__title__en {
   font-family: "Noto Sans", sans-serif;
@@ -213,10 +212,8 @@ a {
 img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 .section__headline {
@@ -226,8 +223,7 @@ img {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  -webkit-clip-path: polygon(0 0, 0 0%, 0 100%, 0 100%);
-          clip-path: polygon(0 0, 0 0%, 0 100%, 0 100%);
+  clip-path: polygon(0 0, 0 0%, 0 100%, 0 100%);
   opacity: 0;
   transform: translateX(50px);
 }
@@ -244,8 +240,7 @@ img {
   display: block;
   width: 150px;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 110% 0, 110% 100%, 0 100%);
-          clip-path: polygon(0 0, 110% 0, 110% 100%, 0 100%);
+  clip-path: polygon(0 0, 110% 0, 110% 100%, 0 100%);
   z-index: 100;
 }
 .pagelink__name {
@@ -375,8 +370,7 @@ img {
   margin: 0 auto 200px;
 }
 .contact__button__textinner {
-  -webkit-clip-path: polygon(-170px 0, 370px 0, 370px 100%, -170px 100%);
-          clip-path: polygon(-170px 0, 370px 0, 370px 100%, -170px 100%);
+  clip-path: polygon(-170px 0, 370px 0, 370px 100%, -170px 100%);
 }
 .contact__button__textinner__ja {
   display: block;
@@ -769,8 +763,7 @@ small {
   margin-right: -20vw;
 }
 .subHero__title__inner {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .subHero__title__h1 {
   font-family: "Noto Sans", sans-serif;
@@ -801,8 +794,7 @@ small {
   max-width: 550px;
   height: 100vh;
   max-height: 450px;
-  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   transition: all 1s 0.3s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 @media (min-width: 960px) {
@@ -822,8 +814,7 @@ small {
   opacity: 1;
 }
 .subHero.loaded .subHero__image {
-  -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
 }
 @keyframes loadedBar {
   0% {
@@ -858,14 +849,12 @@ small {
   opacity: 1;
 }
 .contents__header.active .contents__header__image {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .contents__header__inner {
   flex: 1;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .contents__header__bar {
   display: block;
@@ -896,8 +885,7 @@ small {
 .contents__header__image {
   flex: 1;
   height: 300px;
-  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   transition: all 1s cubic-bezier(0.88, -0.01, 0.22, 1);
 }
 @media (min-width: 960px) {
@@ -952,4 +940,4 @@ small {
     margin-left: auto;
     margin-right: calc(50% - 20vw);
   }
-}/*# sourceMappingURL=works.css.map */
+}

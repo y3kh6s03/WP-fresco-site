@@ -57,6 +57,8 @@
 
 
 
+
+
 # future
 
 <!-- - subpage-Heroのヘッドラインのアニメーション実装
@@ -86,6 +88,8 @@ fontの修正
 <!-- - linkボタンのfont-weightをnomalに変更する -->
 
 <!-- - serviceの詳細ページのリンクボタンの位置を修正する -->
+
+.service catering 写真ケータリング変更
 
 # service詳細
 

@@ -89,8 +89,7 @@
 }
 
 .content__title__inner {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .content__title__en {
   font-family: "Noto Sans", sans-serif;
@@ -144,7 +143,7 @@
   }
 }
 
-.mb-sm, .hero__link__a:nth-child(1), .hero__nav__ul__li, .future__description__title, .recruit__description__title, .info__item__image, .footer__nav__ul li:last-child, .footer__nav, .footer__logo, .header__nav__ul__li {
+.mb-sm, .hero__link__a:nth-child(1), .hero__link__a:nth-child(2), .hero__nav__ul__li, .future__description__title, .recruit__description__title, .info__item__image, .footer__nav__ul li:last-child, .footer__nav, .footer__logo, .header__nav__ul__li {
   margin-bottom: 20px;
 }
 
@@ -213,10 +212,8 @@ a {
 img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 .section__headline {
@@ -226,8 +223,7 @@ img {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  -webkit-clip-path: polygon(0 0, 0 0%, 0 100%, 0 100%);
-          clip-path: polygon(0 0, 0 0%, 0 100%, 0 100%);
+  clip-path: polygon(0 0, 0 0%, 0 100%, 0 100%);
   opacity: 0;
   transform: translateX(50px);
 }
@@ -244,8 +240,7 @@ img {
   display: block;
   width: 150px;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 110% 0, 110% 100%, 0 100%);
-          clip-path: polygon(0 0, 110% 0, 110% 100%, 0 100%);
+  clip-path: polygon(0 0, 110% 0, 110% 100%, 0 100%);
   z-index: 100;
 }
 .pagelink__name {
@@ -375,8 +370,7 @@ img {
   margin: 0 auto 200px;
 }
 .contact__button__textinner {
-  -webkit-clip-path: polygon(-170px 0, 370px 0, 370px 100%, -170px 100%);
-          clip-path: polygon(-170px 0, 370px 0, 370px 100%, -170px 100%);
+  clip-path: polygon(-170px 0, 370px 0, 370px 100%, -170px 100%);
 }
 .contact__button__textinner__ja {
   display: block;
@@ -788,8 +782,7 @@ small {
   }
 }
 .hero__title__inner {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .hero__title__inner h1 {
   display: block;
@@ -881,7 +874,7 @@ small {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 100px;
+    gap: 70px;
   }
 }
 .hero__link__a {
@@ -891,6 +884,11 @@ small {
 }
 @media (min-width: 960px) {
   .hero__link__a:nth-child(1) {
+    margin: 0;
+  }
+}
+@media (min-width: 960px) {
+  .hero__link__a:nth-child(2) {
     margin: 0;
   }
 }
@@ -1147,8 +1145,7 @@ small {
 .future__description__wrapper {
   width: 100vw;
   margin: 0 calc(50% - 50vw);
-  -webkit-clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
-          clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
+  clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
   position: relative;
 }
 .future__description__wrapper img {
@@ -1270,8 +1267,7 @@ small {
   }
 }
 .service__list__item__image {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   position: relative;
 }
 @media (min-width: 960px) {
@@ -1547,8 +1543,7 @@ small {
 .recruit__image {
   width: 70vw;
   margin-left: calc(50% - 20vw);
-  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-          clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 }
 @media (min-width: 960px) {
   .recruit__image {
@@ -1587,8 +1582,7 @@ small {
   }
 }
 .info__inner {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 @media (min-width: 600px) {
   .info__inner {
@@ -1704,6 +1698,9 @@ small {
   height: 200px;
   overflow: hidden;
   position: relative;
+}
+.info__item__image img {
+  object-fit: contain;
 }
 .info__item__image:before {
   content: "";
@@ -1827,4 +1824,4 @@ small {
 
 .contact__contents__p {
   font-family: "Noto Sans JP", sans-serif;
-}/*# sourceMappingURL=home.css.map */
+}

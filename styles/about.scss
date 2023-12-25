@@ -86,6 +86,10 @@
             @extend .mb-md;
             clip-path: polygon(0 0,0 0,0 100%,0 100%);
 
+            &__img{
+                object-position: top;
+            }
+
             @include mq(lg) {
                 flex: 2;
                 height: 100%;

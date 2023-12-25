@@ -25,6 +25,12 @@
                 </span>
                 <span class="hero__link__a__bar"></span>
             </a>
+            <a href="https://fresco-support.netlify.app/" class="hero__link__a">
+                <span class="hero__link__a__enTitle">Support Service</span>
+                <span class="hero__link__a__jaTitle">直営給食サポートサービス
+                </span>
+                <span class="hero__link__a__bar"></span>
+            </a>
             <a href="https://fresco-catering.netlify.app/" class="hero__link__a">
                 <span class="hero__link__a__enTitle">Catering Service</span>
                 <span class="hero__link__a__jaTitle">あなたの食べたいをプレオーダー
@@ -222,7 +228,7 @@
         <li class="service__list__item">
             <a href="<?php echo home_url(); ?>/service/frozen-yogurt">
                 <div class="service__list__item__image">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/frozen.jpg" alt="images" />
+                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/frozen2.jpeg" alt="images" />
                     <p>Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>04</span>
                     </p>
                 </div>
@@ -341,81 +347,6 @@
     </div>
 </section>
 
-<section class="info container">
-
-    <div class="content__title info__title">
-        <div class="content__title__container">
-            <div class="content__title__inner">
-                <h2 class="content__title__en">
-                    Information
-                </h2>
-            </div>
-            <span class="content__title__bar"></span>
-            <span class="content__title__ja">
-                インフォーメーション
-            </span>
-        </div>
-    </div>
-
-    <div class="info__container">
-        <div class="info__inner">
-            <a href="https://fresco-support.netlify.app/" class="info__item">
-                <div class="info__item__image">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/dietician3.jpg" alt="images" class="info__item__image__img">
-                </div>
-                <div class="info__item__text">
-                    <p class="info__item__text__p">
-                        Support
-                    </p>
-                    <span class="info__item__text__bar"></span>
-                    <span class="info__item__text__arrow"></span>
-                    <span class="info__item__text__ja">直営給食サポート事業</span>
-                    <span class="info__item__text__click">Click the link !!</span>
-                </div>
-            </a>
-        </div>
-
-
-        <div class="info__inner">
-            <a href="https://fresco-catering.netlify.app/" class="info__item">
-                <div class="info__item__image">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/catering4.JPG" alt="images" class="info__item__image__img">
-                </div>
-                <div class="info__item__text">
-                    <p class="info__item__text__p">
-                        Catering
-                    </p>
-                    <span class="info__item__text__bar"></span>
-                    <span class="info__item__text__arrow"></span>
-                    <span class="info__item__text__ja">ケータリング事業</span>
-                    <span class="info__item__text__click">Click the link !!</span>
-                </div>
-            </a>
-        </div>
-
-
-        <div class="info__inner">
-            <a href="https://www.taiseisangyo.com/" class="info__item">
-                <div class="info__item__image">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/taisei.jpg" alt="images" class="info__item__image__img">
-                </div>
-                <div class="info__item__text">
-                    <p class="info__item__text__p">
-                        Taisei Sangyo
-                    </p>
-                    <span class="info__item__text__bar"></span>
-                    <span class="info__item__text__arrow"></span>
-                    <span class="info__item__text__ja">大成産業株式会社</span>
-                    <span class="info__item__text__click">Click the link !!</span>
-                </div>
-            </a>
-        </div>
-
-    </div>
-
-
-</section>
-
 <section class="contact container">
     <div class="content__title contact__title">
         <div class="content__title__container">
@@ -451,6 +382,65 @@
             </div>
         </a>
     </div>
+</section>
+
+
+<section class="info container">
+
+    <div class="content__title info__title">
+        <div class="content__title__container">
+            <div class="content__title__inner">
+                <h2 class="content__title__en">
+                    Group
+                </h2>
+            </div>
+            <span class="content__title__bar"></span>
+            <span class="content__title__ja">
+                グループ
+            </span>
+        </div>
+    </div>
+
+    <div class="info__container">
+
+        <div class="info__inner">
+            <a href="https://furesuko.thebase.in/" class="info__item">
+                <div class="info__item__image">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/nac.JPG" alt="images" class="info__item__image__img">
+                </div>
+                <div class="info__item__text">
+                    <p class="info__item__text__p">
+                        NAC化粧品
+                    </p>
+                    <span class="info__item__text__bar"></span>
+                    <span class="info__item__text__arrow"></span>
+                    <span class="info__item__text__ja">NAC化粧品</span>
+                    <span class="info__item__text__click">Click the link !!</span>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="info__inner">
+            <a href="https://www.taiseisangyo.com/" class="info__item">
+                <div class="info__item__image">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/taisei.jpg" alt="images" class="info__item__image__img">
+                </div>
+                <div class="info__item__text">
+                    <p class="info__item__text__p">
+                        Taisei Sangyo
+                    </p>
+                    <span class="info__item__text__bar"></span>
+                    <span class="info__item__text__arrow"></span>
+                    <span class="info__item__text__ja">大成産業株式会社</span>
+                    <span class="info__item__text__click">Click the link !!</span>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+
 </section>
 
 <?php get_footer(); ?>
