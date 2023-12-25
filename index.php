@@ -384,7 +384,6 @@
     </div>
 </section>
 
-
 <section class="info container">
 
     <div class="content__title info__title">
@@ -406,7 +405,7 @@
         <div class="info__inner">
             <a href="https://furesuko.thebase.in/" class="info__item">
                 <div class="info__item__image">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/nac.JPG" alt="images" class="info__item__image__img">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/nac.jpg" alt="images" class="info__item__image__img">
                 </div>
                 <div class="info__item__text">
                     <p class="info__item__text__p">
