@@ -18,20 +18,20 @@
         </div>
 
         <div class="hero__link">
-            <a href="https://fresco-recruit2025.netlify.app/" class="hero__link__a">
+            <a href="https://fresco-recruit2025.netlify.app/" class="hero__link__a" target="_blank">
                 <span class="hero__link__a__enTitle">Fresco Recruit</span>
                 <span class="hero__link__a__jaTitle">フレスコ
                     ・カンパニー採用情報
                 </span>
                 <span class="hero__link__a__bar"></span>
             </a>
-            <a href="https://fresco-support.netlify.app/" class="hero__link__a">
+            <a href="https://fresco-support.netlify.app/" class="hero__link__a" target="_blank">
                 <span class="hero__link__a__enTitle">Support Service</span>
                 <span class="hero__link__a__jaTitle">直営給食サポートサービス
                 </span>
                 <span class="hero__link__a__bar"></span>
             </a>
-            <a href="https://fresco-catering.netlify.app/" class="hero__link__a">
+            <a href="https://fresco-catering.netlify.app/" class="hero__link__a" target="_blank">
                 <span class="hero__link__a__enTitle">Catering Service</span>
                 <span class="hero__link__a__jaTitle">あなたの食べたいをプレオーダー
                 </span>
@@ -66,7 +66,7 @@
                     </a>
                 </li>
                 <li class="hero__nav__ul__li">
-                    <a href="#">Recruit
+                    <a href="https://fresco-recruit2025.netlify.app/"  target="_blank">Recruit
                         <span>わたしたちの採用情報</span>
                     </a>
                 </li>
@@ -287,8 +287,8 @@
             if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
             ?>
                     <div class="swiper-slide">
-                        <a href="<?php home_url(); ?>/works#<?php the_field("service-name"); ?>">
-                            <img src="<?php the_field("image"); ?>" alt="images">
+                        <a href="<?php home_url(); ?>">
+                            <img src="<?php the_field("image"); ?>/works" alt="images">
                             <div class="text__container">
                                 <span class="works__service"><?php the_field("service-name") ?></span>
                                 <span class="works__service__author"><?php the_field("author") ?></span>
@@ -338,7 +338,7 @@
                 食のチカラを信じる仲間とともに、新たな未来を一緒に作りませんか?
             </p>
         </div>
-        <a href="https://fresco-recruit2025.netlify.app/" class="pagelink">
+        <a href="https://fresco-recruit2025.netlify.app/" class="pagelink" target="_blank">
             <span class="pagelink__name">Recruit</span>
             <span class="pagelink__bar"></span>
             <span class="pagelink__arrow"></span>
@@ -357,7 +357,7 @@
             </div>
             <span class="content__title__bar"></span>
             <span class="content__title__ja">
-                インフォーメーション
+                お問い合わせ
             </span>
         </div>
     </div>
@@ -382,6 +382,70 @@
             </div>
         </a>
     </div>
+    <div class="contact__sns">
+        <a href="https://www.instagram.com/fresco_labo/" class="contact__sns__link" target="_blank">
+            <img src="<?php echo get_template_directory_uri() ?>/images/main-images/Instagram.png" alt="">
+        </a>
+        <a href="https://www.facebook.com/labo.fresco?locale=ja_JP" class="contact__sns__link" target="_blank">
+            <img src="<?php echo get_template_directory_uri() ?>/images/main-images/Facebook.png" alt="">
+        </a>
+    </div>
+</section>
+
+<section class="info container">
+
+    <div class="content__title info__title">
+        <div class="content__title__container">
+            <div class="content__title__inner">
+                <h2 class="content__title__en">
+                    Corporate
+                </h2>
+            </div>
+            <span class="content__title__bar"></span>
+            <!-- <span class="content__title__ja">
+            </span> -->
+        </div>
+    </div>
+
+    <div class="info__container">
+
+        <div class="info__inner">
+            <a href="https://furoshiki-ya.co.jp/" class="info__item" target="_blank">
+                株式会社ふろしきや
+                <!-- <div class="info__item__image">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/nac.jpg" alt="images" class="info__item__image__img">
+                </div>
+                <div class="info__item__text">
+                    <p class="info__item__text__p">
+                        NAC化粧品
+                    </p>
+                    <span class="info__item__text__bar"></span>
+                    <span class="info__item__text__arrow"></span>
+                    <span class="info__item__text__ja">NAC化粧品</span>
+                    <span class="info__item__text__click">Click the link !!</span>
+                </div> -->
+            </a>
+        </div>
+
+
+        <div class="info__inner">
+            <a href="https://www.frosta.jp/company/" class="info__item" target="_blank">
+                ファイネスト合同会社
+                <!-- <div class="info__item__image">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/taisei.jpg" alt="images" class="info__item__image__img">
+                </div>
+                <div class="info__item__text">
+                    <p class="info__item__text__p">
+                        Taisei Sangyo
+                    </p>
+                    <span class="info__item__text__bar"></span>
+                    <span class="info__item__text__arrow"></span>
+                    <span class="info__item__text__ja">大成産業株式会社</span>
+                    <span class="info__item__text__click">Click the link !!</span>
+                </div> -->
+            </a>
+        </div>
+    </div>
 </section>
 
 <section class="info container">
@@ -403,7 +467,7 @@
     <div class="info__container">
 
         <div class="info__inner">
-            <a href="https://furesuko.thebase.in/" class="info__item">
+            <a href="https://furesuko.thebase.in/" class="info__item" target="_blank">
                 <div class="info__item__image">
                     <img src="<?php echo get_template_directory_uri() ?>/images/main-images/nac.jpg" alt="images" class="info__item__image__img">
                 </div>
@@ -421,7 +485,7 @@
 
 
         <div class="info__inner">
-            <a href="https://www.taiseisangyo.com/" class="info__item">
+            <a href="https://www.taiseisangyo.com/" class="info__item" target="_blank">
                 <div class="info__item__image">
                     <img src="<?php echo get_template_directory_uri() ?>/images/main-images/taisei.jpg" alt="images" class="info__item__image__img">
                 </div>
@@ -436,10 +500,7 @@
                 </div>
             </a>
         </div>
-
     </div>
-
-
 </section>
 
 <?php get_footer(); ?>

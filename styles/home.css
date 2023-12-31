@@ -367,7 +367,7 @@ img {
   align-items: center;
   gap: 50px;
   position: relative;
-  margin: 0 auto 200px;
+  margin: 0 auto 50px;
 }
 .contact__button__textinner {
   clip-path: polygon(-170px 0, 370px 0, 370px 100%, -170px 100%);
@@ -768,7 +768,7 @@ small {
   position: absolute;
   left: 5%;
   top: 50%;
-  transform: translateY(-70%);
+  transform: translateY(-80%);
 }
 .hero__title__p {
   font-family: "Noto Sans", sans-serif;
@@ -866,11 +866,11 @@ small {
 .hero__link {
   position: absolute;
   left: 5%;
-  bottom: 20%;
+  bottom: 10%;
 }
 @media (min-width: 960px) {
   .hero__link {
-    bottom: 10%;
+    bottom: 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1824,4 +1824,15 @@ small {
 
 .contact__contents__p {
   font-family: "Noto Sans JP", sans-serif;
+}
+.contact__sns {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.contact__sns__link {
+  display: block;
+  width: 50px;
+  height: 50px;
 }

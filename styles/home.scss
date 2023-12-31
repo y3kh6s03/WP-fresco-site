@@ -35,7 +35,7 @@
         position: absolute;
         left: 5%;
         top: 50%;
-        transform: translateY(-70%);
+        transform: translateY(-80%);
 
         &__p {
             font-family: $fNoto;
@@ -161,10 +161,10 @@
     &__link {
         position: absolute;
         left: 5%;
-        bottom: 20%;
+        bottom: 10%;
 
         @include mq(lg) {
-            bottom: 10%;
+            bottom: 15%;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -1394,6 +1394,19 @@
             @extend .font-md;
             font-family: $fNotoJP;
             @extend .mb-md;
+        }
+    }
+
+    &__sns{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        &__link{
+            display: block;
+            width: 50px;
+            height: 50px;
         }
     }
 }

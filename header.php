@@ -51,7 +51,7 @@
                     <span>わたしたちの歩み</span>
                 </li>
                 <li class="header__nav__ul__li">
-                    <a href="https://fresco-recruit2025.netlify.app/">Recruit</a>
+                    <a href="https://fresco-recruit2025.netlify.app/" target="_blank">Recruit</a>
                     <span>わたしたちの採用情報</span>
                 </li>
                 <li class="header__nav__ul__li">

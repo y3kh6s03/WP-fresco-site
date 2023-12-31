@@ -87,6 +87,7 @@
             </p>
         </div>
     </section>
+
     <section class="aboutContents container">
         <div class="content__title aboutContents__title">
             <div class="content__title__container">
@@ -170,6 +171,14 @@
                     Click the link !!
                 </span>
             </div>
+        </a>
+    </div>
+    <div class="contact__sns">
+        <a href="https://www.instagram.com/fresco_labo/" class="contact__sns__link">
+            <img src="<?php echo get_template_directory_uri() ?>/images/main-images/Instagram.png" alt="">
+        </a>
+        <a href="https://www.facebook.com/labo.fresco?locale=ja_JP" class="contact__sns__link">
+            <img src="<?php echo get_template_directory_uri() ?>/images/main-images/Facebook.png" alt="">
         </a>
     </div>
 </main>

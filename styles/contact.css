@@ -368,7 +368,7 @@ img {
   align-items: center;
   gap: 50px;
   position: relative;
-  margin: 0 auto 200px;
+  margin: 0 auto 50px;
 }
 .contact__button__textinner {
   clip-path: polygon(-170px 0, 370px 0, 370px 100%, -170px 100%);
