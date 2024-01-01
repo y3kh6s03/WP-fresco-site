@@ -287,7 +287,7 @@
             if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
             ?>
                     <div class="swiper-slide">
-                        <a href="<?php echo home_url(); ?>">
+                        <a href="<?php echo get_permalink(); ?>">
                             <img src="<?php the_field("image"); ?>/works" alt="images">
                             <div class="text__container">
                                 <span class="works__service"><?php the_field("service-name") ?></span>
