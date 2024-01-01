@@ -69,7 +69,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://fresco-recruit2025.netlify.app/" target="_blank">
+                        <a href="https://fresco-recruit.vercel.app/" target="_blank">
                             Recruit
                             <span>採用情報</span>
                         </a>

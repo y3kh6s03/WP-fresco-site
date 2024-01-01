@@ -18,7 +18,7 @@
         </div>
 
         <div class="hero__link">
-            <a href="https://fresco-recruit2025.netlify.app/" class="hero__link__a" target="_blank">
+            <a href="https://fresco-recruit.vercel.app/" class="hero__link__a" target="_blank">
                 <span class="hero__link__a__enTitle">Fresco Recruit</span>
                 <span class="hero__link__a__jaTitle">フレスコ
                     ・カンパニー採用情報
@@ -66,7 +66,7 @@
                     </a>
                 </li>
                 <li class="hero__nav__ul__li">
-                    <a href="https://fresco-recruit2025.netlify.app/"  target="_blank">Recruit
+                    <a href="https://fresco-recruit.vercel.app/"  target="_blank">Recruit
                         <span>わたしたちの採用情報</span>
                     </a>
                 </li>
@@ -338,7 +338,7 @@
                 食のチカラを信じる仲間とともに、新たな未来を一緒に作りませんか?
             </p>
         </div>
-        <a href="https://fresco-recruit2025.netlify.app/" class="pagelink" target="_blank">
+        <a href="https://fresco-recruit.vercel.app/" class="pagelink" target="_blank">
             <span class="pagelink__name">Recruit</span>
             <span class="pagelink__bar"></span>
             <span class="pagelink__arrow"></span>
