@@ -411,38 +411,38 @@
 
         <div class="info__inner">
             <a href="https://furoshiki-ya.co.jp/" class="info__item" target="_blank">
-                株式会社ふろしきや
-                <!-- <div class="info__item__image">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/nac.jpg" alt="images" class="info__item__image__img">
+                <!-- 株式会社ふろしきや -->
+                <div class="info__item__image">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/furoshikiya.jpg" alt="images" class="info__item__image__img">
                 </div>
-                <div class="info__item__text">
+                <div class="info__item__text furoshikiya">
                     <p class="info__item__text__p">
-                        NAC化粧品
+                        株式会社ふろしきや
                     </p>
                     <span class="info__item__text__bar"></span>
                     <span class="info__item__text__arrow"></span>
-                    <span class="info__item__text__ja">NAC化粧品</span>
+                    <span class="info__item__text__ja">furoshikiya</span>
                     <span class="info__item__text__click">Click the link !!</span>
-                </div> -->
+                </div>
             </a>
         </div>
 
 
         <div class="info__inner">
             <a href="https://www.frosta.jp/company/" class="info__item" target="_blank">
-                ファイネスト合同会社
-                <!-- <div class="info__item__image">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/taisei.jpg" alt="images" class="info__item__image__img">
+                <!-- ファイネスト合同会社 -->
+                <div class="info__item__image">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/main-images/finest.jpg" alt="images" class="info__item__image__img">
                 </div>
-                <div class="info__item__text">
+                <div class="info__item__text finest">
                     <p class="info__item__text__p">
-                        Taisei Sangyo
+                    ファイネスト合同会社
                     </p>
                     <span class="info__item__text__bar"></span>
                     <span class="info__item__text__arrow"></span>
-                    <span class="info__item__text__ja">大成産業株式会社</span>
+                    <span class="info__item__text__ja">finest</span>
                     <span class="info__item__text__click">Click the link !!</span>
-                </div> -->
+                </div>
             </a>
         </div>
     </div>

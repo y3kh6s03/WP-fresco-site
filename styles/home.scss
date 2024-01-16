@@ -1379,6 +1379,15 @@
             transform-origin: left;
         }
     }
+
+    & .furoshikiya{
+        // @extend .font-md;
+        max-width: 300px
+    }
+    & .finest{
+        // @extend .font-md;
+        max-width: 300px
+    }
 }
 
 ////////////////////////////////////
