@@ -155,7 +155,7 @@
                 </p>
                 <div class="message__inner__description__author">
                     <span>代表取締役</span>
-                    <p>藤田　将徳</p>
+                    <p>藤田 将徳</p>
                 </div>
             </div>
         </div>
